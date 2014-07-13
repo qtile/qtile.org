@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Download{% endblock %}
+
+{% block body_class %}download{% endblock %}
+
+{% block main %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>Download</h1>
+        <p class="text-muted">How to get your hands on Qtile</p>
+    </div>
+</div>
+{{ block.super }}
+{% endblock %}
+
+{% block content %}
+<h2>Option 1: Get the latest official version</h2>
+
+<h2>Option 2: Get the latest development</h2>
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% load pygmentify %}
+{% load static %}
+
+{% block extrahead %}
+    {# <link type="text/css" rel="stylesheet" href="{% static 'django_pygments/css/pygments_default.css' %}" /> #}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/pygments.css' %}" />
+{% endblock %}
+
+{% block body_class %}index{% endblock %}
+
+{% block main %}
+<section class="jumbotron example">
+    <div class="container">
+        <h1 class="qtile-brand">Qtile</h1>
+        <p>A full-featured, hackable tiling window manager written and configured in Python</p>
+        <div class="row">
+            <div class="col-md-5">
+                <p class="text-center">
+                    <a href="{% static 'img/screenshots/demo.png' %}">
+                        <img src="{% static 'img/screenshots/aeronotix.jpg' %}" alt="screenshot" class="screenshot" />
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-7">
+                {% pygment %}
+                    <pre lang="python">{% ssi config_path %}</pre>
+                {% endpygment %}
+                <p class="text-center"><a href="https://github.com/qtile/qtile-examples">View more configuration examples on Github</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="download text-center">
+    <p class="lead">Current Stable Release <small class="version">v{{ settings.QTILE_VERSION }}</small></p>
+    <ul class="list-inline">
+        <li><a href="{% url 'download' %}">Download</a></li>
+        <li><a href="{{ settings.QTILE_RELEASE_NOTES }}">Release Notes</a></li>
+        <li><a href="http://docs.qtile.org/en/latest/manual/install/">Install Guide</a></li>
+    </ul>
+</section>
+
+<section class="hooks">
+    <div class="container">
+        <h1>Why Qtile?</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead"><b>Qtile is simple, small, and extensible.</b>
+                It's easy to write your own layouts, widgets, and built-in commands.</p>
+            </div>
+            <div class="col-md-6">
+                <p class="lead"><b>Qtile is written and configured entirely in Python</b>,
+                which means you can leverage the full power and flexibility of the language
+                to make it fit your needs.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead"><b>The Qtile community is active and growing</b>,
+                so there's always someone to lend a hand when you need help.</p>
+            </div>
+            <div class="col-md-6">
+                <p class="lead"><b>Qtile is free and open-source software</b>,
+                distributed under the permissive <a href="http://docs.qtile.org/en/latest/manual/license.html">MIT license</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="screenshots">
+    <div class="container text-center">
+        {% for screenshot in screenshots %}
+            <a href="{% static screenshot.image %}">
+                <img src="{% static screenshot.thumbnail %}" class="thumbnail" />
+            </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="community">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>The Qtile Community</h1>
+                {# <p class="lead">Qtilers are spread far and wide, but you can usually find them online at the following places:</p> #}
+                <ul class="list-unstyled">
+                    <li>
+                        <h3>
+                            <span class="fa fa-comments-o fa-fw"></span>
+                            <a href="irc://irc.oftc.net:6667/qtile">IRC Channel</a>
+                            <small>irc.oftc.net/#qtile</small>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <span class="fa fa-envelope-o fa-fw"></span>
+                            <a href="https://groups.google.com/group/qtile-dev">Mailing List</a>
+                            <small>qtile-dev@googlegroups.com</small>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <span class="fa fa-twitter fa-fw"></span>
+                            <a href="http://twitter.com/Qtile">Twitter</a>
+                            <small>@qtile</small>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <span class="fa fa-reddit fa-fw"></span>
+                            <a href="http://reddit.com/r/qtile">Reddit</a>
+                            <small>/r/qtile</small>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <span class="fa fa-google-plus fa-fw"></span>
+                            <a href="https://plus.google.com/s/qtile">Google+</a>
+                            <small>qtile</small>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h1>Getting Involved</h1>
+                {# <p class="lead">There are multiple ways to get involved and help make Qtile even better!</p> #}
+                <ul class="list-unstyled">
+                    <li>
+                        <h3>
+                            <span class="fa fa-bug fa-fw"></span>
+                            <a href="https://github.com/qtile/qtile/issues">Issue Tracker</a>
+                            <small>Report bugs and request new features</small>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <span class="fa fa-keyboard-o fa-fw"></span>
+                            <a href="http://docs.qtile.org/en/latest/manual/hacking.html">Hacking Qtile</a>
+                            <small>Get started hacking on the code</small>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <span class="fa fa-code-fork fa-fw"></span>
+                            <a href="http://docs.qtile.org/en/latest/manual/contributing.html">Contributing</a>
+                            <small>Get your own patches merged into the project</small>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+<section class="pycon-video">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <div class="video">
+                <iframe width="420" height="315" src="//www.youtube.com/embed/r_8om4dsEmw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+{% endblock %}

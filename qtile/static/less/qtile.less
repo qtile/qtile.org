@@ -1,0 +1,137 @@
+@import "../bootstrap/less/variables.less";
+
+a:hover {
+    text-decoration: none;
+}
+
+.qtile-brand {
+    font-family: @font-family-brand;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    color: @navbar-inverse-link-active-color !important;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 75%; /* 4:3; */
+    padding-top: 25px;
+    height: 0;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.jumbotron {
+    background-color: @gray-darker;
+    color: #fff;
+
+    a {
+        color: @accent-light;
+
+        &:hover {
+            color: @accent-lighter;
+        }
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-header {
+    margin-top: 0;
+}
+
+body.index {
+    section {
+        margin: 0 !important;
+        padding: 48px 30px;
+
+        h1 {
+            margin-top: 0;
+        }
+    }
+
+    section.example {
+        .screenshot {
+            width: 100%;
+        }
+        .highlight {
+            background: transparent;
+        }
+
+        pre {
+            max-height: 340px;
+            overflow-y: scroll;
+        }
+
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+
+    section.download {
+        background-color: @gray-lighter;
+
+        .version {
+            color: @gray-light;
+        }
+
+        .ul {
+            margin-bottom: 0;
+        }
+    }
+
+    section.screenshots {
+        background-color: @gray-lighter;
+
+        .thumbnail {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    section.community {
+        .fa-comments-o { color: #990; }
+        .fa-envelope-o { color: #666; }
+        .fa-twitter { color: #55acee; }
+        .fa-reddit { color: #369; }
+        .fa-google-plus { color: #d34836; }
+
+        .fa-bug { color: #696; }
+        .fa-keyboard-o { color: @gray-light; }
+        .fa-code-fork { color: #f14e32; }
+
+        ul {
+            margin-bottom: 0;
+        }
+    }
+}
+
+footer {
+    color: @gray-light;
+
+    a {
+        color: @gray-light;
+
+        &:hoveer {
+            color: @gray;
+        }
+    }
+}

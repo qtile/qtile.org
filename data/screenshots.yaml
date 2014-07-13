@@ -1,0 +1,22 @@
+- thumbnail: img/screenshots/aeronotix-thumbnail.jpg
+  image: img/screenshots/aeronotix.jpg
+  config: https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py
+
+- thumbnail: img/screenshots/cjbarnes18-thumbnail.jpg
+  image: img/screenshots/cjbarnes18.jpg
+  config: https://github.com/qtile/qtile-examples/tree/master/user-configs/cjbarnes
+
+- thumbnail: img/screenshots/dmpayton-thumbnail.png
+  image: img/screenshots/dmpayton.png
+  config: https://github.com/dmpayton/dotfiles/blob/master/qtile/config.py
+
+- thumbnail: img/screenshots/ldlework-thumbnail.png
+  image: img/screenshots/ldlework.png
+  config: https://github.com/dustinlacewell/dustinlacewell-dotfiles/tree/master/qtile
+
+- thumbnail: img/screenshots/rxcomm-thumbnail.png
+  image: img/screenshots/rxcomm.png
+  config: https://github.com/qtile/qtile-examples/blob/master/user-configs/rxcomm/config.py.dx
+
+- thumbnail: img/screenshots/demo-thumbnail.png
+  image: img/screenshots/demo.png

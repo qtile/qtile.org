@@ -1,0 +1,70 @@
+{% extends "_layout/sidebar_right.html" %}
+{% load static %}
+
+{% block title %}Screenshots{% endblock %}
+
+{% block body_class %}screenshots{% endblock %}
+
+{% block main %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>Screenshots</h1>
+        <p class="text-muted">People making Qtile their own</p>
+    </div>
+</div>
+{{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        {% for screenshot in screenshots %}
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <a href="{% static screenshot.image %}">
+                        <img src="{% static screenshot.thumbnail %}" class="img-responsive" />
+                    </a>
+                    <div class="caption text-center">
+                        {% if screenshot.config %}
+                            <a href="{{ screenshot.config }}">View Config</a>
+                        {% else %}
+                            <span class="text-muted fa fa-frown-o"></span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:4 %}
+                </div><div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="fa fa-cogs fa-fw text-muted"></span>
+                See more config examples
+            </h3>
+        </div>
+        <div class="panel-body">
+            <p>For more examples of how to configure Qtile, check out the
+                <a href="https://github.com/qtile/qtile-examples">qtile-examples</a>
+                repository on Github.</p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="fa fa-columns fa-fw text-muted"></span>
+                Add your screenshot
+            </h3>
+        </div>
+        <div class="panel-body">
+            <p>Want to show off how you've customized Qtile?</p>
+            <p>Send a pull request to the <a href="https://github.com/qtile/qtile.org">qtile.org</a>
+                repository on Github, and we'll get it added!</p>
+        </div>
+    </div>
+{% endblock %}

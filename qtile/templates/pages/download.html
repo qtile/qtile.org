@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "_layout/sidebar_right.html" %}
 
 {% block title %}Download{% endblock %}
 
@@ -15,7 +15,63 @@
 {% endblock %}
 
 {% block content %}
-<h2>Option 1: Get the latest official version</h2>
+    <h2>Option 1: Get the latest official version</h2>
+    <p>The latest official version is {{ settings.QTILE_VERSION }}.</p>
+    <p>You can download it from Github:</p>
+    <p><a href="{{ settings.QTILE_DOWNLOAD }}">{{ settings.QTILE_DOWNLOAD }}</a></p>
 
-<h2>Option 2: Get the latest development</h2>
+    <h2>Option 2: Get the latest development</h2>
+    <p>If you want the latest and greatest version fo Qtile, you can fetch it
+        with <a href="http://git-scm.com/">Git</a>:</p>
+    <pre>git clone https://github.com/qtile/qtile.git</pre>
+    <p>You can also download <a href="https://github.com/qtile/qtile/zipball/master">a zipped archive</a>
+        of the development version.</p>
+
+    <h2>Option 3: Install a pre-packaged release</h2>
+    <p>Qtile has been packaged for a number of Linux distros:<p>
+    <ul>
+        <li><a href="http://docs.qtile.org/en/latest/manual/install/arch.html">Arch</a></li>
+        <li><a href="http://docs.qtile.org/en/latest/manual/install/funtoo.html">Funtoo</a></li>
+        <li><a href="http://docs.qtile.org/en/latest/manual/install/gentoo.html">Gentoo</a></li>
+        <li><a href="http://docs.qtile.org/en/latest/manual/install/ubuntu.html">Ubuntu</a></li>
+        <li><a href="http://docs.qtile.org/en/latest/manual/install/debian.html">Debian</a></li>
+    </ul>
+    <p>If you are running one of these distro's, this is your best bet as the
+        installation process will handle installing Qtile's dependencies.</p>
+
+{% endblock %}
+
+
+{% block sidebar %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="fa fa-question-circle fa-fw text-muted"></span>
+                Which is right for me?
+            </h3>
+        </div>
+        <div class="panel-body">
+            <p>The development version will have the latest features, but may
+                also contain new bugs. Grab this version if you want to live
+                on the bleeding edge, or you plan on hacking on Qtile. You'll
+                probably want to keep an eye on <a href="https://github.com/qtile/qtile">Qtile on Github</a>
+                and subscribe to <a href="https://groups.google.com/group/qtile-dev">qtile-dev</a>.</p>
+            <p>If you want to <i>set it and forget it</i>, then the latest
+                official release is for you. You'll wait longer between updates,
+                but this version is likely to be more stable and have fewer bugs.</p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="fa fa-question-circle fa-fw text-muted"></span>
+                Okay, what's next?
+            </h3>
+        </div>
+        <div class="panel-body">
+            <p>Check out the <a href="http://docs.qtile.org/en/latest/manual/install/index.html">installation guide</a>
+                for further instructions.</p>
+        </div>
+    </div>
 {% endblock %}

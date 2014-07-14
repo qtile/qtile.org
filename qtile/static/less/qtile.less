@@ -9,8 +9,18 @@ a:hover {
     font-weight: bold;
 }
 
-.navbar-brand {
-    color: @navbar-inverse-link-active-color !important;
+.navbar {
+    .navbar-brand {
+        color: @navbar-inverse-link-active-color !important;
+    }
+
+    .fa {
+        color: lighten(@accent-dark, 60%);
+    }
+
+    li.active .fa, a:hover .fa {
+        color: #fff;
+    }
 }
 
 .video {
@@ -72,6 +82,8 @@ body.index {
         }
 
         pre {
+            background-color: darken(@gray-darker, 10%);
+            border: 0;
             max-height: 340px;
             overflow-y: scroll;
         }
@@ -85,11 +97,11 @@ body.index {
     section.download {
         background-color: @gray-lighter;
 
-        .version {
-            color: @gray-light;
+        h3 {
+            margin-top: 0;
         }
 
-        .ul {
+        ul {
             margin-bottom: 0;
         }
     }
@@ -109,7 +121,7 @@ body.index {
 
     section.community {
         .fa-comments-o { color: #990; }
-        .fa-envelope-o { color: #666; }
+        .fa-envelope-o { color: @gray-light; }
         .fa-twitter { color: #55acee; }
         .fa-reddit { color: #369; }
         .fa-google-plus { color: #d34836; }

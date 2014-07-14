@@ -12,5 +12,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'qtile.settings')
 
 from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
+from raven.contrib.django.raven_compat.middleware.wsgi import Sentry
 
-application = Cling(get_wsgi_application())
+application = Sentry(Cling(get_wsgi_application()))

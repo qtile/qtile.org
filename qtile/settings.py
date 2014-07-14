@@ -101,7 +101,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'public/static')
 # http://django-compressor.readthedocs.org
 
 COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = False
+COMPRESS_OFFLINE = True
 COMPRESS_PRECOMPILERS = (
     ('text/less', 'lessc -x {infile} {outfile}'),
 )

@@ -5,6 +5,7 @@ dj-static==0.0.6
 django-vanilla-views==1.0.3
 gevent==1.0.1
 gunicorn==19.0.0
+newrelic==2.22.1.20
 pygments==1.6
 
 -e git+https://github.com/odeoncg/django-pygments.git#egg=django-pygments

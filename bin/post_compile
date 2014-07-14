@@ -17,8 +17,10 @@ MANAGE_FILE=$(find . -maxdepth 3 -type f -name 'manage.py' | head -1)
 MANAGE_FILE=${MANAGE_FILE:2}
 echo "Build dir: ${BUILD_DIR}"
 echo "Bin dir: ${BIN_DIR}"
-echo "Current dir: `pwd`"
 echo "manage.py: ${MANAGE_FILE}"
+
+echo "Current dir: `pwd`"
+ls -hal
 
 # Install node
 if [ -f bin/install_nodejs ]; then

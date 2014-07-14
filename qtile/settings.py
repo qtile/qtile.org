@@ -27,7 +27,9 @@ DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', 1)))
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+if 'ALLOWED_HOSTS' in os.environ:
+    ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
 
 ALLOWED_INCLUDE_ROOTS = [
     os.path.join(PROJECT_DIR, 'includes')

@@ -23,6 +23,10 @@ if [ -f bin/install_nodejs ]; then
     bin/install_nodejs
 fi
 
+# Install front-end dependencies
+echo "-----> Installing bower components"
+bower install --config.interactive=false | indent
+
 # Compile static assets
 echo "-----> Collecting static files"
 python $MANAGE_FILE collectstatic --noinput --traceback 2>&1 | sed '/^Copying/d;/^$/d;/^ /d' | indent

@@ -30,4 +30,4 @@ ln -s -f ../../vendor/node/bin/node-waf .heroku/python/bin/node-waf
 ln -s -f ../../vendor/node/bin/npm .heroku/python/bin/npm
 
 echo "-----> Installing nodejs deps"
-npm install -g less | indent;
+npm install -g bower less | indent;

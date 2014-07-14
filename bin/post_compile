@@ -5,6 +5,9 @@ set -eo pipefail
 
 echo "-----> Running post-compile hook"
 
+# Syntax sugar.
+source $BIN_DIR/utils
+
 # Work around Heroku bug whereby pylibmc isn't available during
 # compile phase. See: https://github.com/heroku/heroku-buildpack-python/issues/57
 export MEMCACHE_SERVERS='' MEMCACHIER_SERVERS=''

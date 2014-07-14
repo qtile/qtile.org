@@ -1,4 +1,5 @@
-{% load active_page %}
+{% load compress %}
+{% load qtile_utils %}
 {% load static %}
 <!doctype html>
 <html>
@@ -9,17 +10,28 @@
 
     <title>{% block title %}Qtile &ndash; A hackable tiling window manager written in Python{% endblock %} | Qtile.org</title>
 
-    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" />
-    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700" />
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" />
     <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Varela+Round" />
-    <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
-    <!--<link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />-->
-    <link type="text/css" rel="stylesheet/less" href="{% static 'bootstrap/less/bootstrap.less' %}" />
-    <link type="text/css" rel="stylesheet/less" href="{% static 'less/qtile.less' %}" />
+
+    {% if debug %}
+        <link type="text/css" rel="stylesheet/less" href="{% static 'fontawesome/less/font-awesome.less' %}" />
+        <link type="text/css" rel="stylesheet/less" href="{% static 'bootstrap/less/bootstrap.less' %}" />
+        <link type="text/css" rel="stylesheet/less" href="{% static 'less/qtile.less' %}" />
+        <link type="text/css" rel="stylesheet/less" href="{% static 'css/pygments.css' %}" />
+    {% else %}
+        {% compress css %}
+            <link type="text/less" rel="stylesheet" href="{% static 'fontawesome/less/font-awesome.less' %}" />
+            <link type="text/less" rel="stylesheet" href="{% static 'bootstrap/less/bootstrap.less' %}" />
+            <link type="text/less" rel="stylesheet" href="{% static 'less/qtile.less' %}" />
+            <link type="text/less" rel="stylesheet" href="{% static 'css/pygments.css' %}" />
+        {% endcompress %}
+    {% endif %}
 
     {% block extrahead %}{% endblock %}
 
-    <script type="text/javascript" src="{% static 'less.js/dist/less-1.7.3.min.js' %}"></script>
+    {% if debug %}
+        <script type="text/javascript" src="{% static 'less.js/dist/less-1.7.3.min.js' %}"></script>
+    {% endif %}
 </head>
 <body class="{% block body_class %}{% endblock %}">
     <div class="navbar navbar-inverse navbar-static-top" role="navigation">

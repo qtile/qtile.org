@@ -85,17 +85,26 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, 'static'),
 ]
 
-if 'collectstatic' not in sys.argv:
-    STATICFILES_DIRS.append(os.path.join(BASE_DIR, 'public/bower_components'))
+# if 'collectstatic' not in sys.argv:
+STATICFILES_DIRS.append(os.path.join(BASE_DIR, 'public/bower_components'))
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     #'django.contrib.staticfiles.finders.DefaultStorageFinder',
     'compressor.finders.CompressorFinder',
-    ]
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'public/static')
+
+# django-compressor
+# http://django-compressor.readthedocs.org
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = False
+COMPRESS_PRECOMPILERS = (
+    ('text/less', 'lessc -x {infile} {outfile}'),
+)
 
 # Templating
 
@@ -105,7 +114,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.request',
     'django.core.context_processors.static',
-    'qtile.context_processors.settings',
+    'qtile.context_processors.context',
 )
 
 # Qtile Stuff

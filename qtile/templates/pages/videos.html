@@ -1,4 +1,5 @@
 {% extends "_layout/sidebar_right.html" %}
+{% load compress %}
 {% load jsonify %}
 {% load static %}
 
@@ -57,12 +58,19 @@
 
     <script type="text/html" id="loading">
         <div class="loading text-center text-muted">
-            <span class="fa fa-spinner fa-4x fa-spin"></span>
+            <p class="lead">Loading...</p>
+            <p><span class="fa fa-spinner fa-4x fa-spin"></span></p>
         </div>
     </script>
 
+    <script type="text/html" id="still_loading">
+        <p>The videos seem to be taking a while to load. Please sit tight for a bit longer.</p>
+    </script>
+
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/microtemplating.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/qtile.videos.js' %}"></script>
+    {% compress js %}
+        <script type="text/javascript" src="{% static 'js/microtemplating.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/qtile.videos.js' %}"></script>
+    {% endcompress %}
     <script type="text/javascript">init_videos({{ videos|jsonify }});</script>
 {% endblock %}

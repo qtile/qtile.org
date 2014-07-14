@@ -41,8 +41,9 @@ INSTALLED_APPS = (
     'qtile',
 
     'compressor',
-    'jsonify',
     'django_pygments',
+    'jsonify',
+    'raven.contrib.django'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -122,6 +123,15 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'qtile.context_processors.context',
 )
+
+# Sentry - error logging service
+
+if 'SENTRY_DSN' in os.environ:
+    RAVEN_CONFIG = {
+        'dsn': os.environ['SENTRY_DSN'],
+        'register_signals': True,
+    }
+    RAVEN_PUBLIC_DSN = 'https://public@{0}'.format(RAVEN_CONFIG['dsn'].split('@')[1])
 
 # Qtile Stuff
 

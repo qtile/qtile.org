@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'compressor',
     'django_pygments',
     'jsonify',
-    'raven.contrib.django'
+    'raven.contrib.django.raven_compat',
 )
 
 MIDDLEWARE_CLASSES = (

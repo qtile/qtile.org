@@ -3,8 +3,8 @@
 {% block content %}
 <div class="container">
     <div class="page-header">
-        <h1>OH SNAP!</h1>
+        <h1>Page Not Found</h1>
     </div>
     <p class="lead">The page you requested is 404'd. Sorry about that.</p>
-    <p><a href="/">Go back to the homepage.</a></p>
+    <p><a href="{% url 'index' %}">Go back to the homepage.</a></p>
 {% endblock %}

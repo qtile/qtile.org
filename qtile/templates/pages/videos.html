@@ -67,10 +67,5 @@
         <p>The videos seem to be taking a while to load. Please sit tight for a bit longer.</p>
     </script>
 
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    {% compress js %}
-        <script type="text/javascript" src="{% static 'js/microtemplating.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/qtile.videos.js' %}"></script>
-    {% endcompress %}
     <script type="text/javascript">init_videos({{ videos|jsonify }});</script>
 {% endblock %}

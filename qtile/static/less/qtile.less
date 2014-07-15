@@ -74,18 +74,32 @@ body.index {
     }
 
     section.example {
-        .screenshot {
+        .screenshot img {
             width: 100%;
         }
+
         .highlight {
             background: transparent;
+        }
+
+        .btn-toggle {
+            color: @gray-light;
+            // background-color: darken(@gray-darker, 5%);
+            border: 0;
+            margin-right: 15px;
+            position: absolute;
+            right: 0;
+
+            &:hover {
+                color: #fff;
+            }
         }
 
         pre {
             background-color: darken(@gray-darker, 10%);
             border: 0;
-            max-height: 340px;
-            overflow-y: scroll;
+            height: 340px;
+            overflow-y: hidden;
         }
 
         ol {

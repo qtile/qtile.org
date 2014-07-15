@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" />
     <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Varela+Round" />
 
+    {# There's gotta be a better, DRYer way to handle this. #}
     {% if debug %}
         <link type="text/css" rel="stylesheet/less" href="{% static 'fontawesome/less/font-awesome.less' %}" />
         <link type="text/css" rel="stylesheet/less" href="{% static 'bootstrap/less/bootstrap.less' %}" />
@@ -92,6 +93,12 @@
         </ul>
     </footer>
 
+    {% compress js %}
+        <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/microtemplating.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/qtile.index.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/qtile.videos.js' %}"></script>
+    {% endcompress %}
     {% block javascript %}{% endblock %}
 </body>
 </html>

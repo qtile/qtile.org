@@ -10,14 +10,14 @@
         <h1 class="qtile-brand">Qtile</h1>
         <p>A full-featured, hackable tiling window manager written and configured in Python</p>
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-5 screenshot">
                 <p class="text-center">
                     <a href="{% static 'img/screenshots/demo.png' %}">
-                        <img src="{% static 'img/screenshots/aeronotix.jpg' %}" alt="screenshot" class="screenshot" />
+                        <img src="{% static 'img/screenshots/aeronotix.jpg' %}" alt="screenshot" />
                     </a>
                 </p>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7 config">
                 {% pygment %}
                     <pre lang="python">{% ssi config_path %}</pre>
                 {% endpygment %}
@@ -147,16 +147,14 @@
         </div>
     </div>
 </section>
+{% endblock %}
 
-<!--
-<section class="pycon-video">
-    <div class="row">
-        <div class="col-md-offset-4 col-md-4">
-            <div class="video">
-                <iframe width="420" height="315" src="//www.youtube.com/embed/r_8om4dsEmw" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</section>
--->
+{% block javascript %}
+    <script type="text/html" id="config_expander">
+        <span class="btn btn-toggle pull-right">
+            <span class="fa fa-expand"></span>
+        </span>
+    </script>
+
+    <script type="text/javascript">init_demo();</script>
 {% endblock %}

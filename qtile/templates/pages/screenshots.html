@@ -16,9 +16,9 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
+    <div class="row gallery">
         {% for screenshot in screenshots %}
-            <div class="col-md-3">
+            <div class="gallery-item screens-{{ screenshot.screens }}">
                 <div class="thumbnail">
                     <a href="{% static screenshot.image %}">
                         <img src="{% static screenshot.thumbnail %}" class="img-responsive" />
@@ -32,9 +32,6 @@
                     </div>
                 </div>
             </div>
-            {% if forloop.counter|divisibleby:4 %}
-                </div><div class="row">
-            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}
@@ -66,4 +63,8 @@
                 and we'll get your screenshot and config added.</p>
         </div>
     </div>
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript">init_screenshots();</script>
 {% endblock %}

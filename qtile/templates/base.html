@@ -95,8 +95,11 @@
 
     {% compress js %}
         <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'masonry/dist/masonry.pkgd.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/microtemplating.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/qtile.index.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/qtile.screenshots.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/qtile.videos.js' %}"></script>
     {% endcompress %}
     {% block javascript %}{% endblock %}

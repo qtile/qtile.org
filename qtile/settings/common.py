@@ -9,11 +9,9 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 import os
-import sys
-from memcacheify import memcacheify
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.sep.join((os.path.abspath(__file__).split(os.sep))[:-2])
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 # Quick-start development settings - unsuitable for production
@@ -28,8 +26,6 @@ DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', 1)))
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['*']
-if 'ALLOWED_HOSTS' in os.environ:
-    ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
 
 ALLOWED_INCLUDE_ROOTS = [
     os.path.join(PROJECT_DIR, 'includes')
@@ -37,7 +33,7 @@ ALLOWED_INCLUDE_ROOTS = [
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'qtile',
@@ -46,16 +42,16 @@ INSTALLED_APPS = (
     'django_pygments',
     'jsonify',
     'raven.contrib.django.raven_compat',
-)
+]
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
     # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
     # 'django.contrib.auth.middleware.AuthenticationMiddleware',
     # 'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+]
 
 ROOT_URLCONF = 'qtile.urls'
 
@@ -69,7 +65,11 @@ DATABASES = {}
 # Cache
 # https://docs.djangoproject.com/en/1.6/ref/settings/#caches
 
-CACHES = memcacheify()
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -109,7 +109,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'public/static')
 # django-compressor
 # http://django-compressor.readthedocs.org
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 COMPRESS_OFFLINE = True
 COMPRESS_PRECOMPILERS = (
     ('text/less', 'lessc -x {infile} {outfile}'),
@@ -125,15 +125,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'qtile.context_processors.context',
 )
-
-# Sentry - error logging service
-
-if 'SENTRY_DSN' in os.environ:
-    RAVEN_CONFIG = {
-        'dsn': os.environ['SENTRY_DSN'],
-        'register_signals': True,
-    }
-    RAVEN_PUBLIC_DSN = 'https://public@{0}'.format(RAVEN_CONFIG['dsn'].split('@')[1])
 
 # Qtile Stuff
 

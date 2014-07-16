@@ -14,13 +14,18 @@ a:hover {
         color: @navbar-inverse-link-active-color !important;
     }
 
-    .fa {
-        color: lighten(@accent-dark, 60%);
-        display: none;
+    li.active a {
+        border-bottom: @accent-color 3px solid;
+        padding-bottom: (@navbar-padding-vertical - 3px);
     }
 
     li.active .fa, a:hover .fa {
         color: #fff;
+    }
+
+    .fa {
+        color: lighten(@accent-dark, 60%);
+        display: none;
     }
 }
 

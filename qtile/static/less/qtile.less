@@ -16,6 +16,7 @@ a:hover {
 
     .fa {
         color: lighten(@accent-dark, 60%);
+        display: none;
     }
 
     li.active .fa, a:hover .fa {
@@ -145,6 +146,18 @@ body.index {
         .fa-code-fork { color: #f14e32; }
 
         ul {
+            margin-bottom: 0;
+        }
+    }
+}
+
+body.download {
+    .well {
+        :first-child {
+            margin-top: 0;
+        }
+
+        :last-child {
             margin-bottom: 0;
         }
     }

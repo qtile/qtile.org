@@ -15,19 +15,28 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Option 1: Get the latest official version</h2>
+    <h2><span class="text-muted fa fa-fw fa-star"></span> Get the latest official version</h2>
     <p>The latest official version is {{ settings.QTILE_VERSION }}.</p>
     <p>You can download it from Github:</p>
     <p><a href="{{ settings.QTILE_DOWNLOAD }}">{{ settings.QTILE_DOWNLOAD }}</a></p>
 
-    <h2>Option 2: Get the latest development</h2>
+    <div class="alert alert-info">
+        <h4><span class="fa fa-linux fa-lg fa-fw"></span> Packages and Installation Guides</h4>
+        Qtile has been packaged for a number of Linux distros, and it may not
+        be necessary to download the official release directly. Check out the
+        <a href="http://docs.qtile.org/en/latest/manual/install/index.html" class="alert-link">installation guide</a>
+        to see if your distro is included.
+    </div>
+
+    <h2><span class="text-muted fa fa-fw fa-flask"></span> Get the latest development version</h2>
     <p>If you want the latest and greatest version fo Qtile, you can fetch it
         with <a href="http://git-scm.com/">Git</a>:</p>
     <pre>git clone https://github.com/qtile/qtile.git</pre>
     <p>You can also download <a href="https://github.com/qtile/qtile/zipball/master">a zipped archive</a>
         of the development version.</p>
 
-    <h2>Option 3: Install a pre-packaged release</h2>
+    {% comment %}
+    <h2><span class="text-muted fa fa-fw fa-cube"></span> Install a pre-packaged release</h2>
     <p>Qtile has been packaged for a number of Linux distros:<p>
     <ul>
         <li><a href="http://docs.qtile.org/en/latest/manual/install/arch.html">Arch</a></li>
@@ -36,8 +45,10 @@
         <li><a href="http://docs.qtile.org/en/latest/manual/install/ubuntu.html">Ubuntu</a></li>
         <li><a href="http://docs.qtile.org/en/latest/manual/install/debian.html">Debian</a></li>
     </ul>
-    <p>If you are running one of these distros, this is your best bet as the
-        installation process will handle installing Qtile's dependencies.</p>
+    <p>If you are running one of these distros, this is your best bet. The
+        installation process will handle &mdash; or guide you through &mdash;
+        installing Qtile's dependencies.</p>
+    {% endcomment %}
 
 {% endblock %}
 
@@ -46,7 +57,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">
-                <span class="fa fa-question-circle fa-fw text-muted"></span>
+                <span class="fa fa-question-circle fa-fw fa-lg text-muted"></span>
                 Which is right for me?
             </h3>
         </div>
@@ -65,8 +76,8 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">
-                <span class="fa fa-question-circle fa-fw text-muted"></span>
-                Okay, what's next?
+                <span class="fa fa-question-circle fa-fw fa-lg text-muted"></span>
+                Got it, what's next?
             </h3>
         </div>
         <div class="panel-body">

@@ -23,13 +23,11 @@
                     <a href="{% static screenshot.image %}">
                         <img src="{% static screenshot.thumbnail %}" class="img-responsive" />
                     </a>
-                    <div class="caption text-center">
-                        {% if screenshot.config %}
+                    {% if screenshot.config %}
+                        <div class="caption text-center">
                             <a href="{{ screenshot.config }}">View Config</a>
-                        {% else %}
-                            <span class="text-muted fa fa-frown-o"></span>
-                        {% endif %}
-                    </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

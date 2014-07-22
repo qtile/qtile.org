@@ -65,11 +65,15 @@
 
 <section class="screenshots">
     <div class="container text-center">
-        {% for screenshot in screenshots %}
-            <a href="{% static screenshot.image %}">
-                <img src="{% static screenshot.thumbnail %}" class="thumbnail" />
-            </a>
-        {% endfor %}
+        <div class="row">
+            {% for screenshot in screenshots %}
+                <div class="col-md-3">
+                    <a href="{% static screenshot.image %}">
+                        <img src="{% static screenshot.thumbnail %}" class="thumbnail img-responsive" />
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 

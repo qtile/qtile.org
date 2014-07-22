@@ -15,20 +15,27 @@
 {% endblock %}
 
 {% block content %}
-    <h2><span class="text-muted fa fa-fw fa-star"></span> Get the latest official version</h2>
+    <h2><span class="fa fa-fw fa-star"></span> Get the latest official version</h2>
     <p>The latest official version is {{ settings.QTILE_VERSION }}.</p>
     <p>You can download it from Github:</p>
     <p><a href="{{ settings.QTILE_DOWNLOAD }}">{{ settings.QTILE_DOWNLOAD }}</a></p>
 
-    <div class="alert alert-info">
-        <h4><span class="fa fa-linux fa-lg fa-fw"></span> Packages and Installation Guides</h4>
-        Qtile has been packaged for a number of Linux distros, and it may not
-        be necessary to download the official release directly. Check out the
-        <a href="http://docs.qtile.org/en/latest/manual/install/index.html" class="alert-link">installation guide</a>
-        to see if your distro is included.
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="fa fa-linux fa-lg fa-fw"></span>
+                Packages and Installation Guides
+            </h3>
+        </div>
+        <div class="panel-body">
+            <p>Qtile has been packaged for a number of Linux distros, and it may not
+                be necessary to download the official release directly. Check out the
+                <a href="http://docs.qtile.org/en/latest/manual/install/index.html" class="alert-link">installation guide</a>
+                to see if your distro is included.</p>
+        </div>
     </div>
 
-    <h2><span class="text-muted fa fa-fw fa-flask"></span> Get the latest development version</h2>
+    <h2><span class="fa fa-fw fa-flask"></span> Get the latest development version</h2>
     <p>If you want the latest and greatest version fo Qtile, you can fetch it
         with <a href="http://git-scm.com/">Git</a>:</p>
     <pre>git clone https://github.com/qtile/qtile.git</pre>

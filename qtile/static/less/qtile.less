@@ -12,7 +12,16 @@ a:hover {
 
 .navbar {
     .navbar-brand {
+        .border-radius(3px);
         color: @navbar-inverse-link-active-color !important;
+        // background: @accent-gray;
+        height: auto;
+        margin-top: 10px;
+        padding: 5px 7px;
+
+        &:hover {
+            background-color: @accent-gray;
+        }
     }
 
     .navbar-nav {
@@ -21,7 +30,7 @@ a:hover {
             margin-top: 10px;
 
             &> a {
-                .border-radius(2px);
+                .border-radius(3px);
                 padding: 5px 7px;
             }
         }
@@ -78,6 +87,10 @@ a:hover {
 }
 
 body.index {
+    .navbar-brand, .navbar-brand:hover {
+        background-color: @accent-color;
+    }
+
     section {
         margin: 0 !important;
         padding: 48px 30px;

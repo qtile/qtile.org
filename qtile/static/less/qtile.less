@@ -1,4 +1,5 @@
 @import "../bootstrap/less/variables.less";
+@import "../lesshat/build/lesshat.less";
 
 a:hover {
     text-decoration: none;
@@ -14,9 +15,16 @@ a:hover {
         color: @navbar-inverse-link-active-color !important;
     }
 
-    li.active a {
-        border-bottom: @accent-color 3px solid;
-        padding-bottom: (@navbar-padding-vertical - 3px);
+    .navbar-nav {
+        li {
+            margin-left: 5px;
+            margin-top: 10px;
+
+            &> a {
+                .border-radius(2px);
+                padding: 5px 7px;
+            }
+        }
     }
 
     li.active .fa, a:hover .fa {
@@ -24,7 +32,7 @@ a:hover {
     }
 
     .fa {
-        color: lighten(@accent-dark, 60%);
+        color: lighten(@gray-dark, 60%);
         display: none;
     }
 }
@@ -49,10 +57,10 @@ a:hover {
     color: #fff;
 
     a {
-        color: @accent-light;
+        color: lighten(@accent-color, 20%);
 
         &:hover {
-            color: @accent-lighter;
+            color: lighten(@accent-color, 30%);
         }
     }
 
@@ -127,9 +135,11 @@ body.index {
     }
 
     section.screenshots {
-        background-color: @gray-lighter;
+        background-color: @gray-darker;
 
         .thumbnail {
+            background-color: @gray-dark;
+            border-color: @accent-gray;
             display: inline;
             margin: 0 10px;
         }
@@ -157,15 +167,9 @@ body.index {
 }
 
 body.download {
-    .well {
-        :first-child {
-            margin-top: 0;
-        }
-
-        :last-child {
-            margin-bottom: 0;
-        }
-    }
+    .fa-star { color: #fc0; }
+    .fa-flask { color: #3c6; }
+    .fa-linux { color: @gray-dark; }
 }
 
 body.screenshots {

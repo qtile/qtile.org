@@ -7,11 +7,14 @@
 //
 
 //@accent-color: #18BAEB; // libqtile.widget.graph.Graph graph_color
-@accent-lighter: #ccf;
-@accent-light: #09c;
-@accent-color: #069;
-@accent-dark: #036;
-@accent-darker: #003;
+// @accent-lighter: #ccf;
+// @accent-light: #09c;
+// @accent-color: #069;
+// @accent-dark: #036;
+// @accent-darker: #003;
+
+@accent-color: #215578;
+@accent-gray: #404040;
 
 
 //## Gray and brand colors for use across Bootstrap.
@@ -344,7 +347,7 @@
 //##
 
 // Basics of a navbar
-@navbar-height:                    60px;
+@navbar-height:                    50px;
 @navbar-margin-bottom:             0;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
@@ -378,15 +381,15 @@
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @gray-light;
-@navbar-inverse-bg:                         @accent-dark;
-@navbar-inverse-border:                     darken(@accent-dark, 10%);
+@navbar-inverse-bg:                         #000;
+@navbar-inverse-border:                     @gray-dark;
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @gray-lighter;
 @navbar-inverse-link-hover-color:           #fff;
-@navbar-inverse-link-hover-bg:              darken(@navbar-inverse-bg, 5%);
+@navbar-inverse-link-hover-bg:              #404040;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
-@navbar-inverse-link-active-bg:             @navbar-inverse-link-hover-bg;
+@navbar-inverse-link-active-bg:             @accent-color;
 @navbar-inverse-link-disabled-color:        #444;
 @navbar-inverse-link-disabled-bg:           transparent;
 

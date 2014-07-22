@@ -47,7 +47,7 @@
                 {% if not homepage or 1 %}<a class="navbar-brand qtile-brand" href="{% url 'index' %}">Qtile</a>{% endif %}
             </div>
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="{% active_page request "download" %}">
                         <a href="{% url 'download' %}"><span class="fa fa-lg fa-fw fa-download"></span> Download</a>
                     </li>

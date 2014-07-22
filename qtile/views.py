@@ -14,7 +14,7 @@ class Index(vanilla.TemplateView):
             'config_path': os.path.join(settings.PROJECT_DIR,
                 'includes/config.py'),
             'screenshots': sorted(load_data('screenshots'),
-                key=lambda x: random.random())[:5],
+                key=lambda x: random.random())[:4],
             'homepage': True,
         })
 

@@ -83,20 +83,26 @@ floating_layout = layout.Floating()
 # Screens and widget options
 screens = [
     Screen(
-        bottom=bar.Bar([
-            widget.GroupBox(),
-            widget.Prompt(),
-            widget.WindowName(),
-            widget.Systray(),
-            widget.Clock(format='%a %d %b %I:%M %p'),
-        ], size=30),
+        bottom=bar.Bar(
+            widgets=[
+                widget.GroupBox(
+                    highlight_method='block',
+                    inactive='999999'
+                ),
+                widget.Prompt(),
+                widget.WindowName(),
+                widget.Systray(),
+                widget.Clock(format='%a %d %b %I:%M %p'),
+            ],
+            size=30,
+            background=['222222', '111111'],
+        ),
     ),
 ]
 
 widget_defaults = dict(
     font='Arial',
-    fontsize=16,
-    padding=3,
+    fontsize=15,
 )
 
 auto_fullscreen = True

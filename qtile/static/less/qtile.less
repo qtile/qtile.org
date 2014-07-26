@@ -1,20 +1,28 @@
 @import "../bootstrap/less/variables.less";
 @import "../lesshat/build/lesshat.less";
 
+.qtile-brand(@color: #fff, @glow:0px) {
+    font-color: @color !important;
+    font-family: @font-family-brand;
+    font-weight: bold;
+
+    .fa {
+        .rotate(135);
+        text-shadow: 0 0 @glow @color;
+    }
+}
+
 a:hover {
     text-decoration: none;
 }
 
-.qtile-brand {
-    font-family: @font-family-brand;
-    font-weight: bold;
-}
-
 .navbar {
+    .background-image(linear-gradient(to bottom, #222 0%, #111 100%));
+
     .navbar-brand {
+        .qtile-brand();
         .border-radius(3px);
         color: @navbar-inverse-link-active-color !important;
-        // background: @accent-gray;
         height: auto;
         margin-top: 10px;
         padding: 5px 7px;
@@ -25,9 +33,13 @@ a:hover {
     }
 
     .navbar-nav {
+        .fa {
+            color: lighten(@gray-dark, 60%);
+            display: none;
+        }
+
         li {
-            margin-left: 5px;
-            margin-top: 10px;
+            margin: 10px 5px 0px 10px;
 
             &> a {
                 .border-radius(3px);
@@ -38,11 +50,6 @@ a:hover {
 
     li.active .fa, a:hover .fa {
         color: #fff;
-    }
-
-    .fa {
-        color: lighten(@gray-dark, 60%);
-        display: none;
     }
 }
 
@@ -87,7 +94,8 @@ a:hover {
 }
 
 body.index {
-    .navbar-brand, .navbar-brand:hover {
+    .navbar-brand,
+    .navbar-brand:hover {
         background-color: @accent-color;
     }
 
@@ -101,6 +109,10 @@ body.index {
     }
 
     section.example {
+        .qtile-brand {
+            .qtile-brand(#fff, 0px);
+        }
+
         .screenshot img {
             width: 100%;
         }
@@ -111,7 +123,7 @@ body.index {
 
         .btn-toggle {
             color: @gray-light;
-            background-color: darken(@gray-darker, 10%);
+            background-color: darken(@gray-darker, 7%);
             border: 0;
             margin-right: 15px;
             position: absolute;
@@ -123,7 +135,7 @@ body.index {
         }
 
         pre {
-            background-color: darken(@gray-darker, 10%);
+            background-color: darken(@gray-darker, 7%);
             border: 0;
             height: 340px;
             overflow-y: hidden;
@@ -192,6 +204,7 @@ body.screenshots {
             margin-bottom: 30px;
 
             .thumbnail {
+                background-color: @gray-lighter;
                 margin-bottom: 0;
 
                 img {

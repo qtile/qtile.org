@@ -14,8 +14,8 @@ var init_videos = function(video_list){
             }, 1000);
 
             // Fetch the video data via noembed and render each video
-            $.each(video_list, function(index, video_url){
-                var url = 'http://noembed.com/embed?nowrap=on&url=' + video_url;
+            $.each(video_list, function(index, video){
+                var url = 'http://noembed.com/embed?nowrap=on&url=' + video.url;
                 $.getJSON(url, function(data){
                     $container.find('.loading').remove();
                     $container.append(render(data));

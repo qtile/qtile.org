@@ -1,0 +1,65 @@
+- image: img/screenshots/aeronotix.jpg
+  config: https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py
+
+- image: img/screenshots/aeronotix2.jpg
+  config: https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py
+
+- image: img/screenshots/cjbarnes18.jpg
+  config: https://github.com/qtile/qtile-examples/tree/master/user-configs/cjbarnes
+
+- image: img/screenshots/dmpayton.png
+  config: https://github.com/dmpayton/dotfiles/blob/master/qtile/config.py
+
+- image: img/screenshots/eigrad.png
+  config: null
+
+- image: img/screenshots/jasoneastman.png
+  config: null
+
+- image: img/screenshots/jasoneastman-greyish.png
+  config: null
+
+- image: img/screenshots/ldlework.png
+  config: https://github.com/dustinlacewell/dustinlacewell-dotfiles/tree/master/qtile
+
+- image: img/screenshots/linuxville.png
+  config: null
+
+- image: img/screenshots/linuxville-comicbook.png
+  config: null
+
+- image: img/screenshots/linuxville-tiling.png
+  config: null
+
+- image: img/screenshots/linuxville-rage-of-angels.png
+  config: null
+
+- image: img/screenshots/maxdamaged-clean.png
+  config: null
+
+- image: img/screenshots/maxdamaged-dirty.png
+  config: null
+
+- image: img/screenshots/oblivion.png
+  config: null
+
+- image: img/screenshots/pavel.png
+  config: null
+
+- image: img/screenshots/rxcomm.png
+  config: https://github.com/qtile/qtile-examples/blob/master/user-configs/rxcomm/config.py.dx
+
+- image: img/screenshots/tian.png
+  config: null
+
+- image: img/screenshots/tjy.png
+  config: null
+
+- image: img/screenshots/tywgg-clean.png
+  config: null
+
+- image: img/screenshots/tywgg-dirty.png
+  config: null
+
+- image: img/screenshots/demo.png
+  config: null

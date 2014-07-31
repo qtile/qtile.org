@@ -46,6 +46,10 @@ class Screenshot(Model):
         return Path(staticfiles_storage.path(self.image))
 
     @property
+    def name(self):
+        return self.path.name
+
+    @property
     def file(self):
         path = staticfiles_storage.path(self.image)
         return ImageFile(open(path))

@@ -2,7 +2,7 @@
 <div class="screenshot thumbnail">
     <a href="{% static screenshot.image %}" class="fullsize"
         data-title="{{ screenshot.name }}"
-        data-config="{{ screenshot.config }}">
+        data-config="{{ screenshot.config|default_if_none:"" }}">
         <img src="{% static screenshot.thumbnail %}" class="img-responsive" />
     </a>
     {% if show_config and screenshot.config %}

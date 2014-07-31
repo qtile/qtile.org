@@ -57,8 +57,11 @@ var init_screenshot_lightbox = function(){
                 if($this.data('config')) {
                     $modal.find('.modal-footer').html(
                         $('<a>')
-                            .text('View Config')
+                            .text(' View Config')
                             .attr('href', $this.data('config'))
+                            .prepend(
+                                $('<span>').addClass('fa fa-fw fa-cogs text-muted')
+                            )
                     );
                 }
                 $modal.modal({show: true});

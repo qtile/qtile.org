@@ -1,3 +1,4 @@
+cached-property==0.1.5
 Django==1.6.5
 django_compressor==1.4
 django-heroku-memcacheify==0.5

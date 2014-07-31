@@ -1,5 +1,6 @@
 import os
 import yaml
+from cached_property import cached_property
 from django.conf import settings
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.core.files.images import ImageFile
@@ -37,30 +38,30 @@ class Model(object):
 class Screenshot(Model):
     order = 'image'
 
-    @property
+    @cached_property
     def image(self):
         return Path(self._data['image'])
 
-    @property
+    @cached_property
     def path(self):
         return Path(staticfiles_storage.path(self.image))
 
-    @property
+    @cached_property
     def name(self):
         return self.path.name
 
-    @property
+    @cached_property
     def file(self):
         path = staticfiles_storage.path(self.image)
         return ImageFile(open(path))
 
-    @property
+    @cached_property
     def screens(self):
         if self.file.width / self.file.height > 1:
             return 2
         return 1
 
-    @property
+    @cached_property
     def thumbnail(self):
         return Path(self.image.parent, 'thumb', self.image.name)
 

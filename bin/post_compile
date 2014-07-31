@@ -34,4 +34,7 @@ python $MANAGE_FILE collectstatic --noinput --traceback 2>&1 | sed '/^Copying/d;
 echo "-----> Compressing static files"
 python $MANAGE_FILE compress --traceback 2>&1 | indent
 
+echo "-----> Creating screenshot thumbnails"
+python $MANAGE_FILE process_screenshots --traceback 2>&1 | indent
+
 echo "-----> Post-compile done"

@@ -41,7 +41,3 @@ class Videos(vanilla.TemplateView):
 
 class Download(vanilla.TemplateView):
     template_name = 'pages/download.html'
-
-
-class Origins(vanilla.TemplateView):
-    template_name = 'pages/origins.html'

@@ -68,6 +68,10 @@ a:hover {
     }
 }
 
+#lightbox .modal-body img {
+    max-width: 100%;
+}
+
 .jumbotron {
     background-color: @gray-darker;
     color: #fff;
@@ -170,9 +174,12 @@ body.index {
         .thumbnail {
             background-color: @gray-dark;
             border-color: @accent-gray;
-            display: inline;
+            display: inline-block;
             margin: 0 10px;
-            max-height: 120px;
+
+            img {
+                max-height: 120px;
+            }
         }
 
         p:last-child {

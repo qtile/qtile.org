@@ -12,9 +12,7 @@
         <div class="row">
             <div class="col-md-5 screenshot">
                 <p class="text-center">
-                    <a href="{% static 'img/screenshots/default.png' %}">
-                        <img src="{% static 'img/screenshots/default.png' %}" alt="screenshot" class="thumbnail" />
-                    </a>
+                    <img src="{% static 'img/screenshots/default.png' %}" alt="screenshot" class="thumbnail" />
                 </p>
             </div>
             <div class="col-md-7 config">
@@ -68,9 +66,7 @@
         <div class="row">
             {% for screenshot in screenshots %}
                 <div class="col-md-3">
-                    <a href="{% static screenshot.image %}">
-                        <img src="{% static screenshot.thumbnail %}" class="thumbnail img-responsive" />
-                    </a>
+                    {% include "_includes/screenshot-inline.html" with screenshot=screenshot only %}
                 </div>
             {% endfor %}
         </div>
@@ -161,4 +157,5 @@
     </script>
 
     <script type="text/javascript">init_demo();</script>
+    <script type="text/javascript">init_screenshot_lightbox();</script>
 {% endblock %}

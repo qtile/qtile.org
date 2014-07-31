@@ -104,6 +104,7 @@
     {% compress js %}
         <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'bootstrap/js/collapse.js' %}"></script>
+        <script type="text/javascript" src="{% static 'bootstrap/js/modal.js' %}"></script>
         <script type="text/javascript" src="{% static 'bootstrap/js/tooltip.js' %}"></script>
         <script type="text/javascript" src="{% static 'imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'masonry/dist/masonry.pkgd.min.js' %}"></script>
@@ -118,6 +119,22 @@
             })(jQuery);
         </script>
     {% endcompress %}
+
+    <div id="lightbox" class="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
     {% block javascript %}{% endblock %}
 </body>
 </html>

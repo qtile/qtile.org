@@ -19,16 +19,7 @@
     <div class="row gallery">
         {% for screenshot in screenshots %}
             <div class="gallery-item width-{{ screenshot.screens }}">
-                <div class="thumbnail">
-                    <a href="{% static screenshot.image %}">
-                        <img src="{% static screenshot.thumbnail %}" class="img-responsive" />
-                    </a>
-                    {% if screenshot.config %}
-                        <div class="caption text-center">
-                            <a href="{{ screenshot.config }}">View Config</a>
-                        </div>
-                    {% endif %}
-                </div>
+                {% include "_includes/screenshot-inline.html" with screenshot=screenshot show_config=1 only %}
             </div>
         {% endfor %}
     </div>
@@ -65,4 +56,5 @@
 
 {% block javascript %}
     <script type="text/javascript">init_screenshots();</script>
+    <script type="text/javascript">init_screenshot_lightbox();</script>
 {% endblock %}

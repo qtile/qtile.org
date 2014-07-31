@@ -19,6 +19,9 @@
 - image: img/screenshots/jasoneastman-greyish.png
   config: null
 
+- image: img/screenshots/jasoneastman-lighter.png
+  config: null
+
 - image: img/screenshots/ldlework.png
   config: https://github.com/dustinlacewell/dustinlacewell-dotfiles/tree/master/qtile
 

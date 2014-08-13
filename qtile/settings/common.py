@@ -8,6 +8,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
+import datetime
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -135,3 +136,6 @@ QTILE_DOWNLOAD = os.environ.get('QTILE_DOWNLOAD',
 
 QTILE_RELEASE_NOTES = os.environ.get('QTILE_RELEASE_NOTES',
     'http://docs.qtile.org/en/latest/releases/{0}.html'.format(QTILE_VERSION))
+
+QTILE_RELEASE_DATE = datetime.datetime.strptime(
+    os.environ.get('QTILE_RELEASE_DATE', '2014-03-30'), '%Y-%m-%d').date()

@@ -16,7 +16,7 @@
 
 {% block content %}
     <h2><span class="fa fa-fw fa-star"></span> Get the latest official version</h2>
-    <p>The latest official version is {{ settings.QTILE_VERSION }}.</p>
+    <p>Qtile v{{ settings.QTILE_VERSION }} was released on {{ settings.QTILE_RELEASE_DATE|date }}.</p>
     <p>You can download it from Github:</p>
     <p><a href="{{ settings.QTILE_DOWNLOAD }}">{{ settings.QTILE_DOWNLOAD }}</a></p>
 

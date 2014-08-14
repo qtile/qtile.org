@@ -52,16 +52,20 @@ a:hover {
         color: #fff;
     }
 
-    .latest-release {
+    .current-release {
         color: #eee;
-        margin-top: ((@navbar-height - @line-height-computed) / 6);
+        margin: 5px 0;
 
         @media (min-width: @screen-sm-min) {
             text-align: right;
         }
 
-        li:last-child {
-            padding-right: 0;
+        ul {
+            margin-bottom: 0;
+
+            li:last-child {
+                padding-right: 0;
+            }
         }
 
         a {

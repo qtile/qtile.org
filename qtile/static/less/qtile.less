@@ -51,6 +51,27 @@ a:hover {
     li.active .fa, a:hover .fa {
         color: #fff;
     }
+
+    .latest-release {
+        color: #eee;
+        margin-top: ((@navbar-height - @line-height-computed) / 6);
+
+        @media (min-width: @screen-sm-min) {
+            text-align: right;
+        }
+
+        li:last-child {
+            padding-right: 0;
+        }
+
+        a {
+            color: lighten(@accent-color, 20%);
+
+            &:hover {
+                color: lighten(@accent-color, 30%);
+            }
+        }
+    }
 }
 
 .video {
@@ -186,6 +207,17 @@ body.index {
             margin-bottom: 0;
         }
     }
+
+    section.hooks {
+        h1 {
+            margin-bottom: 20px;
+
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
+    }
+
 
     section.community {
         .fa-comments-o { color: #990; }

@@ -127,6 +127,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'qtile.context_processors.context',
 )
 
+
 # Qtile Stuff
 
 QTILE_VERSION = os.environ.get('QTILE_VERSION', '0.7.0')
@@ -139,3 +140,8 @@ QTILE_RELEASE_NOTES = os.environ.get('QTILE_RELEASE_NOTES',
 
 QTILE_RELEASE_DATE = datetime.datetime.strptime(
     os.environ.get('QTILE_RELEASE_DATE', '2014-03-30'), '%Y-%m-%d').date()
+
+
+# Google Analytics Tracking ID
+
+GOOGLE_ANALYTICS_ID = os.environ.get('GOOGLE_ANALYTICS_ID')

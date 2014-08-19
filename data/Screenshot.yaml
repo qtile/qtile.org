@@ -49,8 +49,11 @@
 - image: img/screenshots/pavel.png
   config: null
 
+- image: img/screenshots/roger.png
+  config: https://github.com/qtile/qtile-examples/tree/master/user-configs/roger
+
 - image: img/screenshots/rxcomm.png
-  config: https://github.com/qtile/qtile-examples/blob/master/user-configs/rxcomm/config.py.dx
+  config: https://github.com/qtile/qtile-examples/blob/master/user-configs/rxcomm
 
 - image: img/screenshots/tian.png
   config: null

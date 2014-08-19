@@ -111,12 +111,3 @@ auto_fullscreen = True
 def main(qtile):
     ''' This function is called when Qtile starts. '''
     pass
-
-
-@hook.subscribe.client_new
-def floating_dialogs(window):
-    ''' Set dialog windows to floating. '''
-    dialog = window.window.get_wm_type() == 'dialog'
-    transient = window.window.get_wm_transient_for()
-    if dialog or transient:
-        window.floating = True

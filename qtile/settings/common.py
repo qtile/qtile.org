@@ -136,7 +136,7 @@ QTILE_DOWNLOAD = os.environ.get('QTILE_DOWNLOAD',
     'https://github.com/qtile/qtile/archive/v{0}.tar.gz'.format(QTILE_VERSION))
 
 QTILE_RELEASE_DATE = datetime.datetime.strptime(
-    os.environ.get('QTILE_RELEASE_DATE', '2014-01-20'), '%Y-%m-%d').date()
+    os.environ.get('QTILE_RELEASE_DATE', '2015-01-20'), '%Y-%m-%d').date()
 
 
 # Google Analytics Tracking ID

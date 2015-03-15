@@ -69,3 +69,6 @@
 
 - image: img/screenshots/demo.png
   config: null
+
+- image: img/screenshots/drei.png
+  config: null

@@ -130,13 +130,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 # Qtile Stuff
 
-QTILE_VERSION = os.environ.get('QTILE_VERSION', '0.9.1')
+QTILE_VERSION = os.environ.get('QTILE_VERSION', '0.10.4')
 
 QTILE_DOWNLOAD = os.environ.get('QTILE_DOWNLOAD',
     'https://github.com/qtile/qtile/archive/v{0}.tar.gz'.format(QTILE_VERSION))
 
 QTILE_RELEASE_DATE = datetime.datetime.strptime(
-    os.environ.get('QTILE_RELEASE_DATE', '2015-02-13'), '%Y-%m-%d').date()
+    os.environ.get('QTILE_RELEASE_DATE', '2016-01-19'), '%Y-%m-%d').date()
 
 
 # Google Analytics Tracking ID

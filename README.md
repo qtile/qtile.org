@@ -36,7 +36,7 @@ Setup Instructions
 Contributing
 ------------
 
-Contributing is easy: fork this repository on Github, make your changes, and make a pull request.
+Contributing is easy: fork this repository on GitHub, make your changes, and make a pull request.
 
 ### Screenshots (& Configurations)
 

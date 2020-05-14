@@ -72,3 +72,7 @@
 
 - image: img/screenshots/drei.png
   config: null
+
+- image: img/screenshots/longerhv.png
+  config: https://gitlab.com/LongerHV/.dotfiles/blob/master/.config/qtile/config.py
+

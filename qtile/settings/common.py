@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import datetime
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-PROJECT_DIR = os.sep.join((os.path.abspath(__file__).split(os.sep))[:-2])
-BASE_DIR = os.path.dirname(PROJECT_DIR)
+from unipath import Path
+
+# Build paths inside the project like this: BASE_DIR.child(...)
+BASE_DIR = Path(__file__).absolute().ancestor(3)
+PROJECT_DIR = Path(__file__).absolute().ancestor(2)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -45,7 +47,7 @@ INSTALLED_APPS = [
     'raven.contrib.django.raven_compat',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
@@ -92,11 +94,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_DIR, 'static'),
+    PROJECT_DIR.child('static'),
 ]
-
-# if 'collectstatic' not in sys.argv:
-STATICFILES_DIRS.append(os.path.join(BASE_DIR, 'public/bower_components'))
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -105,7 +104,7 @@ STATICFILES_FINDERS = [
     'compressor.finders.CompressorFinder',
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'public/static')
+STATIC_ROOT = BASE_DIR.child('public', 'static')
 
 # django-compressor
 # http://django-compressor.readthedocs.org
@@ -113,19 +112,26 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'public/static')
 COMPRESS_ENABLED = False
 COMPRESS_OFFLINE = True
 COMPRESS_PRECOMPILERS = (
-    ('text/less', 'lessc -x {infile} {outfile}'),
+    ('text/less', 'lessc --js -x {infile} {outfile}'),
 )
 
 # Templating
 
-TEMPLATE_DIRS = (os.path.join(PROJECT_DIR, 'templates'),)
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.debug',
-    'django.core.context_processors.request',
-    'django.core.context_processors.static',
-    'qtile.context_processors.context',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [PROJECT_DIR.child('templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.template.context_processors.static',
+                'qtile.context_processors.context',
+            ],
+        },
+    },
+]
 
 
 # Qtile Stuff

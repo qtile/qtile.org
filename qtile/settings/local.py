@@ -5,7 +5,7 @@ COMPRESS_ENABLED = False
 DJANGO_DEBUG_TOOLBAR = True
 if DJANGO_DEBUG_TOOLBAR:
     INSTALLED_APPS.append('debug_toolbar')
-    MIDDLEWARE_CLASSES.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 
     DEBUG_TOOLBAR_CONFIG = {
         # 'SHOW_TOOLBAR_CALLBACK': lambda request: True  # request.user.is_superuser

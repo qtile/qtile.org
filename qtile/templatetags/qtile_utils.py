@@ -1,7 +1,7 @@
 from django import template
 from django.conf import settings
 from django.contrib.staticfiles.storage import staticfiles_storage
-from django.core.urlresolvers import resolve, Resolver404
+from django.urls import resolve, Resolver404
 
 register = template.Library()
 

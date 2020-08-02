@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load pygmentify %}
 {% load static %}
+{% load qtile_utils %}
 
 {% block body_class %}index{% endblock %}
 
@@ -17,7 +18,7 @@
             </div>
             <div class="col-md-7 config">
                 {% pygment %}
-                    <pre lang="python">{% ssi config_path %}</pre>
+                    <pre lang="python">{% ssi "config.py" %}</pre>
                 {% endpygment %}
                 <p class="text-center"><a href="https://github.com/qtile/qtile-examples">View more configuration examples on Github</a></p>
             </div>

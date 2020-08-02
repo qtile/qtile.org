@@ -11,8 +11,6 @@ class Index(vanilla.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(Index, self).get_context_data(**kwargs)
         context.update({
-            'config_path': os.path.join(settings.PROJECT_DIR,
-                'includes/config.py'),
             'screenshots': sorted(models.Screenshot.load(),
                 key=lambda x: random.random())[:4],
             'homepage': True,

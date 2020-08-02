@@ -14,16 +14,12 @@ from qtile import models
 class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         for screenshot in models.Screenshot.load():
-            print screenshot.name
-            img = Image.open(staticfiles_storage.path(screenshot.path))
-
-            # Ensure we're in RGB
-            if img.mode not in ('L', 'RGB'):
-                img = img.convert('RGB')
+            print(screenshot.name)
 
             # Magic!
             # The thumbnail is only limited by width, so use
             # a larger-than-needed height.
+            img = screenshot.img.copy()
             img.thumbnail((200 * screenshot.screens, 1000), Image.ANTIALIAS)
 
             # Save the thumbnail to a tmpfile

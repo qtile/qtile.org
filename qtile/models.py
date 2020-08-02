@@ -1,9 +1,12 @@
 import os
 import yaml
-from cached_property import cached_property
+
 from django.conf import settings
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.core.files.images import ImageFile
+from django.utils.functional import cached_property
+
+from PIL import Image
 from unipath import Path
 
 
@@ -36,11 +39,19 @@ class Model(object):
 
 
 class Screenshot(Model):
-    order = 'image'
+    order = 'name'
+
+    def __init__(self, data):
+        super().__init__(data)
+        self._data['image'] = Path(self._data['image'])
+        print(self.name, self.screens)
 
     @cached_property
-    def image(self):
-        return Path(self._data['image'])
+    def img(self):
+        img = Image.open(self.path)
+        if img.mode not in ('L', 'RGB'):
+            img = img.convert('RGB')
+        return img
 
     @cached_property
     def path(self):
@@ -57,13 +68,13 @@ class Screenshot(Model):
 
     @cached_property
     def screens(self):
-        if self.file.width / self.file.height > 1:
+        if (self.img.width / self.img.height) > 2:
             return 2
         return 1
 
     @cached_property
     def thumbnail(self):
-        return Path(self.image.parent, 'thumb', self.image.name)
+        return Path(self.image.parent, 'thumb', self.name)
 
 
 class Video(Model):

@@ -7,7 +7,6 @@ echo "-----> Running release process"
 
 # Install front-end dependencies
 echo "-----> Installing front-end components"
-npm install -g bower less
 bower install --config.interactive=false
 
 # Compile static assets

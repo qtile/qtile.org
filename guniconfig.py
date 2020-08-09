@@ -1,11 +1,16 @@
+import multiprocessing
 import os
-import sys
 
 
-def when_ready(server):
-    dir = os.path.dirname(os.path.abspath(__file__))
-    if dir not in sys.path:
-        sys.path.append(dir)
+def env(key, default=None):
+    return os.environ.get(key, default)
 
-    from django.core.management import call_command
-    call_command('validate')
+
+bind = f"0:{env('PORT', '8000')}"
+
+preload_app = True
+
+max_requests = env("GUNICORN_MAX_REQUESTS", 1000)
+max_requests_jitter = env("GUNICORN_MAX_REQUESTS_JITTER", 100)
+
+workers = env("GUNICORN_WORKERS", multiprocessing.cpu_count() * 2)

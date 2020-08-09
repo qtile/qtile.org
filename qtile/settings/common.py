@@ -95,6 +95,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     PROJECT_DIR.child('static'),
+    BASE_DIR.child('public', 'bower_components'),
 ]
 
 STATICFILES_FINDERS = [

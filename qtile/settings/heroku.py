@@ -15,8 +15,5 @@ COMPRESS_ENABLED = True
 
 # Sentry - error logging service
 if 'SENTRY_DSN' in os.environ:
-    RAVEN_CONFIG = {
-        'dsn': os.environ['SENTRY_DSN'],
-        'register_signals': True,
-    }
-    RAVEN_PUBLIC_DSN = 'https://public@{0}'.format(RAVEN_CONFIG['dsn'].split('@')[1])
+    import sentry_sdk
+    sentry_sdk.init(os.environ['SENTRY_DSN'])

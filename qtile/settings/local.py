@@ -1,6 +1,6 @@
 from .common import *
 
-COMPRESS_ENABLED = False
+COMPRESS_ENABLED = True
 
 DJANGO_DEBUG_TOOLBAR = True
 if DJANGO_DEBUG_TOOLBAR:

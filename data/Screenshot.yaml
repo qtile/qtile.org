@@ -75,4 +75,6 @@
 
 - image: img/screenshots/longerhv.png
   config: https://gitlab.com/LongerHV/.dotfiles/blob/master/.config/qtile/config.py
-
+  
+- image: img/screenshots/david35mm.png
+  config: https://github.com/david35mm/.files/tree/main/.config/qtile

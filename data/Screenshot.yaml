@@ -78,3 +78,6 @@
   
 - image: img/screenshots/david35mm.png
   config: https://github.com/david35mm/.files/tree/main/.config/qtile
+
+- image: img/screenshots/justinesmithies.png
+  config: https://github.com/justinesmithies/dotfiles/tree/master/.config/qtile

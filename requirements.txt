@@ -10,7 +10,7 @@ django_compressor==2.4
 
 gevent==20.6.2
 gunicorn==20.0.4
-Pillow==8.1.1
+Pillow==8.2.0
 pygments==2.6.1
 pylibmc==1.6.1
 python-dotenv==0.13.0

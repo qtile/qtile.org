@@ -81,6 +81,6 @@
 
 - image: img/screenshots/justinesmithies.png
   config: https://github.com/justinesmithies/dotfiles/tree/master/.config/qtile
-  
+
 - image: img/screenshots/barbarossa93.png
   config: https://github.com/Barbarossa93/Genome/blob/main/.config/qtile/config.py

@@ -1,4 +1,4 @@
-Django==3.1.13
+Django==3.1.14
 dj-static==0.0.6
 django-debug-toolbar==2.2
 django-heroku-memcacheify==1.0.0

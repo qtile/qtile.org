@@ -14,6 +14,6 @@ Pillow==8.3.2
 pygments==2.7.4
 pylibmc==1.6.1
 python-dotenv==0.13.0
-PyYAML==5.3.1
+PyYAML==5.4
 sentry-sdk==0.16.3
 Unipath==1.1

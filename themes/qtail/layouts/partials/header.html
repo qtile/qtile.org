@@ -1,0 +1,31 @@
+<header>    
+    <!-- Navbar -->
+    <nav class="max-w-full p-4 bg-[#1B1B1B] text-[#F9F9F9]">
+  
+      <div class="mx-8 lg:mx-80 flex flex-col gap-1 items-center lg:flex-row">
+          <a href="/">
+              <img 
+                  class="rounded p-2 bg-[#215578]" 
+                  src="{{ $.Site.Params.qtileLogo }}" 
+                  alt="Logo of {{ .Site.Title }}" height="48" width="64"
+              />
+          </a>
+          <!-- Manages the navbar. For more information - https://gohugo.io/templates/menu-templates/ -->
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+              <a class="px-2 py-1 rounded hover:bg-[#404040]
+          
+                  {{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} 
+                      active 
+                  {{ end }}" 
+          
+                  href="{{ .URL }}" title="{{ .Title }}"> {{ .Name }}
+          
+              </a>
+          
+          {{ end }}
+      </div>
+  
+        
+    </nav>
+  </header>

@@ -1,0 +1,59 @@
+<main>
+    <article class="max-w-full text-lg">      
+        <header class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
+            <div class="mx-8 lg:mx-80 py-8">
+                <h1 class="text-6xl mx-">{{ .Title }}</h1>
+                <p class="text-lg">{{ .Params.description }}</p>
+            </div>
+        </header>
+
+        <section class="flex flex-col gap-4 mx-8 lg:mx-80 lg:flex-row my-2 py-2">
+            <div class="p-4 border rounded w-2/5 h-48">
+                <h4 class="text-xl font-semibold">See more config examples</h4>
+                <p>Be sure to check out qtile-examples on Github for more examples of how to configure Qtile.</p>
+            </div>
+            <div class="p-4 border rounded w-2/5 h-48">
+                <h4 class="text-xl font-semibold">Add your screenshot</h4>
+                <p>Want to show off how you've customized Qtile?</p>
+                <p>Send a pull request to qtile.org on Github, and we'll get your screenshot and config added.</p>
+            </div>
+        </section>
+    
+        <section class="mx-8 lg:mx-80 py-4">
+            <ul>
+                <li> 
+                    <div class="flex flex-col flex-wrap lg:flex-row gap-4 place-items-center">
+                        
+                        <!-- Iterate through screenshots and show them as a grid -->
+                        {{ range .Pages }}
+                            
+                            <div class="h-64 w-80 p-2 border shadow rounded">
+                                
+                                <!-- If "screenshot:" frontmatter is set in the markdown file, display image -->
+                                {{ if .Params.screenshot }}
+                                    
+                                    <!-- Find image from "screenshot" frontmatter(.Params) provided from subsequent markdown file. -->
+                                    {{ $image := resources.GetMatch .Params.screenshot }}
+                                    <!-- Use Hugo image processing method of "Fit" to fit the image in the thumbnail  -->
+                                    {{ $image := $image.Fit "320x256 webp"}}
+                                    <img class="w-full h-[75%] rounded aspect-square 
+                                        hover:scale-150 hover:transition hover:ease-linear hover:delay-100 hover:border-2 hover:border-blue-600" 
+                                        src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}" height="24" width="24"
+                                    >
+                                
+                                {{ end }}
+                                <!-- Buttons to the links for viewing the configuration file and screenshot  -->
+                                <div class="p-2 grid h-[25%] max-w-full grid-flow-col gap-2 items-center">
+                                    <a class="p-2 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="{{ .Params.config }}">Config</a>
+                                    <a class="p-1.5 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="{{ .Permalink }}">Screenshot</a>
+                                </div>
+                            </div>
+                        
+                        {{ end }}
+                    
+                    </div>      
+                </li>
+            </ul>
+        </section>
+    </article>
+</main>

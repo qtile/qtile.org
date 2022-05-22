@@ -1,3 +1,46 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL             = ""
+languageCode        = "en-us"
+title               = "Qtile"
+theme               = "qtail"
+
+sectionPagesMenu    = "main"
+
+[permalinks]
+    posts           = "posts/:month/:year/:title/"
+
+
+[menu]
+    
+    [[menu.main]]
+        identifier  = "screenshots"
+        name        = "Screenshots"
+        url         = "/screenshots/"
+        weight      = 2
+    
+    [[menu.main]]
+        identifier  = "videos"
+        name        = "Videos"
+        url         = "/videos/"
+        weight      = 3
+
+    [[menu.main]]
+        identifier  = "docs"
+        name        = "Documentation"
+        url         = "http://docs.qtile.org/"
+        weight      = 4
+
+    [[menu.main]]
+        identifier  = "issues"
+        name        = "Issues"
+        url         = "https://github.com/qtile/qtile/issues/"
+        weight      = 5
+    
+    [[menu.main]]
+        identifier  = "github"
+        name        = "GitHub"
+        url         = "https://github.com/qtile/qtile/"
+        weight      = 6
+    
+
+[params]    
+    qtileLogo           = "/images/qtile-logo-white.webp"

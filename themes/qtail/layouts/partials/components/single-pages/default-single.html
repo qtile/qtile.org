@@ -1,0 +1,16 @@
+<main>
+    <article class="max-w-full h-auto">
+        <header class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
+            <div class="mx-8 lg:mx-80 py-8">
+                <h1 class="text-6xl mx-">{{ .Title }}</h1>
+                <p class="text-lg">{{ .Params.description }}</p>
+            </div>
+        </header>
+        
+        
+        <section class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
+            {{ .Content }}
+        </section>
+    
+    </article>
+</main>

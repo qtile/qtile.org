@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+    {{ if eq .Section "screenshots" }}
+        
+        <!-- Load list template for projects section -->
+        {{- partial "components/list-pages/screenshots-list.html" . -}}
+    
+    {{ else }}
+    
+        <!-- Load default list template -->
+        {{ partial "components/list-pages/default-list.html" . }}
+    
+    {{ end }}
+
+{{ end }}

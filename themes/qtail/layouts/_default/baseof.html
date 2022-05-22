@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Loads the head partial template. -->
+    <head>{{ partial "head.html" . }}</head>
+
+  
+    <body class="max-w-full min-w-full">   
+        
+        <!-- Loads the header template. -->
+        <header>
+            <section>{{ partial "header.html" . }}</section>
+        </header> 
+        
+        <!-- Loads the main block of a markdown file. -->
+        <article>
+            <section>{{- block "main" . }}{{- end }}</section>
+        </article>
+
+
+        <!-- Loads the footer template. -->
+        <section>{{ partial "footer.html" . }}</section>
+
+    </body>
+</html>

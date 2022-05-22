@@ -1,0 +1,30 @@
+<main>
+  <article class="text-lg">
+      
+      <header>
+          <h2 class="font-semibold pt-4 my-0 not-prose">
+              {{ .Title }}
+          </h2>
+      </header>
+  
+      <section>
+          <ul class="p-0 m-0 list-none not-prose">
+              <li>
+              
+                  <!-- Iterates through pages and diplays it as links in the order of publish date and the title of the page. -->
+                  {{ range .Pages }}
+                  
+                      <a href="{{ .Permalink }}">
+                          <div class="py-2 hover:text-blue-600">
+                              <span class="text-xl underline decoration-2">{{ .Title }}</span><br>
+                              <span class="text-sm uppercase">{{ .Date.Format "January 2, 2006" }}</span>
+                          </div>
+                      </a>
+              
+                  {{ end }}
+              
+              </li>
+          </ul>
+      </section>
+  </article>
+</main>

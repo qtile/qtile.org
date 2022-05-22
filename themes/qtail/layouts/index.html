@@ -1,0 +1,141 @@
+{{ define "main" }}
+
+    <section class="bg-[#222222] max-w-full h-auto lg:h-[60vh] py-8">
+        
+        <div class="mx-8 lg:mx-80 text-[#FDFDFE]">
+            <img class="py-4 font-semibold mx-2 p-2" src="/images/qtile-logo-white.webp">
+            
+            <!-- Description is fetched from home.md -->
+            {{ with .Site.GetPage "home.md" }}
+                
+                <h3 class="text-2xl">{{ .Params.description }}</h3>
+    
+            {{ end }}
+            
+            <!-- Section for screenshot and example configuration -->
+            <div class="grid grid-flow-row lg:grid-flow-col gap-4 h-auto ">
+        
+                <!-- Image of Qtile -->
+                <img class="h-80 w-auto border-4 border-[#404040] hover:border-gray-600" src="/images/qtile.png">
+        
+                <!-- Example configuration file of Qtile is fetched from home.md file -->
+                <span class="h-80 w-[80%] overflow-y-auto border-4 border-[#404040] hover:border-gray-600">
+                    
+                    {{ with .Site.GetPage "home.md" }}
+                
+                        {{ .Content }}
+                
+                    {{ end }}
+                
+                </span>
+            </div>
+            <span><a href="https://github.com/qtile/qtile-examples">View more configuration examples on Github</a></span>
+        </div>
+    </section>
+
+    <!-- Benefits of using a twm section -->
+    <section class="mx-8 lg:mx-80 py-4 my-4">
+        <h1 class="my-2 text-4xl grid justify-items-center">Benefits of using a tiling window manager</h1>
+    
+        <div class="grid grid-flow-row lg:grid-cols-3 gap-4">
+            <div class="my-5">
+                <span class="flex justify-center py-2"><img class="h-12 w-12" src="/images/fa-icons/bolt-solid.svg" /></span>
+                <span class="text-xl font-semibold">Optimize your workflow</span>
+                <span>by configuring your environment to fit how <em>you</em> work.</span>
+            </div>
+            
+            <div class="my-5">
+                <span class="flex justify-center py-2"><img class=" h-12 w-12" src="/images/fa-icons/table-columns-solid.svg" /></span>
+                <span class="text-xl font-semibold">Efficiently use screen real-estate</span>
+                <span>by automatically arranging windows with minimal visual cruft.</span>
+            </div>
+            
+            <div class="my-2">
+                <span class="flex justify-center py-2"><img class=" h-12 w-12" src="/images/fa-icons/kit-medical-solid.svg" /></span>
+                <span class="text-xl font-semibold">Save your wrists from RSI</span>
+                <span>by ditching the mouse and driving with the keyboard.</span>
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- Why Qtile? section -->
+    <section class="mx-8 lg:mx-80 py-4 my-4">
+        
+        <h1 class="my-2 text-4xl grid justify-items-center">Why Qtile?</h1>
+    
+        <div class="grid grid-flow-row lg:grid-cols-2 gap-4">
+            <div class="my-2 text-xl">
+                <span class="text-xl font-semibold">Qtile is simple, small, and extensible.</span>
+                <span>It's easy to write your own layouts, widgets, and built-in commands.</span>
+            </div>
+            
+            <div class="my-2">
+                <span class="text-xl font-semibold">Qtile is written and configured entirely in Python.</span>
+                <span>Leverage the full power and flexibility of the language to make it fit your needs.</span>
+            </div>
+            
+            <div class="my-2">
+                <span class="text-xl font-semibold">The Qtile community is active and growing.</span>
+                <span>There's always someone to lend a hand when you need help.</span>
+            </div>
+
+            <!--  -->
+            <div class="my-2">
+                <span class="text-xl font-semibold">Qtile is free and open-source software.</span>
+                <span>Distributed under the permissive <a class="text-[#215578]" href="http://docs.qtile.org/en/latest/manual/license.html">MIT license</a>.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Screenshots section -->
+    <section class="bg-[#222222] max-w-full h-40">
+        <p class="mx-8 lg:mx-80 text-[#FDFDFE]">Screenshot section will be here!</p>
+    </section>
+
+
+    <section class="mx-8 py-4 my-4 lg:mx-80 w-max grid grid-flow-row gap-16 lg:grid-flow-col">
+        
+        <div class="">
+            <h1 class="text-3xl">The Qtile community</h1>
+            <div class="flex flex-row gap-4 items-center my-2 py-1">
+                <img class="h-8 w-8" src="/images/fa-icons/comments-regular.svg" alt="Two dialogue boxes which meants comments section." />
+                <a href="irc://irc.oftc.net:6667/qtile" class="text-2xl text-[#215578]">IRC Channel</a>
+                <p>irc.oftc.net/#qtile</p>
+            </div>
+            
+            <div class="flex flex-row gap-4 items-center my-2 py-1">
+                <img class="h-8 w-8" src="/images/fa-icons/envelope-regular.svg" alt="Two dialogue boxes which meants comments section." />
+                <a href="qtile-dev@googlegroups.com" class="text-2xl text-[#215578]">Mailing list</a>
+                <p>irc.oftc.net/#qtile</p>
+            </div>
+
+            <div class="flex flex-row gap-4 items-center my-2 py-1">
+                <img class="h-8 w-8" src="/images/fa-icons/twitter-brands.svg" alt="Two dialogue boxes which meants comments section." />
+                <a href="http://twitter.com/Qtile" class="text-2xl text-[#215578]">Twitter</a>
+                <p>irc.oftc.net/#qtile</p>
+            </div>
+        </div>
+
+        <div class="">
+            <h1 class="text-4xl">Getting involved</h1>
+            <div class="flex flex-row gap-4 items-center my-2 py-1">
+                <span><img class="h-8 w-8" src="/images/fa-icons/bug-solid.svg" alt="Two dialogue boxes which meants comments section." /></span>
+                <span><a href="irc://irc.oftc.net:6667/qtile" class="text-2xl text-[#215578]">IRC Channel</a></span>
+                <span><p>irc.oftc.net/#qtile</p></span>
+            </div>
+            
+            <div class="flex flex-row gap-4 items-center my-2 py-1">
+                <img class="h-8 w-8" src="/images/fa-icons/keyboard-regular.svg" alt="Two dialogue boxes which meants comments section." />
+                <a href="qtile-dev@googlegroups.com" class="text-2xl text-[#215578]">Mailing list</a>
+                <p>irc.oftc.net/#qtile</p>
+            </div>
+
+
+        </div>
+    
+    </section>
+
+
+{{ end }}

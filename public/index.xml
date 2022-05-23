@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qtile</title>
+    <link>/</link>
+    <description>Recent content on Qtile</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 May 2022 19:36:22 +0530</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Justinsmithies</title>
+      <link>/screenshots/justinsmithies/</link>
+      <pubDate>Sun, 08 May 2022 19:36:22 +0530</pubDate>
+      
+      <guid>/screenshots/justinsmithies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jasoneastman Lighter</title>
+      <link>/screenshots/jasoneastman-lighter/</link>
+      <pubDate>Sun, 08 May 2022 19:24:17 +0530</pubDate>
+      
+      <guid>/screenshots/jasoneastman-lighter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cjbarnes18</title>
+      <link>/screenshots/cjbarnes18/</link>
+      <pubDate>Fri, 06 May 2022 16:09:10 +0530</pubDate>
+      
+      <guid>/screenshots/cjbarnes18/</guid>
+      <description>This</description>
+    </item>
+    
+    <item>
+      <title>Aeronotix2</title>
+      <link>/screenshots/aeronotix2/</link>
+      <pubDate>Mon, 02 May 2022 13:39:06 +0530</pubDate>
+      
+      <guid>/screenshots/aeronotix2/</guid>
+      <description>what?</description>
+    </item>
+    
+    <item>
+      <title>Aeronotix</title>
+      <link>/screenshots/aeronotix/</link>
+      <pubDate>Mon, 02 May 2022 13:26:38 +0530</pubDate>
+      
+      <guid>/screenshots/aeronotix/</guid>
+      <description>That</description>
+    </item>
+    
+    <item>
+      <title>Videos</title>
+      <link>/videos/</link>
+      <pubDate>Sat, 30 Apr 2022 19:15:01 +0530</pubDate>
+      
+      <guid>/videos/</guid>
+      <description>   PyCon 2011 Qtile Lightning Talk Friday Afternoon by harrisonishable    </description>
+    </item>
+    
+    <item>
+      <title>Home</title>
+      <link>/home/</link>
+      <pubDate>Sat, 30 Apr 2022 18:34:51 +0530</pubDate>
+      
+      <guid>/home/</guid>
+      <description>from libqtile.config import Key, Screen, Group, Drag, Click  from libqtile.command import lazy  from libqtile import layout, bar, widget   try:  from typing import List # noqa: F401  except ImportError:  pass   mod = &amp;#34;mod4&amp;#34;   keys = [  # Switch between windows in current stack pane  Key([mod], &amp;#34;k&amp;#34;, lazy.layout.down()),  Key([mod], &amp;#34;j&amp;#34;, lazy.layout.up()),   # Move windows up or down in current stack  Key([mod, &amp;#34;control&amp;#34;], &amp;#34;k&amp;#34;, lazy.</description>
+    </item>
+    
+  </channel>
+</rss>

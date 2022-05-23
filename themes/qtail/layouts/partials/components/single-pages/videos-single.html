@@ -1,11 +1,23 @@
 <main>
     <article class="max-w-full h-auto">
+        
         <header class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 py-8">
                 <h1 class="text-6xl mx-">{{ .Title }}</h1>
                 <p class="text-lg">{{ .Params.description }}</p>
             </div>
         </header>
+
+            
+        <!-- Section for the information on how to submit videos to qtile.org -->
+        <section>
+            <div>
+                <h4>Add your video</h4>
+                <p>Did you give a talk about Qtile or make a screencast showing off your config? Send a pull request to qtile.org on GitHub, and we'll get it added!</p>
+            </div>
+        </section>
+        
+
         
         <!-- Markdown file contents -->
         <section class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">

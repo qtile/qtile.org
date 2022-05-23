@@ -1,13 +1,22 @@
 {{ define "main" }}
 
+
+
+    {{ if eq .Section "videos" }}
+    
+        <!-- Load default single page template from /components/single-pages/default-single.html" -->
+        {{- partial "/components/single-pages/videos-single.html" . -}}
+    
+    {{ end }}
+
     <!-- Check if the section is "screenshots" and loads appropriate partial templates -->
     {{ if eq .Section "screenshots" }}
         
         <!-- Load single page template for screenshots section from components/single-pages/screenshots-single.html -->
         {{- partial "components/single-pages/screenshots-single.html" . -}}
-    
+
     {{ else }}
-    
+
         <!-- Load default single page template from /components/single-pages/default-single.html" -->
         {{- partial "components/single-pages/default-single.html" . -}}
     

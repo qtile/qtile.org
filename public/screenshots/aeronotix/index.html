@@ -19,93 +19,96 @@
     <body class="max-w-full min-w-full">   
         
         
-        <header>
             <section><header>    
     
-    <nav class="max-w-full p-4 bg-[#1B1B1B] text-[#F9F9F9]">
-  
-      <div class="mx-8 lg:mx-80 flex flex-col gap-1 items-center lg:flex-row">
-          <a href="/">
-              <img 
-                  class="rounded p-2 bg-[#215578]" 
-                  src="/images/qtile-logo-white.webp" 
-                  alt="Logo of Qtile" height="48" width="64"
-              />
-          </a>
-          
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="/screenshots/" title=""> Screenshots
-          
-              </a>
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="/videos/" title=""> Videos
-          
-              </a>
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="http://docs.qtile.org/" title=""> Documentation
-          
-              </a>
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="https://github.com/qtile/qtile/issues/" title=""> Issues
-          
-              </a>
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="https://github.com/qtile/qtile/" title=""> GitHub
-          
-              </a>
-          
-          
-      </div>
-  
+    <nav class="grid grid-flow-row items-center max-w-full p-4 lg:grid-flow-col 
+        bg-[#1B1B1B] text-[#F9F9F9] border border-b-[#404040]"
+    >
+        
+        <div class="mx-8 lg:mx-80 w-fit h-fit flex flex-col gap-1 items-center lg:flex-row">
+
+            <a href="/">
+                <img 
+                    class="rounded p-2 bg-[#215578] min-w-fit h-12 w-16"
+                    src="/images/qtile-logo-white.webp" 
+                    alt="Logo of Qtile" 
+                    height="48" width="64"
+                />
+            </a>
+            
+            
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="/screenshots/" title=""> Screenshots
+
+                </a>
+                
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="/videos/" title=""> Videos
+
+                </a>
+                
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="http://docs.qtile.org/" title=""> Documentation
+
+                </a>
+                
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="https://github.com/qtile/qtile/issues/" title=""> Issues
+
+                </a>
+                
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="https://github.com/qtile/qtile/" title=""> GitHub
+
+                </a>
+                
+            
+        </div>
+        <div class="mx-8 lg:mx-80 w-64 border border-solid border-white grid justify-items-center">
+            v0.21.0,March 23,2022
+        </div>
         
     </nav>
-  </header></section>
-        </header> 
+</header></section>
         
         
-        <article>
-            <section>
 
-
-
-    
-
-    
     
         
         <main>
     <article class="max-w-full">
-        <header class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
+        <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="max-w-full text-3xl lg:text-6xl">Aeronotix</h1>
+                <h1 class="text-6xl">Aeronotix</h1>
+                    
+                    
+                        
+                        <p class="text-lg">This is some desc</p>
+                    
+                    
+
             </div>
-        </header>
-        
+        </section>
 
         <div class="mx-8 lg:mx-80 py-2">
             
@@ -117,15 +120,25 @@
                     
                     
                     
-                    <img class="rounded"
-                        src="/images/screenshots/aeronotix_hu65f571f787a5baea9bf3b70b34c19034_238057_1920x0_resize_q75_h2_box.webp" alt="This is some desc" height="1080" width="1920">
+                    
+                    
+                    
+                    <img class="rounded" 
+                        src="/images/screenshots/aeronotix_hu65f571f787a5baea9bf3b70b34c19034_238057_1920x0_resize_q75_h2_box.webp" 
+                        alt="This is some desc" 
+                        height="1080" width="1920"
+                    >
+                
                 </div>
             
             
 
             
             <div class="py-2 grid h-[25%] max-w-full grid-flow-col gap-2 items-center">
-                <a class="p-2 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-[#FDFDFE]" href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py">
+                <a class="p-2 h-auto text-center rounded border 
+                    hover:bg-[#215578] hover:text-white hover:border-[#215578]"
+                    href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
+                >
                     View the configuration file
                 </a>
             </div>
@@ -136,7 +149,7 @@
         
         
               
-        <section class="grid grid-flow-row lg:grid-flow-col items-center my-4 py-4 mx-8 lg:mx-80 gap-2">
+        <section class="grid grid-flow-row items-center gap-2 my-4 py-4 mx-8 lg:mx-80 lg:grid-flow-col">
             <span class="max-w-full">
                 
                 
@@ -150,8 +163,10 @@
                 
                     
                     <a class="decoration-2 border border-solid p-2 flex place-content-center rounded 
-                    hover:bg-[#1B1B1B] hover:text-[#FDFDFE]" href="/screenshots/aeronotix2/">
-                            Next screenshot&nbsp;&rarr;
+                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                        href="/screenshots/aeronotix2/"
+                    >
+                        Next screenshot&nbsp;&rarr;
                     </a>                                
                 
                 
@@ -162,8 +177,7 @@
     </article>
 </main>
 
-</section>
-        </article>
+
 
 
         

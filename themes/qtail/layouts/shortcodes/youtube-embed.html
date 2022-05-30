@@ -1,17 +1,17 @@
 <!-- Container for youtube video embeds -->
 <div class="flex flex-col-reverse gap-6 my-8 w-fit lg:flex-row lg:items-center">
     <!-- iframe for youtube video thumbnail. -->
-    <iframe class="flex flex-wrap rounded  h-64 w-96 lg:max-w-4xl
+    <iframe class="flex flex-wrap rounded h-64 w-96 lg:max-w-4xl
         hover:shadow-lg hover:shadow-[#404040]" 
-        type="text/html" width="640" height="385" 
+        type="text/html" width="640" height="385"
         src="https://www.youtube.com/embed/{{ index .Params 0 }}" allowfullscreen frameborder="0"
     >
-        <!--  -->
         {{ index .Params 1 }}
     </iframe>
     <a class="flex text-lg font-semibold max-w-sm lg:hover:underline lg:hover:decoration-2"
         href="https://www.youtube.com/embed/{{ index .Params 0 }}"
-    >
+    >   
+        <!-- Check for the second parameter about title information when youtube shortcode is added -->
         {{ index .Params 1 }}
     </a>
 </div>

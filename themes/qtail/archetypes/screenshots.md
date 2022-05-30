@@ -1,5 +1,5 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+description: "Rices, desktops and everything nice!"
 ---

@@ -19,99 +19,136 @@
     <body class="max-w-full min-w-full">   
         
         
-        <header>
             <section><header>    
     
-    <nav class="max-w-full p-4 bg-[#1B1B1B] text-[#F9F9F9]">
-  
-      <div class="mx-8 lg:mx-80 flex flex-col gap-1 items-center lg:flex-row">
-          <a href="/">
-              <img 
-                  class="rounded p-2 bg-[#215578]" 
-                  src="/images/qtile-logo-white.webp" 
-                  alt="Logo of Qtile" height="48" width="64"
-              />
-          </a>
-          
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="/screenshots/" title=""> Screenshots
-          
-              </a>
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="/videos/" title=""> Videos
-          
-              </a>
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="http://docs.qtile.org/" title=""> Documentation
-          
-              </a>
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="https://github.com/qtile/qtile/issues/" title=""> Issues
-          
-              </a>
-          
-          
-              <a class="px-2 py-1 rounded hover:bg-[#404040]
-          
-                  " 
-          
-                  href="https://github.com/qtile/qtile/" title=""> GitHub
-          
-              </a>
-          
-          
-      </div>
-  
+    <nav class="grid grid-flow-row items-center max-w-full p-4 lg:grid-flow-col 
+        bg-[#1B1B1B] text-[#F9F9F9] border border-b-[#404040]"
+    >
+        
+        <div class="mx-8 lg:mx-80 w-fit h-fit flex flex-col gap-1 items-center lg:flex-row">
+
+            <a href="/">
+                <img 
+                    class="rounded p-2 bg-[#215578] min-w-fit h-12 w-16"
+                    src="/images/qtile-logo-white.webp" 
+                    alt="Logo of Qtile" 
+                    height="48" width="64"
+                />
+            </a>
+            
+            
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="/screenshots/" title=""> Screenshots
+
+                </a>
+                
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="/videos/" title=""> Videos
+
+                </a>
+                
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="http://docs.qtile.org/" title=""> Documentation
+
+                </a>
+                
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="https://github.com/qtile/qtile/issues/" title=""> Issues
+
+                </a>
+                
+            
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+
+                    " 
+
+                    href="https://github.com/qtile/qtile/" title=""> GitHub
+
+                </a>
+                
+            
+        </div>
+        <div class="mx-8 lg:mx-80 w-64 border border-solid border-white grid justify-items-center">
+            v0.21.0,March 23,2022
+        </div>
         
     </nav>
-  </header></section>
-        </header> 
+</header></section>
         
         
-        <article>
-            <section>
 
     
         
         <main>
-    <article class="max-w-full text-lg">      
-        <header class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
+    <article class="max-w-full text-lg">
+        <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="text-6xl mx-">Screenshots</h1>
-                <p class="text-lg"></p>
-            </div>
-        </header>
+                <h1 class="text-6xl">Screenshots</h1>
+                    
+                    
 
+            </div>
+        </section>
+        
         
         <section class="flex flex-col gap-4 mx-8 lg:mx-80 lg:flex-row my-2 py-2">
-            <div class="p-4 border rounded w-2/5 h-48">
-                <h4 class="text-xl font-semibold">See more config examples</h4>
-                <p>Be sure to check out qtile-examples on Github for more examples of how to configure Qtile.</p>
+            <div class="p-4 border rounded px-0 pt-0 mx-0 h-auto lg:w-2/5">
+                <span class="flex flex-row gap-2 px-6 py-2 bg-neutral-100 border-b border-solid">
+                    <img src="/images/fa-icons/cogs-solid.svg" 
+                        alt="cogs solid type font icon from font awesome"
+                        height="20" width="20"
+                    />
+                    <h4 class="text-xl">See more config examples</h4>
+                </span>
+                
+                <p class="text-lg px-6 py-2 h-auto">
+                    Be sure to check out 
+                    <a class="text-[#215578] hover:text-[#102A3C] hover:underline decoration-[#102A3C]" 
+                    href="https://github.com/qtile/qtile-examples"
+                    >
+                        more examples on Github
+                    </a>
+                    on how to configure Qtile.
+                </p>
             </div>
-            <div class="p-4 border rounded w-2/5 h-48">
-                <h4 class="text-xl font-semibold">Add your screenshot</h4>
-                <p>Want to show off how you've customized Qtile?</p>
-                <p>Send a pull request to qtile.org on Github, and we'll get your screenshot and config added.</p>
+
+            <div class="p-4 border rounded px-0 pt-0 mx-0 h-auto lg:w-2/5">
+                <span class="flex flex-row gap-2 px-6 py-2 bg-neutral-100 border-b border-solid">
+                    <img src="/images/fa-icons/table-columns-solid.svg" 
+                    alt="cogs solid type font icon from font awesome"
+                    height="20" width="20"
+                    />
+                    <h4 class="text-xl">Add your screenshot</h4>
+                </span>
+                
+                <p class="text-lg px-6 py-2 h-auto">
+                    Want to show off how you've customized Qtile?
+                </p>
+                <p class="text-lg px-6 py-2 h-auto">
+                    Send a pull request to 
+                    <a class="text-[#215578] hover:text-[#102A3C] hover:underline decoration-[#102A3C]"
+                        href="https://github.com/qtile/qtile.org"
+                    >
+                        qtile.org on GitHub,
+                    </a>
+                    and we'll get your screenshot and config added.
+                </p>
             </div>
         </section>
     
@@ -123,20 +160,32 @@
                         
                         
                             
-                            <div class="h-64 w-80 p-2 border shadow rounded">
+                            <div class="h-64 p-2 border shadow rounded w-80">
+                                
                                 
                                 
                                 
                                 
                                 <div class="p-2 grid h-[25%] max-w-full grid-flow-col gap-2 items-center">
-                                    <a class="p-2 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py">Config</a>
-                                    <a class="p-1.5 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="/screenshots/justinsmithies/">Screenshot</a>
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
+                                    >
+                                        Config
+                                    </a>
+                                    
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="/screenshots/justinsmithies/"
+                                    >
+                                        Screenshot
+                                    </a>
                                 </div>
                             </div>
                         
                         
                             
-                            <div class="h-64 w-80 p-2 border shadow rounded">
+                            <div class="h-64 p-2 border shadow rounded w-80">
                                 
                                 
                                 
@@ -146,21 +195,33 @@
                                     
                                     
                                     <img class="w-full h-[75%] rounded aspect-square 
-                                        hover:scale-150 hover:transition hover:ease-linear hover:delay-100 hover:border-2 hover:border-blue-600" 
+                                        " 
                                         src="/images/screenshots/jasoneastman-lighter_hud2dac44e7f0f186f50d8d9bea73e1375_623139_320x256_fit_q75_h2_box_3.webp" alt="This is some desc" height="24" width="24"
                                     >
                                 
                                 
                                 
+                                
                                 <div class="p-2 grid h-[25%] max-w-full grid-flow-col gap-2 items-center">
-                                    <a class="p-2 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py">Config</a>
-                                    <a class="p-1.5 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="/screenshots/jasoneastman-lighter/">Screenshot</a>
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
+                                    >
+                                        Config
+                                    </a>
+                                    
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="/screenshots/jasoneastman-lighter/"
+                                    >
+                                        Screenshot
+                                    </a>
                                 </div>
                             </div>
                         
                         
                             
-                            <div class="h-64 w-80 p-2 border shadow rounded">
+                            <div class="h-64 p-2 border shadow rounded w-80">
                                 
                                 
                                 
@@ -170,21 +231,33 @@
                                     
                                     
                                     <img class="w-full h-[75%] rounded aspect-square 
-                                        hover:scale-150 hover:transition hover:ease-linear hover:delay-100 hover:border-2 hover:border-blue-600" 
+                                        " 
                                         src="/images/screenshots/cjbarnes18_hu6bc448b61b2a30dd518da1536b49419c_249913_320x256_fit_q75_h2_box.webp" alt="This is some desc" height="24" width="24"
                                     >
                                 
                                 
                                 
+                                
                                 <div class="p-2 grid h-[25%] max-w-full grid-flow-col gap-2 items-center">
-                                    <a class="p-2 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py">Config</a>
-                                    <a class="p-1.5 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="/screenshots/cjbarnes18/">Screenshot</a>
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
+                                    >
+                                        Config
+                                    </a>
+                                    
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="/screenshots/cjbarnes18/"
+                                    >
+                                        Screenshot
+                                    </a>
                                 </div>
                             </div>
                         
                         
                             
-                            <div class="h-64 w-80 p-2 border shadow rounded">
+                            <div class="h-64 p-2 border shadow rounded w-80">
                                 
                                 
                                 
@@ -194,21 +267,33 @@
                                     
                                     
                                     <img class="w-full h-[75%] rounded aspect-square 
-                                        hover:scale-150 hover:transition hover:ease-linear hover:delay-100 hover:border-2 hover:border-blue-600" 
+                                        " 
                                         src="/images/screenshots/aeronotix2_hu2c453f10e1a5a2f37bc5653464f76139_557127_320x256_fit_q75_h2_box.webp" alt="This is some desc" height="24" width="24"
                                     >
                                 
                                 
                                 
+                                
                                 <div class="p-2 grid h-[25%] max-w-full grid-flow-col gap-2 items-center">
-                                    <a class="p-2 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py">Config</a>
-                                    <a class="p-1.5 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="/screenshots/aeronotix2/">Screenshot</a>
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
+                                    >
+                                        Config
+                                    </a>
+                                    
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="/screenshots/aeronotix2/"
+                                    >
+                                        Screenshot
+                                    </a>
                                 </div>
                             </div>
                         
                         
                             
-                            <div class="h-64 w-80 p-2 border shadow rounded">
+                            <div class="h-64 p-2 border shadow rounded w-80">
                                 
                                 
                                 
@@ -218,15 +303,27 @@
                                     
                                     
                                     <img class="w-full h-[75%] rounded aspect-square 
-                                        hover:scale-150 hover:transition hover:ease-linear hover:delay-100 hover:border-2 hover:border-blue-600" 
+                                        " 
                                         src="/images/screenshots/aeronotix_hu65f571f787a5baea9bf3b70b34c19034_238057_320x256_fit_q75_h2_box.webp" alt="This is some desc" height="24" width="24"
                                     >
                                 
                                 
                                 
+                                
                                 <div class="p-2 grid h-[25%] max-w-full grid-flow-col gap-2 items-center">
-                                    <a class="p-2 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py">Config</a>
-                                    <a class="p-1.5 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-white" href="/screenshots/aeronotix/">Screenshot</a>
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
+                                    >
+                                        Config
+                                    </a>
+                                    
+                                    <a class="p-1.5 h-fit text-center rounded border 
+                                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                        href="/screenshots/aeronotix/"
+                                    >
+                                        Screenshot
+                                    </a>
                                 </div>
                             </div>
                         
@@ -239,8 +336,7 @@
     </article>
 </main>
 
-</section>
-        </article>
+
 
 
         

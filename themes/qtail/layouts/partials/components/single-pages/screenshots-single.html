@@ -1,11 +1,17 @@
 <main>
     <article class="max-w-full">
-        <header class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
+        <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="max-w-full text-3xl lg:text-6xl">{{ .Title }}</h1>
+                <h1 class="text-6xl">{{ .Title }}</h1>
+                    
+                    {{ if .Params.description }}
+                        
+                        <p class="text-lg">{{ .Params.description }}</p>
+                    
+                    {{ end }}
+
             </div>
-        </header>
-        
+        </section>
 
         <div class="mx-8 lg:mx-80 py-2">
             
@@ -13,19 +19,29 @@
             {{ if .Params.screenshot }}
     
                 <div class="h-auto w-auto my-6">
+                    
                     <!-- Find image from "screenshot" frontmatter(.Params) provided from the markdown file. -->
                     {{ $image := resources.GetMatch .Params.screenshot }}
-                    <!-- Use Hugo image processing method of "Fit" to fit the image in the thumbnail  -->
-                    {{ $image := $image.Resize "1920x webp "}}
-                    <img class="rounded"
-                        src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}" height="1080" width="1920">
+                    
+                    <!-- Use Hugo image processing method of "Resize" to resize the image in the thumbnail  -->
+                    {{ $image := $image.Resize "1920x webp" }}
+                    
+                    <img class="rounded" 
+                        src="{{ $image.RelPermalink }}" 
+                        alt="{{ .Params.description }}" 
+                        height="1080" width="1920"
+                    >
+                
                 </div>
             
             {{ end }}
 
             <!-- Buttons to the links for viewing the configuration file and screenshot  -->
             <div class="py-2 grid h-[25%] max-w-full grid-flow-col gap-2 items-center">
-                <a class="p-2 h-fit text-center rounded border hover:bg-[#1B1B1B] hover:text-[#FDFDFE]" href="{{ .Params.config }}">
+                <a class="p-2 h-auto text-center rounded border 
+                    hover:bg-[#215578] hover:text-white hover:border-[#215578]"
+                    href="{{ .Params.config }}"
+                >
                     View the configuration file
                 </a>
             </div>
@@ -36,15 +52,17 @@
         <!-- Markdown file's content -->
         <!-- <section class="leading-relaxed text-left mx-8 lg:mx-80">{{ .Content }}</section> -->
               
-        <section class="grid grid-flow-row lg:grid-flow-col items-center my-4 py-4 mx-8 lg:mx-80 gap-2">
+        <section class="grid grid-flow-row items-center gap-2 my-4 py-4 mx-8 lg:mx-80 lg:grid-flow-col">
             <span class="max-w-full">
                 
                 <!-- Check if a previous page is present in the current section and display the link to it if present. -->
                 {{ if .PrevInSection }}
                     
-                    <a class="decoration-2 border border-solid p-2 flex place-content-center rounded hover:bg-[#1B1B1B] hover:text-[#FDFDFE]"  
-                        href="{{ .PrevInSection.Permalink }}">
-                            &larr;&nbsp;Previous screenshot
+                    <a class="decoration-2 border border-solid p-2 flex place-content-center rounded 
+                        hover:bg-[#215578] hover:text-white hover:border-[#215578]"  
+                        href="{{ .PrevInSection.Permalink }}"
+                    >
+                        &larr;&nbsp;Previous screenshot
                     </a>
                 
                 {{ end }}
@@ -57,8 +75,10 @@
                 {{ if .NextInSection }}
                     
                     <a class="decoration-2 border border-solid p-2 flex place-content-center rounded 
-                    hover:bg-[#1B1B1B] hover:text-[#FDFDFE]" href="{{ .NextInSection.Permalink }}">
-                            Next screenshot&nbsp;&rarr;
+                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                        href="{{ .NextInSection.Permalink }}"
+                    >
+                        Next screenshot&nbsp;&rarr;
                     </a>                                
                 
                 {{ end }}

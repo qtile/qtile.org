@@ -44,3 +44,5 @@ sectionPagesMenu    = "main"
 
 [params]    
     qtileLogo           = "/images/qtile-logo-white.webp"
+    disableKinds        = "section"
+    currentRelease      = "v0.21.0,March 23,2022"

@@ -8,14 +8,10 @@
     <body class="max-w-full min-w-full">   
         
         <!-- Loads the header template. -->
-        <header>
             <section>{{ partial "header.html" . }}</section>
-        </header> 
         
         <!-- Loads the main block of a markdown file. -->
-        <article>
-            <section>{{- block "main" . }}{{- end }}</section>
-        </article>
+        {{- block "main" . }}{{- end }}
 
 
         <!-- Loads the footer template. -->

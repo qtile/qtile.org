@@ -5,10 +5,10 @@
     <head>{{ partial "head.html" . }}</head>
 
   
-    <body class="max-w-full min-w-full">   
+    <body class="">   
         
         <!-- Loads the header template. -->
-            <section>{{ partial "header.html" . }}</section>
+            <header>{{ partial "header.html" . }}</header>
         
         <!-- Loads the main block of a markdown file. -->
         {{- block "main" . }}{{- end }}

@@ -5,10 +5,15 @@
         <!-- Load list template for projects section -->
         {{- partial "components/list-pages/screenshots-list.html" . -}}
     
-    {{ else }}
+    {{ else if eq .Section "videos" }}
+
+        <!-- Load videos list template -->
+        {{- partial "components/list-pages/videos-list.html" . -}}
     
+    {{ else }}
+
         <!-- Load default list template -->
-        {{ partial "components/list-pages/default-list.html" . }}
+        {{- partial "components/list-pages/default-list.html" . -}}
     
     {{ end }}
 

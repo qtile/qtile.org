@@ -14,40 +14,6 @@
             </div>
         </section>
 
-        <!-- Searches for a page with the name videos.md and adds the below.
-            This is because the videos is a single page section and not a list page section like screenshot.
-            If this is a list page section, we would use: 
-            #################################################
-            {{ if eq .Section "videos" }}
-                <do something>
-            {{ end }}
-            ################################################# -->
-        {{ if .Site.GetPage "section" "videos.md" }}
-            
-            <section class="flex flex-col gap-4 mx-8 lg:mx-80 lg:flex-row my-2 py-2">
-                <div class="p-4 border rounded px-0 pt-0 mx-0 lg:w-2/5 h-auto">
-                    <div class="flex flex-row gap-2 px-6 py-2 border-b border-solid bg-neutral-100">
-                        <img src="/images/fa-icons/circle-play-solid.svg" 
-                            alt="circle play solid type font icon from font awesome"
-                            height="20" width="20"
-                        />
-                        <h2 class="text-xl">Add your video</h2>
-                    </div>
-                    
-                    <p class="text-lg px-6 py-2 h-auto">
-                        Did you give a talk about Qtile or make a screencast showing
-                        off your config? Send a pull request to 
-                        <a class="text-[#215578] hover:text-[#102A3C] hover:underline" 
-                            href="https://github.com/qtile/qtile.org">qtile.org on GitHub
-                        </a>,
-                        and we'll get it added!
-                    </p>
-                </div>
-            </section>
-
-        {{ end }}
-
-
         <!-- Display markdown file contents -->
         <section class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
 

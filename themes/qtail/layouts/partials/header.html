@@ -26,6 +26,18 @@
     
         <div class="mx-8 lg:mx-80 w-max">
             <span>{{ .Site.Params.currentRelease }}</span>
+            
+            {{ if .Site.GetPage "download.md" }}
+                
+                {{ $downloadPage := .Site.GetPage "download.html" }}
+                <a  class="px-2 py-1 rounded hover:bg-[#404040]" 
+                    href="{{ $downloadPage.Permalink }}"
+                >
+                    Download
+                </a>
+            
+            {{ end }}
+        
         </div>
     </div>
     

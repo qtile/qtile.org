@@ -1,0 +1,34 @@
+<main>
+    <article class="max-w-full h-auto">
+        <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
+            <div class="mx-8 lg:mx-80 py-8">
+                <h1 class="text-6xl">{{ .Title }}</h1>
+
+                {{ if .Params.description }}
+
+                    <p class="text-lg">{{ .Params.description }}</p>
+
+                {{ end }}
+
+            </div>
+        </section>
+
+        <section>
+            {{ if .Params.youtubeLink }}
+                                
+                <iframe class="flex flex-wrap rounded h-64 w-96 mx-8 my-4 lg:mx-80 lg:max-w-4xl
+                hover:shadow-lg hover:shadow-[#404040]" 
+                type="text/html" width="640" height="385"
+                src="{{ .Params.youtubeLink }}" allowfullscreen frameborder="0"
+                >           
+            
+                    {{ .Title }}
+            
+                </iframe>
+    
+            {{ end }}
+        </section>
+
+    
+    </article>
+</main>

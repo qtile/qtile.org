@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Videos on Qtile</title>
+    <link>/videos/</link>
+    <description>Recent content in Videos on Qtile</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Jun 2022 12:59:33 +0530</lastBuildDate><atom:link href="/videos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pycon 2011 Qtile Lightning Talk</title>
+      <link>/videos/pycon-2011-qtile-lightning-talk/</link>
+      <pubDate>Mon, 06 Jun 2022 16:48:59 +0530</pubDate>
+      
+      <guid>/videos/pycon-2011-qtile-lightning-talk/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

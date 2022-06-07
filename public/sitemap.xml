@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/screenshots/justinsmithies/</loc>
-    <lastmod>2022-05-08T19:36:22+05:30</lastmod>
+    <loc>/videos/pycon-2011-qtile-lightning-talk/</loc>
+    <lastmod>2022-06-06T16:48:59+05:30</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-05-08T19:36:22+05:30</lastmod>
+    <lastmod>2022-06-06T16:48:59+05:30</lastmod>
   </url><url>
-    <loc>/screenshots/</loc>
+    <loc>/download/</loc>
+    <lastmod>2022-06-04T12:59:33+05:30</lastmod>
+  </url><url>
+    <loc>/videos/</loc>
+    <lastmod>2022-06-03T12:59:33+05:30</lastmod>
+  </url><url>
+    <loc>/screenshots/justinsmithies/</loc>
     <lastmod>2022-05-08T19:36:22+05:30</lastmod>
   </url><url>
     <loc>/screenshots/jasoneastman-lighter/</loc>
@@ -23,8 +29,8 @@
     <loc>/screenshots/aeronotix/</loc>
     <lastmod>2022-05-02T13:26:38+05:30</lastmod>
   </url><url>
-    <loc>/videos/</loc>
-    <lastmod>2022-04-30T19:15:01+05:30</lastmod>
+    <loc>/screenshots/</loc>
+    <lastmod>2022-05-02T13:26:38+05:30</lastmod>
   </url><url>
     <loc>/home/</loc>
     <lastmod>2022-04-30T18:34:51+05:30</lastmod>

@@ -5,14 +5,13 @@
     <head>{{ partial "head.html" . }}</head>
 
   
-    <body class="">   
+    <body>   
         
         <!-- Loads the header template. -->
-            <header>{{ partial "header.html" . }}</header>
+        <header>{{ partial "header.html" . }}</header>
         
         <!-- Loads the main block of a markdown file. -->
         {{- block "main" . }}{{- end }}
-
 
         <!-- Loads the footer template. -->
         <section>{{ partial "footer.html" . }}</section>

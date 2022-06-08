@@ -6,7 +6,25 @@
     <description>Recent content on Qtile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jun 2022 16:48:59 +0530</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jun 2022 14:54:46 +0530</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qtile Demonstration of Floating</title>
+      <link>/videos/qtile-demonstration-of-floating/</link>
+      <pubDate>Wed, 08 Jun 2022 14:54:46 +0530</pubDate>
+      
+      <guid>/videos/qtile-demonstration-of-floating/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Qtile Layout Monadtall</title>
+      <link>/videos/qtile-layout-monadtall/</link>
+      <pubDate>Wed, 08 Jun 2022 14:52:35 +0530</pubDate>
+      
+      <guid>/videos/qtile-layout-monadtall/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Pycon 2011 Qtile Lightning Talk</title>
       <link>/videos/pycon-2011-qtile-lightning-talk/</link>

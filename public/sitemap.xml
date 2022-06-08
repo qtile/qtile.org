@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/videos/pycon-2011-qtile-lightning-talk/</loc>
-    <lastmod>2022-06-06T16:48:59+05:30</lastmod>
-  </url><url>
     <loc>/</loc>
+    <lastmod>2022-06-08T14:54:46+05:30</lastmod>
+  </url><url>
+    <loc>/videos/qtile-demonstration-of-floating/</loc>
+    <lastmod>2022-06-08T14:54:46+05:30</lastmod>
+  </url><url>
+    <loc>/videos/qtile-layout-monadtall/</loc>
+    <lastmod>2022-06-08T14:52:35+05:30</lastmod>
+  </url><url>
+    <loc>/videos/pycon-2011-qtile-lightning-talk/</loc>
     <lastmod>2022-06-06T16:48:59+05:30</lastmod>
   </url><url>
     <loc>/download/</loc>

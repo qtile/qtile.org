@@ -4,7 +4,6 @@ date: 2022-06-06T16:48:59+05:30
 youtubeId: "r_8om4dsEmw"
 description: "Pycon 2011 Qtile Lightning Talk"
 ---
-
 <!-- {{< youtube-embed "r_8om4dsEmw" "PyCon 2011 Qtile Lightning Talk Friday Afternoon by harrisonishable" >}}
 
 

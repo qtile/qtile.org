@@ -15,30 +15,53 @@
         <!-- Manages the navbar. For more information - https://gohugo.io/templates/menu-templates/ -->
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-            <a class="px-2 py-1 rounded hover:bg-[#404040]
-                {{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} 
-                    active 
-                {{ end }}" 
-                href="{{ .URL }}" title="{{ .Title }}"> {{ .Name }}
-            </a>
-            
-        {{ end }}
-    
-        <div class="mx-8 lg:mx-80 w-max">
-            <span>{{ .Site.Params.currentRelease }}</span>
-            
-            {{ if .Site.GetPage "download.md" }}
-                
-                {{ $downloadPage := .Site.GetPage "download.html" }}
-                <a  class="px-2 py-1 rounded hover:bg-[#404040]" 
-                    href="{{ $downloadPage.Permalink }}"
-                >
-                    Download
+
+            {{ if eq .Page "download" }}
+
+                <a class="hidden">.</a>
+
+            {{ else }}
+
+                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                    {{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} 
+                        active 
+                    {{ end }}" 
+                    href="{{ .URL }}" title="{{ .Title }}"> {{ .Name }}
                 </a>
             
             {{ end }}
-        
+        {{ end }}
+    
+        <div class="flex flex-col items-center  mx-8 lg:mx-80 w-max">
+            <div>Current release:<b>{{ .Site.Params.currentRelease }}</b></div>
+            
+            <div class="text-xs text-[#378ec8] ml-0">
+
+                {{ if .Site.GetPage "download.md" }}
+                
+                    {{ $downloadPage := .Site.GetPage "download.md" }}
+
+                        <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                            href="{{ $downloadPage.Permalink }}"
+                        >
+                            Download
+                        </a>
+                    
+                    {{ end }}
+
+                <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                href="https://github.com/qtile/qtile/blob/master/CHANGELOG"
+                >
+                    Release Notes
+                </a>
+
+                <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                href="http://docs.qtile.org/en/latest/manual/install/"
+                >
+                    Install Guide
+                </a>
+
+            </div>
         </div>
     </div>
-    
 </nav>

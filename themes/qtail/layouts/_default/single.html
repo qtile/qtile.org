@@ -1,21 +1,25 @@
 {{ define "main" }}
 
+    {{ with .Site.GetPage "download.md "}}
+
+        {{- partial "components/single-pages/download-single.html" . -}}
+
+    {{ end }}
+
     {{ if eq .Section "videos" }}
 
         {{- partial "components/single-pages/videos-single.html" . -}}
 
-    
     {{ else if eq .Section "screenshots" }}
 
         <!-- Load single page template for screenshots section from components/single-pages/screenshots-single.html -->
         {{- partial "components/single-pages/screenshots-single.html" . -}}
 
-
     {{ else }}
 
         <!-- Load default single page template from /components/single-pages/default-single.html" -->
         {{- partial "components/single-pages/default-single.html" . -}}
-
+        
     {{ end }}
 
 {{ end }}

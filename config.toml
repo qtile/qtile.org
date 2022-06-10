@@ -4,6 +4,7 @@ title               = "Qtile"
 theme               = "qtail"
 
 sectionPagesMenu    = "main"
+disableKinds        = ["download"]
 
 [permalinks]
     posts           = "posts/:month/:year/:title/"
@@ -40,6 +41,7 @@ sectionPagesMenu    = "main"
         name        = "GitHub"
         url         = "https://github.com/qtile/qtile/"
         weight      = 6
+
     
 
 [params]    

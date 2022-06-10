@@ -1,0 +1,43 @@
+<main>
+    <article class="max-w-full h-auto">
+
+        <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
+            <div class="mx-8 lg:mx-80 py-8">
+                <h1 class="text-6xl">{{ .Title }}</h1>
+                    
+                    {{ if .Params.description }}
+                        
+                        <p class="text-lg">{{ .Params.description }}</p>
+                    
+                    {{ end }}
+
+            </div>
+        </section>
+
+        <section class="grid grid-flow-row lg:grid-flow-col">
+            <!-- Display markdown file contents -->
+            <div class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
+
+                <div>
+                    <span>
+                        <img>
+                        <h1>Get the latest official version</h1>
+                    </span>
+                </div>
+                <div></div>
+                <div></div>
+            
+            </div>
+
+            <!-- Info boxes -->
+            <div class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
+                
+                <div></div>
+                <div></div>
+            
+            </div>
+        </section>
+        
+
+    </article>
+</main>

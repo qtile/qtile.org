@@ -1,5 +1,5 @@
 <main>
-    <article class="max-w-full h-auto">
+    <article class="w-auto h-auto text-sm prose-a:text-[#215578]">
 
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 py-8">
@@ -14,28 +14,110 @@
             </div>
         </section>
 
-        <section class="grid grid-flow-row lg:grid-flow-col">
+        <section class="grid grid-flow-row items-start my-4 w-auto gap-4 mx-8 h-auto lg:mx-80 lg:grid-cols-3">
+            
             <!-- Display markdown file contents -->
-            <div class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
+            <div class="my-4 grid grid-flow-row w-auto gap-4 items-start lg:col-span-2">
 
-                <div>
-                    <span>
-                        <img>
-                        <h1>Get the latest official version</h1>
+                <div class="gap-1">
+                    <span class="grid grid-flow-col w-max items-center gap-4"
+                    
+                    >
+                        <img src="/images/fa-icons/star-solid.svg" 
+                            alt="A star icon from fontawesome.com"
+                            height="20" width="20"    
+                        >
+                        <h3>Get the latest official version</h3>
+
                     </span>
+                    <p>Latest Qtile release - {{ .Site.Params.currentRelease }}. 
+                        <br>
+                        You can download it from Github:
+                        <br>
+                        <a class="hover:text-[#215578]" href="https://github.com/qtile/qtile/releases/latest">
+                            https://github.com/qtile/qtile/releases/latest
+                        </a>
+                    </p>
                 </div>
-                <div></div>
-                <div></div>
+
+                <div class="grid grid-flow-row items-center rounded border w-auto">
+                    <span class="grid grid-flow-col items-center place-content-start w-auto 
+                    gap-4 p-2 bg-neutral-100 border-b border-solid"
+                    >
+                        <img src="/images/fa-icons/linux-brands.svg" 
+                        alt="Linux logo icon from fontawesome.com"
+                        height="20" width="20"
+                        >
+                        <h5>Packages and Installation Guides</h5>
+                    </span>
+                    <p class="p-2">Qtile has been packaged for a number of Linux distros,
+                        and it may not be necessary to download the official release directly. Check out the <a href="http://docs.qtile.org/en/latest/manual/install/index.html">
+                            installation guide
+                        </a> to see if your distro is included.</p>
+                </div>
+
+                <div class="grid grid-flow-row items-center gap-1">
+                    <span class="grid grid-flow-col items-center place-content-start w-auto gap-4">
+                        <img src="/images/fa-icons/flask-solid.svg" 
+                        alt="Flask icon from fontawesome.com"
+                        height="20" width="20"
+                        >
+                        <h3>Get the latest development version</h4>
+                    </span>
+                    <p>If you want the latest and greatest version of Qtile, you can fetch it with Git:</p><br>
+                    <code class="bg-neutral-100 p-2 rounded border w-auto">
+                        git clone https://github.com/qtile/qtile.git
+                    </code>
+                    <br>
+                    <p>You can also download a 
+                        <a class="hover:text-[#215578]" href="https://github.com/qtile/qtile/zipball/master">
+                            zipped archive
+                        </a> of the development version.
+                    </p>
+                </div>
+            
+            </div>
+        
+            <!-- Info boxes -->
+            <div class="my-4 grid grid-flow-row items-start place-content-start col-span-1 gap-4 w-auto">
+                
+                <div class="border rounded">
+                    <span class="grid grid-flow-col items-center place-content-start gap-4
+                        bg-neutral-100 border-b m-0 p-2"
+                    >
+                        <img src="/images/fa-icons/question-circle-solid.svg" 
+                        alt="Question mark in a circle icon from fontawesome.com" 
+                        height="20" width="20"
+                        >
+                        <h5>Which is right for me?</h5>
+                    </span>
+                    <p class="px-4 py-2">The development version will have the latest features, but may also contain new bugs. 
+                        Grab this version if you want to live on the bleeding edge, or you plan on hacking on Qtile. 
+                        You'll probably want to keep an eye on <a href="https://github.com/qtile/qtile">Qtile on GitHub</a> 
+                        and subscribe to <a href="https://groups.google.com/group/qtile-dev">qtile-dev.</a>
+                    </p>
+                    <p class="px-4 py-2">If you want to <em>set it and forget it</em>, then the latest official release is for you. 
+                        You'll wait longer between updates, but this version is likely to be more stable and have fewer bugs.
+                    </p>
+                </div>
+
+                <div class="border rounded">
+                    <span class="grid grid-flow-col items-center place-content-start gap-4
+                        bg-neutral-100 border-b p-2"
+                    >
+                        <img src="/images/fa-icons/question-circle-solid.svg" 
+                        alt="Question mark in a circle icon from fontawesome.com" 
+                        height="20" width="20"
+                        >
+                        <h5>Got it, what's next?</h5>
+                    </span>
+                    <p class="px-4 py-2">Check out the <a href="http://docs.qtile.org/en/latest/manual/install/index.html">installation guide</a> 
+                        for further instructions.
+                    </p>
+                </div>
             
             </div>
 
-            <!-- Info boxes -->
-            <div class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
-                
-                <div></div>
-                <div></div>
-            
-            </div>
         </section>
         
 

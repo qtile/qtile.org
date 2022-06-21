@@ -16,12 +16,6 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
 
-            {{ if eq .Page "download" }}
-
-                <a class="hidden">.</a>
-
-            {{ else }}
-
                 <a class="px-2 py-1 rounded hover:bg-[#404040]
                     {{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} 
                         active 
@@ -29,7 +23,6 @@
                     href="{{ .URL }}" title="{{ .Title }}"> {{ .Name }}
                 </a>
             
-            {{ end }}
         {{ end }}
     
         <div class="flex flex-col items-center  mx-8 lg:mx-80 w-max">

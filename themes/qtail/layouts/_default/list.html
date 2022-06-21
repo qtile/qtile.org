@@ -1,6 +1,10 @@
 {{ define "main" }}
 
-    {{ if eq .Section "screenshots" }}
+    {{ if eq .Section "download" }}
+
+        {{- partial "components/single-pages/download-single.html" . -}}
+
+    {{ else if eq .Section "screenshots" }}
         
         <!-- Load list template for projects section -->
         {{- partial "components/list-pages/screenshots-list.html" . -}}

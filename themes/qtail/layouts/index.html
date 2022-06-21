@@ -90,8 +90,23 @@
     </section>
 
     <!-- Screenshots section -->
-    <section class="bg-[#222222] max-w-full h-40">
-        <p class="mx-8 lg:mx-80 text-[#FDFDFE]">Screenshot section will be here!</p>
+    <section class="bg-[#222222] max-w-full my-4 p-4 h-auto lg:h-40">
+        <div class="mx-8 lg:mx-80 text-[#FDFDFE]">
+            <ul>
+                <li class="grid grid-flow-row gap-4 items-center justify-items-center lg:grid-flow-col">
+                    {{ range first 5 (where .Site.RegularPages "Section" "screenshots") }}
+
+                        {{ if .Params.screenshot }}
+                            {{ $image := resources.GetMatch .Params.screenshot }}
+                            {{ $image := $image.Fit "256x128 webp"}}
+                            <img class="border-2 hover:border-[#49799B] border-[#222222] rounded" 
+                                src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}"
+                            >
+                        {{ end }}
+                    {{ end }}
+                </li>
+            </ul>
+        </div>
     </section>
 
 

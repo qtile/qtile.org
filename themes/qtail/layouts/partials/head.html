@@ -9,5 +9,8 @@
     It will not work if you mention the exact location like "./assets/style.css".-->
     {{ $style := resources.Get "style.css" }}    
     <link rel="stylesheet" href="{{ $style.Permalink }}"> 
-  
+    
+    <!-- Varela round font for headings -->
+    <link rel="preload" href="{{ "/fonts/varelaround-regular-webfont.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+
 </head>

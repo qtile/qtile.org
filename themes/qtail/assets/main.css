@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+
+    @font-face {
+        font-family: 'Varela Round Regular';
+        src: url('./fonts/varelaround-regular-webfont.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
     
     h1 {
         @apply text-3xl lg:text-5xl font-medium;

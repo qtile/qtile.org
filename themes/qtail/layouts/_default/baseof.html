@@ -5,7 +5,7 @@
     <head>{{ partial "head.html" . }}</head>
 
   
-    <body>   
+    <body class="prose-headings:font-varelaRound prose-h1:font-varelaRound">   
         
         <!-- Loads the header template. -->
         <header>{{ partial "header.html" . }}</header>
@@ -14,7 +14,7 @@
         {{- block "main" . }}{{- end }}
 
         <!-- Loads the footer template. -->
-        <section>{{ partial "footer.html" . }}</section>
+        {{ partial "footer.html" . }}
 
     </body>
 </html>

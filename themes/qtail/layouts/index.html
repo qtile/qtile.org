@@ -1,7 +1,7 @@
 {{ define "main" }}
 
     <section class="grid grid-flow-row items-center justify-between 
-        bg-[#222222] max-w-full min-h-fit p-4 lg:max-h-auto"
+        bg-[#222222] max-w-full min-h-fit lg:p-4 lg:max-h-auto"
     >
         <div class="mx-8 lg:mx-80 text-[#FDFDFE]">
             <!-- Use .webp image where supported or fallback to .png format of the qtile logo -->
@@ -45,7 +45,7 @@
     </section>
 
     <!-- Benefits of using a twm section -->
-    <section class="mx-8 lg:mx-80 p-4 my-4">
+    <section class="mx-8 my-4 lg:mx-80 lg:p-4 ">
         <h1 class="my-2 text-4xl grid justify-items-center">Benefits of using a tiling window manager</h1>
     
         <div class="grid grid-flow-row lg:grid-cols-3 gap-2">
@@ -75,7 +75,7 @@
     </section>
 
     <!-- Why Qtile? section -->
-    <section class="mx-8 lg:mx-80 p-4 my-4">
+    <section class="mx-8 my-4 lg:mx-80 lg:p-4">
         
         <h1 class="my-2 text-4xl grid justify-items-center">Why Qtile?</h1>
     
@@ -113,8 +113,8 @@
     </section>
 
     <!-- Screenshots section -->
-    <section class="grid grid-flow-col items-center bg-[#222222] max-w-full my-4 p-4 h-auto lg:h-48">
-        <div class="mx-8 lg:mx-80 text-[#FDFDFE]">
+    <section class="grid grid-flow-col items-center bg-[#222222] max-w-full my-4 h-auto p-4 lg:h-48">
+        <div class="mx-8 my-4 lg:mx-80">
             <ul>
                 <li class="grid grid-flow-row gap-4 items-center justify-items-center lg:grid-flow-col">
                     <!-- Find the first 5 regular pages from screenshots sectino which
@@ -135,10 +135,10 @@
 
     <!-- Qtile communiy and getting involved section -->
     <section class="grid grid-flow-row items-start justify-items-stretch  
-        mx-8 my-4 p-4 max-w-full gap-4 lg:gap-8 lg:mx-80 lg:grid-cols-2"
+        mx-8 my-4 max-w-full gap-4 lg:p-4 lg:gap-8 lg:mx-80 lg:grid-cols-2"
     >
         <!-- Qtile community sub section -->
-        <div class="grid grid-flow-row items-start place-content-start my-4 p-4 gap-2 max-w-full">
+        <div class="grid grid-flow-row items-start place-content-start gap-2 max-w-full">
             <h3>The Qtile community</h3>
             <div class="grid grid-flow-row items-center place-content-start gap-2 lg:grid-flow-col">
                 <span class="grid grid-flow-col items-center place-content-start gap-2">
@@ -184,9 +184,9 @@
         </div>
 
         <!-- Getting involved sub section -->
-        <div class="grid grid-flow-row items-start place-content-start my-4 p-4 gap-2">
+        <div class="grid grid-flow-row items-start place-content-start gap-2">
             <h3>Getting involved</h3>
-            <div class="grid grid-flow-row items-center place-content-start lg:gap-4 lg:grid-flow-col">
+            <div class="grid grid-flow-row items-center place-content-start gap-2 lg:grid-flow-col">
                 <span class="grid grid-flow-col items-center gap-2 place-content-start">
                     <img class="h-8 w-8" src="/images/fa-icons/bug-solid.svg" 
                     alt="Two dialogue boxes which meants comments section." 
@@ -200,12 +200,12 @@
                 <p>Report bugs and request new features</p>
             </div>
             
-            <div class="grid grid-flow-row place-content-start items-center lg:gap-2 lg:grid-flow-col">
+            <div class="grid grid-flow-row place-content-start items-center gap-2 lg:grid-flow-col">
                 <span class="grid grid-flow-col items-center gap-2 place-content-start">
                     <img class="h-8 w-8" src="/images/fa-icons/keyboard-regular.svg" 
                     alt="Two dialogue boxes which meants comments section." 
                 />
-                <a href="qtile-dev@googlegroups.com" 
+                <a href="http://docs.qtile.org/en/latest/manual/hacking.html" 
                     class="text-xl lg:text-2xl text-[#215578]"
                 >
                     Hacking Qtile

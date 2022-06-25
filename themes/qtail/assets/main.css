@@ -13,18 +13,22 @@
     }
     
     h1 {
-        @apply text-3xl lg:text-5xl font-medium;
+        @apply text-4xl lg:text-6xl font-medium;
     }
     
     h2 {
-        @apply text-2xl lg:text-4xl font-medium;
+        @apply text-3xl lg:text-5xl font-medium;
     }
 
     h3 {
-        @apply text-xl lg:text-3xl font-medium;
+        @apply text-2xl lg:text-4xl font-medium;
     }
 
     h4 {
+        @apply text-xl lg:text-3xl font-medium;
+    }
+
+    h5 {
         @apply text-lg lg:text-2xl font-medium;
     }
 }

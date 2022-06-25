@@ -1,9 +1,12 @@
 <!-- Navbar -->
-<nav class="grid grid-flow-row justify-items-center items-center py-6 max-w-full lg:grid-flow-col 
+<nav class="grid grid-flow-row justify-items-center items-center p-2 max-w-full lg:grid-flow-col 
     bg-[#1B1B1B] text-[#F9F9F9] border-b border-b-[#404040] border-solid"
 >
     
-    <div class="mx-8 lg:mx-80 w-max h-fit flex flex-col gap-1 items-center lg:flex-row">
+    <!-- Section links in navbar -->
+    <div class="mx-8 lg:mx-80 w-max h-fit grid grid-flow-row gap-2 
+        justify-items-center items-center lg:grid-flow-col"
+    >
         <a href="/">
             <img 
                 class="rounded p-2 bg-[#215578]"
@@ -16,7 +19,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
 
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     {{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} 
                         active 
                     {{ end }}" 
@@ -24,17 +27,22 @@
                 </a>
             
         {{ end }}
-    
-        <div class="flex flex-col items-center  mx-8 lg:mx-80 w-max">
-            <div>Current release:<b>{{ .Site.Params.currentRelease }}</b></div>
+        
+        <!-- Release information, Download information and installation guide -->
+        <div class="grid grid-flow-row justify-items-center items-center mx-8 w-full
+            lg:mx-80"
+        >
+            <div>Current release: <b>{{ .Site.Params.currentRelease }}</b></div>
             
-            <div class="text-xs text-[#378ec8] ml-0">
+            <div class="grid grid-flow-row justify-items-center items-center 
+                text-sm text-[#378ec8] lg:grid-flow-col"
+            >
 
                 {{ if .Site.GetPage "download.md" }}
                 
                     {{ $downloadPage := .Site.GetPage "download.md" }}
 
-                        <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                        <a  class="p-1 hover:text-[#5C9FCD]" 
                             href="{{ $downloadPage.Permalink }}"
                         >
                             Download
@@ -42,13 +50,13 @@
                     
                     {{ end }}
 
-                <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                <a  class="p-1 hover:text-[#5C9FCD]" 
                 href="https://github.com/qtile/qtile/blob/master/CHANGELOG"
                 >
                     Release Notes
                 </a>
 
-                <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                <a  class="p-1 hover:text-[#5C9FCD]" 
                 href="http://docs.qtile.org/en/latest/manual/install/"
                 >
                     Install Guide

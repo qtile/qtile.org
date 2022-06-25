@@ -2,8 +2,8 @@
     <article class="max-w-full h-auto">
 
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
-            <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="text-6xl font-varelaRound">{{ .Title }}</h1>
+            <div class="mx-8 lg:mx-80 p-4">
+                <h1>{{ .Title }}</h1>
                     
                     {{ if .Params.description }}
                         
@@ -15,7 +15,7 @@
         </section>
 
         <!-- Display markdown file contents -->
-        <section class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
+        <section class="my-4 p-4 grid grid-flow-row mx-8 lg:mx-80 min-w-full">
 
             {{ .Content }}
         

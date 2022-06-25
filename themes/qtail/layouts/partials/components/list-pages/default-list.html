@@ -1,12 +1,12 @@
 <main>
-  <article class="text-lg">
+  <article>
     <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
-        <div class="mx-8 lg:mx-80 py-8">
-            <h1 class="text-6xl font-varelaRound">{{ .Title }}</h1>
+        <div class="mx-8 lg:mx-80 p-4">
+            <h1 class="font-varelaRound">{{ .Title }}</h1>
                 
                 {{ if .Params.description }}
                     
-                    <p class="text-lg">{{ .Params.description }}</p>
+                    <p>{{ .Params.description }}</p>
                 
                 {{ end }}
 
@@ -14,7 +14,7 @@
     </section>
   
       <section>
-          <ul class="p-0 m-0 list-none not-prose">
+          <ul>
               <li>
               
                   <!-- Iterates through pages and diplays it as links in the order of publish date and the title of the page. -->

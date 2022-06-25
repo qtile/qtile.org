@@ -1,57 +1,72 @@
 {{ define "main" }}
 
-    <section class="bg-[#222222] max-w-full min-h-fit lg:max-h-auto py-8">
-        
+    <section class="grid grid-flow-row items-center justify-between 
+        bg-[#222222] max-w-full min-h-fit lg:max-h-auto"
+    >
         <div class="mx-8 lg:mx-80 text-[#FDFDFE]">
-            <img class="py-4 font-semibold mx-2 p-2" src="/images/qtile-logo-white.webp">
+            <!-- Use .webp image where supported or fallback to .png format of the qtile logo -->
+            <picture>
+                <source  srcset="/images/qtile-logo-white.webp" type="image/webp">
+                <source srcset="/images/qtile-logo-white.png" type="image/png">
+                <img class="py-4 my-4" src="/images/qtile-logo-white.png" alt="Qtile logo">
+            </picture>
             
             <!-- Description is fetched from home.md -->
             {{ with .Site.GetPage "home.md" }}
-                
-                <h3 class="text-2xl">{{ .Params.description }}</h3>
-    
+                <h5 class="font-varelaRound">{{ .Params.description }}</h5>
             {{ end }}
             
             <!-- Section for screenshot and example configuration -->
-            <div class="grid grid-flow-row lg:grid-flow-col gap-4 h-auto ">
-        
+            <div class="grid grid-flow-row lg:grid-flow-col gap-2 h-auto my-4">
                 <!-- Image of Qtile -->
-                <img class="h-80 w-auto border-4 border-[#404040] hover:border-gray-600" src="/images/qtile.png">
-        
+                <img class="w-auto border rounded border-[#404040] hover:border-gray-600 lg:h-80" 
+                    src="/images/qtile.png"
+                >
                 <!-- Example configuration file of Qtile is fetched from home.md file -->
-                <span class="h-80 w-[80%] overflow-y-auto border-4 border-[#404040] hover:border-gray-600">
-                    
-                    {{ with .Site.GetPage "home.md" }}
-                
-                        {{ .Content }}
-                
+                <span class="text-xs h-80 px-2 w-auto overflow-y-auto border rounded 
+                    border-[#404040] hover:border-gray-600 lg:text-sm"
+                >  
+                    {{ with .Site.GetPage "home.md" }} 
+                        {{ .Content }} 
                     {{ end }}
-                
                 </span>
             </div>
-            <span><a href="https://github.com/qtile/qtile-examples">View more configuration examples on Github</a></span>
+            <!-- Anchor link for more configuration examples -->
+            <span class="grid justify-items-center items-center 
+                my-4 p-2 lg:justify-end"
+            >
+                <a class="text-[#378ec8] hover:text-[#5C9FCD]" 
+                    href="https://github.com/qtile/qtile-examples"
+                >
+                    View more configuration examples on Github
+                </a>
+            </span>
         </div>
     </section>
 
     <!-- Benefits of using a twm section -->
-    <section class="mx-8 lg:mx-80 py-4 my-4">
+    <section class="mx-8 lg:mx-80 p-2 my-4">
         <h1 class="my-2 text-4xl grid justify-items-center">Benefits of using a tiling window manager</h1>
     
-        <div class="grid grid-flow-row lg:grid-cols-3 gap-4">
-            <div class="my-5">
-                <span class="flex justify-center py-2"><img class="h-12 w-12" src="/images/fa-icons/bolt-solid.svg" /></span>
+        <div class="grid grid-flow-row lg:grid-cols-3 gap-2">
+            <div class="my-4">
+                <span class="grid justify-center p-2">
+                    <img class="h-12 w-12" src="/images/fa-icons/bolt-solid.svg" />
+                </span>
                 <span class="text-xl font-semibold">Optimize your workflow</span>
                 <span>by configuring your environment to fit how <em>you</em> work.</span>
             </div>
-            
-            <div class="my-5">
-                <span class="flex justify-center py-2"><img class=" h-12 w-12" src="/images/fa-icons/table-columns-solid.svg" /></span>
+            <div class="my-4">
+                <span class="grid justify-center p-2">
+                    <img class="h-12 w-12" src="/images/fa-icons/table-columns-solid.svg" />
+                </span>
                 <span class="text-xl font-semibold">Efficiently use screen real-estate</span>
                 <span>by automatically arranging windows with minimal visual cruft.</span>
             </div>
-            
-            <div class="my-2">
-                <span class="flex justify-center py-2"><img class=" h-12 w-12" src="/images/fa-icons/kit-medical-solid.svg" /></span>
+            <div class="my-4">
+                <span class="grid justify-center p-2">
+                    <img class="h-12 w-12" src="/images/fa-icons/kit-medical-solid.svg" />
+                </span>
                 <span class="text-xl font-semibold">Save your wrists from RSI</span>
                 <span>by ditching the mouse and driving with the keyboard.</span>
             </div>
@@ -64,7 +79,7 @@
         
         <h1 class="my-2 text-4xl grid justify-items-center">Why Qtile?</h1>
     
-        <div class="grid grid-flow-row lg:grid-cols-2 gap-4">
+        <div class="grid grid-flow-row items-center lg:grid-cols-2 gap-2">
             <div class="my-2 text-xl">
                 <span class="text-xl font-semibold">Qtile is simple, small, and extensible.</span>
                 <span>It's easy to write your own layouts, widgets, and built-in commands.</span>
@@ -82,24 +97,33 @@
 
             <!--  -->
             <div class="my-2">
-                <span class="text-xl font-semibold">Qtile is free and open-source software.</span>
-                <span>Distributed under the permissive <a class="text-[#215578]" href="http://docs.qtile.org/en/latest/manual/license.html">MIT license</a>.</span>
+                <span class="text-xl font-semibold">
+                    Qtile is free and open-source software.
+                </span>
+                <span>Distributed under the permissive 
+                    <a class="text-[#215578]" 
+                        href="http://docs.qtile.org/en/latest/manual/license.html"
+                    >
+                        MIT license
+                    </a>.
+                </span>
             </div>
 
         </div>
     </section>
 
     <!-- Screenshots section -->
-    <section class="bg-[#222222] max-w-full my-4 p-4 h-auto lg:h-40">
+    <section class="grid grid-flow-col items-center bg-[#222222] max-w-full my-4 p-4 h-auto lg:h-48">
         <div class="mx-8 lg:mx-80 text-[#FDFDFE]">
             <ul>
                 <li class="grid grid-flow-row gap-4 items-center justify-items-center lg:grid-flow-col">
+                    <!-- Find the first 5 regular pages from screenshots sectino which
+                    have the frontmatter screenshot -->
                     {{ range first 5 (where .Site.RegularPages "Section" "screenshots") }}
-
                         {{ if .Params.screenshot }}
                             {{ $image := resources.GetMatch .Params.screenshot }}
                             {{ $image := $image.Fit "256x128 webp"}}
-                            <img class="border-2 hover:border-[#49799B] border-[#222222] rounded" 
+                            <img class="border hover:border-gray-600 border-[#222222] rounded" 
                                 src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}"
                             >
                         {{ end }}
@@ -109,48 +133,88 @@
         </div>
     </section>
 
-
-    <section class="mx-8 py-4 my-4 lg:mx-80 w-max grid grid-flow-row gap-16 lg:grid-flow-col">
-        
-        <div class="">
-            <h1 class="text-3xl">The Qtile community</h1>
-            <div class="flex flex-row gap-4 items-center my-2 py-1">
-                <img class="h-8 w-8" src="/images/fa-icons/comments-regular.svg" alt="Two dialogue boxes which meants comments section." />
-                <a href="irc://irc.oftc.net:6667/qtile" class="text-2xl text-[#215578]">IRC Channel</a>
-                <p>irc.oftc.net/#qtile</p>
+    <!-- Qtile communiy and getting involved section -->
+    <section class="grid grid-flow-row items-start place-content-start  
+        mx-8 my-4 w-max gap-4 lg:gap-8 lg:mx-80 lg:grid-cols-2"
+    >
+        <!-- Qtile community sub section -->
+        <div class="grid grid-flow-row items-start place-content-start my-4 gap-2 lg:gap-4">
+            <h3>The Qtile community</h3>
+            <div class="grid grid-flow-row items-center place-content-start lg:gap-4 lg:grid-flow-col">
+                <span class="grid grid-flow-col items-center place-content-start gap-2">
+                    <img class="h-8 w-8" src="/images/fa-icons/comments-regular.svg" 
+                    alt="Two dialogue boxes which means comment sections." 
+                />
+                <a href="irc://irc.oftc.net:6667/qtile" 
+                    class="text-xl lg:text-2xl text-[#215578]"
+                >
+                    IRC Channel
+                </a>
+                </span>
+                <p>irc://irc.oftc.net:6667/qtile</p>
             </div>
             
-            <div class="flex flex-row gap-4 items-center my-2 py-1">
-                <img class="h-8 w-8" src="/images/fa-icons/envelope-regular.svg" alt="Two dialogue boxes which meants comments section." />
-                <a href="qtile-dev@googlegroups.com" class="text-2xl text-[#215578]">Mailing list</a>
-                <p>irc.oftc.net/#qtile</p>
+            <div class="grid grid-flow-row items-center place-content-start lg:gap-4 lg:grid-flow-col">
+                <span class="grid grid-flow-col items-center place-content-start gap-2">
+                    <img class="h-8 w-8" src="/images/fa-icons/envelope-regular.svg" 
+                    alt="Two dialogue boxes which meants comments section." 
+                />
+                <a href="qtile-dev@googlegroups.com" 
+                    class="text-xl lg:text-2xl text-[#215578]"
+                >
+                    Mailing
+                     list</a>
+                </span>
+                <p>qtile-dev@googlegroups.com</p>
             </div>
 
-            <div class="flex flex-row gap-4 items-center my-2 py-1">
-                <img class="h-8 w-8" src="/images/fa-icons/twitter-brands.svg" alt="Two dialogue boxes which meants comments section." />
-                <a href="http://twitter.com/Qtile" class="text-2xl text-[#215578]">Twitter</a>
-                <p>irc.oftc.net/#qtile</p>
+            <div class="grid grid-flow-row items-center place-content-start lg:gap-4 lg:grid-flow-col">
+                <span class="grid grid-flow-col items-center place-content-start gap-2">
+                    <img class="h-8 w-8" src="/images/fa-icons/twitter-brands.svg" 
+                    alt="Two dialogue boxes which meants comments section." 
+                />
+                <a href="http://twitter.com/Qtile" 
+                    class="text-xl lg:text-2xl text-[#215578]"
+                >
+                    Twitter
+                </a>
+                </span>
+                <p>@qtile</p>
             </div>
         </div>
 
-        <div class="">
-            <h1 class="text-4xl">Getting involved</h1>
-            <div class="flex flex-row gap-4 items-center my-2 py-1">
-                <span><img class="h-8 w-8" src="/images/fa-icons/bug-solid.svg" alt="Two dialogue boxes which meants comments section." /></span>
-                <span><a href="irc://irc.oftc.net:6667/qtile" class="text-2xl text-[#215578]">IRC Channel</a></span>
-                <span><p>irc.oftc.net/#qtile</p></span>
+        <!-- Getting involved sub section -->
+        <div class="grid grid-flow-row items-start place-content-start my-4 gap-2 lg:gap-4">
+            <h3>Getting involved</h3>
+            <div class="grid grid-flow-row items-center place-content-start lg:gap-4 lg:grid-flow-col">
+                <span class="grid grid-flow-col items-center gap-2 place-content-start">
+                    <img class="h-8 w-8" src="/images/fa-icons/bug-solid.svg" 
+                    alt="Two dialogue boxes which meants comments section." 
+                />
+                <a href="https://github.com/qtile/qtile/issues" 
+                    class="text-xl lg:text-2xl text-[#215578]"
+                >
+                    Issue tracker
+                </a>
+                </span>
+                <p>Report bugs and request new features</p>
             </div>
             
-            <div class="flex flex-row gap-4 items-center my-2 py-1">
-                <img class="h-8 w-8" src="/images/fa-icons/keyboard-regular.svg" alt="Two dialogue boxes which meants comments section." />
-                <a href="qtile-dev@googlegroups.com" class="text-2xl text-[#215578]">Mailing list</a>
-                <p>irc.oftc.net/#qtile</p>
+            <div class="grid grid-flow-row place-content-start items-center lg:gap-4 lg:grid-flow-col">
+                <span class="grid grid-flow-col items-center gap-2 place-content-start">
+                    <img class="h-8 w-8" src="/images/fa-icons/keyboard-regular.svg" 
+                    alt="Two dialogue boxes which meants comments section." 
+                />
+                <a href="qtile-dev@googlegroups.com" 
+                    class="text-xl lg:text-2xl text-[#215578]"
+                >
+                    Hacking Qtile
+                </a>
+                </span>
+                <p>Get started hacking on the code</p>
             </div>
-
-
         </div>
     
     </section>
-
 
 {{ end }}

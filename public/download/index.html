@@ -12,22 +12,28 @@
     
         
     <link rel="stylesheet" href="/style.css"> 
-  
+    
+    
+    <link rel="preload" href="/fonts/varelaround-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
 </head></head>
 
-  
-    <body>   
+    
+    <body class="prose-headings:font-varelaRound text-base">   
         
         
         <header>
-<nav class="grid grid-flow-row justify-items-center items-center py-6 max-w-full lg:grid-flow-col 
+<nav class="grid grid-flow-row justify-items-center items-center  max-w-full p-4 lg:grid-flow-col 
     bg-[#1B1B1B] text-[#F9F9F9] border-b border-b-[#404040] border-solid"
 >
     
-    <div class="mx-8 lg:mx-80 w-max h-fit flex flex-col gap-1 items-center lg:flex-row">
+    
+    <div class="mx-8 lg:mx-80 max-w-full h-fit grid grid-flow-row gap-2 
+        justify-items-center items-center lg:grid-flow-col"
+    >
         <a href="/">
             <img 
-                class="rounded p-2 bg-[#215578]"
+                class="max-w-max rounded p-2 bg-[#215578]"
                 src="/images/qtile-logo-white.webp" 
                 alt="Logo of Qtile" 
                 height="48" width="64"
@@ -37,66 +43,56 @@
         
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="/screenshots/" title=""> Screenshots
                 </a>
             
-            
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="/videos/" title=""> Videos
                 </a>
             
-            
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="http://docs.qtile.org/" title=""> Documentation
                 </a>
             
-            
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="https://github.com/qtile/qtile/issues/" title=""> Issues
                 </a>
             
-            
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="https://github.com/qtile/qtile/" title=""> GitHub
                 </a>
             
-            
         
-    
-        <div class="flex flex-col items-center  mx-8 lg:mx-80 w-max">
-            <div>Current release:<b>v0.21.0,March 23,2022</b></div>
+        
+        
+        <div class="grid grid-flow-row justify-items-center items-center mx-8 w-full
+            lg:mx-80"
+        >
+            <div>Current release: <b>v0.21.0,March 23,2022</b></div>
             
-            <div class="text-xs text-[#378ec8] ml-0">
+            <div class="grid grid-flow-row justify-items-center items-center 
+                text-sm text-[#378ec8] lg:grid-flow-col"
+            >
 
                 
                 
                     
 
-                        <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                        <a  class="p-1 hover:text-[#5C9FCD]" 
                             href="/download/"
                         >
                             Download
@@ -104,13 +100,13 @@
                     
                     
 
-                <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                <a  class="p-1 hover:text-[#5C9FCD]" 
                 href="https://github.com/qtile/qtile/blob/master/CHANGELOG"
                 >
                     Release Notes
                 </a>
 
-                <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                <a  class="p-1 hover:text-[#5C9FCD]" 
                 href="http://docs.qtile.org/en/latest/manual/install/"
                 >
                     Install Guide
@@ -125,11 +121,11 @@
         
 
     <main>
-    <article class="max-w-full h-auto">
+    <article class="w-auto h-auto prose-a:text-[#215578]">
 
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="text-6xl">Download</h1>
+                <h1 class="font-varelaRound">Download</h1>
                     
                     
                         
@@ -140,66 +136,139 @@
             </div>
         </section>
 
-        <section class="grid grid-flow-row lg:grid-flow-col">
+        <section class="grid grid-flow-row items-start my-4 w-auto gap-4 mx-8 h-auto lg:mx-80 lg:grid-cols-3">
             
-            <div class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
+            
+            <div class="my-4 grid grid-flow-row w-auto gap-4 items-start lg:col-span-2">
 
-                <div>
-                    <span>
-                        <img>
-                        <h1>Get the latest official version</h1>
+                <div class="gap-1">
+                    <span class="grid grid-flow-col w-max items-center gap-4"
+                    
+                    >
+                        <img src="/images/fa-icons/star-solid.svg" 
+                            alt="A star icon from fontawesome.com"
+                            height="20" width="20"    
+                        >
+                        <h3>Get the latest official version</h3>
+
                     </span>
+                    <p>Latest Qtile release - v0.21.0,March 23,2022. 
+                        <br>
+                        You can download it from Github:
+                        <br>
+                        <a class="hover:text-[#215578]" href="https://github.com/qtile/qtile/releases/latest">
+                            https://github.com/qtile/qtile/releases/latest
+                        </a>
+                    </p>
                 </div>
-                <div></div>
-                <div></div>
+
+                <div class="grid grid-flow-row items-center rounded border w-auto">
+                    <span class="grid grid-flow-col items-center place-content-start w-auto 
+                    gap-4 p-2 bg-neutral-100 border-b border-solid"
+                    >
+                        <img src="/images/fa-icons/linux-brands.svg" 
+                        alt="Linux logo icon from fontawesome.com"
+                        height="20" width="20"
+                        >
+                        <h5>Packages and Installation Guides</h5>
+                    </span>
+                    <p class="p-2">Qtile has been packaged for a number of Linux distros,
+                        and it may not be necessary to download the official release directly. Check out the <a href="http://docs.qtile.org/en/latest/manual/install/index.html">
+                            installation guide
+                        </a> to see if your distro is included.</p>
+                </div>
+
+                <div class="grid grid-flow-row items-center gap-1">
+                    <span class="grid grid-flow-col items-center place-content-start w-auto gap-4">
+                        <img src="/images/fa-icons/flask-solid.svg" 
+                        alt="Flask icon from fontawesome.com"
+                        height="20" width="20"
+                        >
+                        <h3>Get the latest development version</h4>
+                    </span>
+                    <p>If you want the latest and greatest version of Qtile, you can fetch it with Git:</p><br>
+                    <code class="bg-neutral-100 p-2 rounded border w-auto">
+                        git clone https://github.com/qtile/qtile.git
+                    </code>
+                    <br>
+                    <p>You can also download a 
+                        <a class="hover:text-[#215578]" href="https://github.com/qtile/qtile/zipball/master">
+                            zipped archive
+                        </a> of the development version.
+                    </p>
+                </div>
             
             </div>
-
+        
             
-            <div class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
+            <div class="my-4 grid grid-flow-row items-start place-content-start col-span-1 gap-4 w-auto">
                 
-                <div></div>
-                <div></div>
+                <div class="border rounded">
+                    <span class="grid grid-flow-col items-center place-content-start gap-4
+                        bg-neutral-100 border-b m-0 p-2"
+                    >
+                        <img src="/images/fa-icons/question-circle-solid.svg" 
+                        alt="Question mark in a circle icon from fontawesome.com" 
+                        height="20" width="20"
+                        >
+                        <h5>Which is right for me?</h5>
+                    </span>
+                    <p class="px-4 py-2">The development version will have the latest features, but may also contain new bugs. 
+                        Grab this version if you want to live on the bleeding edge, or you plan on hacking on Qtile. 
+                        You'll probably want to keep an eye on <a href="https://github.com/qtile/qtile">Qtile on GitHub</a> 
+                        and subscribe to <a href="https://groups.google.com/group/qtile-dev">qtile-dev.</a>
+                    </p>
+                    <p class="px-4 py-2">If you want to <em>set it and forget it</em>, then the latest official release is for you. 
+                        You'll wait longer between updates, but this version is likely to be more stable and have fewer bugs.
+                    </p>
+                </div>
+
+                <div class="border rounded">
+                    <span class="grid grid-flow-col items-center place-content-start gap-4
+                        bg-neutral-100 border-b p-2"
+                    >
+                        <img src="/images/fa-icons/question-circle-solid.svg" 
+                        alt="Question mark in a circle icon from fontawesome.com" 
+                        height="20" width="20"
+                        >
+                        <h5>Got it, what's next?</h5>
+                    </span>
+                    <p class="px-4 py-2">Check out the <a href="http://docs.qtile.org/en/latest/manual/install/index.html">installation guide</a> 
+                        for further instructions.
+                    </p>
+                </div>
             
             </div>
+
         </section>
         
 
     </article>
 </main>
 
-    
-
-        <main>
-    <article class="max-w-full h-auto">
-
-        <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
-            <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="text-6xl">Download</h1>
-                    
-                    
-                        
-                        <p class="text-lg">How to get your hands on Qtile</p>
-                    
-                    
-
-            </div>
-        </section>
-
-        
-        <section class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
-
-            
-        
-        </section>
-    
-    </article>
-</main>
-
 
 
         
-        <section></section>
+        <hr class="mx-8 lg:mx-80">
+<footer class="mx-8 lg:mx-80 p-4 grid grid-flow-col items-center justify-between">
+    <a href="/">
+        <img src="/images/qtile-logo-black.png" alt="" width="64" height="64">
+    </a>
+    <div class="grid grid-flow-col items-center gap-4">
+        <a class="" href="">
+            <img src="/images/fa-icons/heart-regular.svg" 
+            alt="heart icon" height="24" width="24"
+            >
+        </a>
+
+        <a href="https://github.com/qtile/qtile.org/">
+            <img src="/images/fa-icons/github-brands.svg" 
+                alt="github logo" height="24" width="24"
+            >
+        </a>
+
+    </div>
+</footer>
 
     </body>
 </html>

@@ -1,8 +1,8 @@
 <main>
     <article class="text-lg">
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
-            <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="text-6xl font-varelaRound">{{ .Title }}</h1>
+            <div class="mx-8 lg:mx-80 p-4">
+                <h1 class="font-varelaRound">{{ .Title }}</h1>
 
                     {{ if .Params.description }}
 
@@ -14,14 +14,14 @@
         </section>
 
         <!-- Dialogue box for Add your video -->
-        <section class="flex flex-col gap-4 mx-8 lg:mx-80 lg:flex-row my-2 py-2">
+        <section class="grid grid-flow-row gap-4 mx-8 lg:mx-80 lg:grid-flow-col my-2 py-2">
             <div class="p-4 border rounded px-0 pt-0 mx-0 lg:w-2/5 h-auto">
-                <div class="flex flex-row gap-2 px-6 py-2 border-b border-solid bg-neutral-100">
+                <div class="grid grid-flow-col items-center place-content-start gap-2 px-6 py-2 border-b border-solid bg-neutral-100">
                     <img src="/images/fa-icons/circle-play-solid.svg" 
                         alt="circle play solid type font icon from font awesome"
                         height="20" width="20"
                     />
-                    <h2 class="text-xl">Add your video</h2>
+                    <h6>Add your video</h6>
                 </div>
 
                 <p class="text-lg px-6 py-2 h-auto">

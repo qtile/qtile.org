@@ -15,11 +15,11 @@
         
         <!-- Section for the information on how to submit screenshots to qtile.org -->
         <section class="grid grid-flow-row items-start place-content-start 
-            gap-4 my-2 p-4 mx-8 max-w-full lg:mx-80 lg:grid-flow-col"
+            gap-4 my-2 p-2 mx-8 max-w-full lg:mx-80 lg:grid-flow-col text-lg"
         >   
             <!-- See more config examples section -->
             <div class="grid grid-flow-row items-center place-content-start 
-                p-4 border rounded px-0 pt-0 mx-0 my-4 h-auto w-auto lg:h-48 lg:w-96"
+                p-4 border rounded px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
             >
                 <span class="grid grid-flow-col items-center place-content-start gap-2 p-2 
                     bg-neutral-100 border-b border-solid"
@@ -44,7 +44,7 @@
 
             <!-- Add your screenshot section -->
             <div class="grid grid-flow-row items-start place-content-start p-4 
-                border rounded px-0 pt-0 mx-0 my-4 h-auto w-auto lg:h-48 lg:w-96"
+                border rounded px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
             >
                 <span class="grid grid-flow-col items-center place-content-start gap-4 p-2 
                     bg-neutral-100 border-b border-solid"
@@ -69,14 +69,14 @@
             </div>
         </section>
     
-        <section class="grid gap-4 mx-8 lg:mx-80 my-2 p-2 h-auto w-auto">
+        <section class="mx-8 lg:mx-80 my-2 p-2 h-auto w-auto border rounded">
             <ul>
                 <li> 
                     <!-- Iterate through screenshots and show them as a grid -->
                     {{ range .Pages }}
                         
-                        <div class="inline-grid grid-flow-row h-60 p-2 m-2 gap-2
-                         border rounded w-auto lg:w-72 lg:hover:shadow-2xl"
+                        <div class="inline-grid grid-flow-row items-center justify-between h-auto p-2 m-2 gap-2
+                         border rounded w-auto lg:hover:shadow-2xl"
                         >
                             
                             <!-- If "screenshot:" frontmatter is set in the markdown file, display image -->
@@ -85,8 +85,8 @@
                                 <!-- Find image from "screenshot" frontmatter(.Params) provided from subsequent markdown file. -->
                                 {{ $image := resources.GetMatch .Params.screenshot }}
                                 <!-- Use Hugo image processing method of "Fit" to fit the image in the thumbnail  -->
-                                {{ $image := $image.Fit "320x256 webp"}}
-                                <img class="w-full h-full rounded aspect-square 
+                                {{ $image := $image.Resize "256x160 webp"}}
+                                <img class="w-full h-full rounded
                                     " 
                                     src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}" height="24" width="24"
                                 >

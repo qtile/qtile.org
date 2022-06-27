@@ -12,22 +12,28 @@
     
         
     <link rel="stylesheet" href="/style.css"> 
-  
+    
+    
+    <link rel="preload" href="/fonts/varelaround-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
 </head></head>
 
-  
-    <body>   
+    
+    <body class="prose-headings:font-varelaRound text-base">   
         
         
         <header>
-<nav class="grid grid-flow-row justify-items-center items-center py-6 max-w-full lg:grid-flow-col 
+<nav class="grid grid-flow-row justify-items-center items-center  max-w-full p-4 lg:grid-flow-col 
     bg-[#1B1B1B] text-[#F9F9F9] border-b border-b-[#404040] border-solid"
 >
     
-    <div class="mx-8 lg:mx-80 w-max h-fit flex flex-col gap-1 items-center lg:flex-row">
+    
+    <div class="mx-8 lg:mx-80 max-w-full h-fit grid grid-flow-row gap-2 
+        justify-items-center items-center lg:grid-flow-col"
+    >
         <a href="/">
             <img 
-                class="rounded p-2 bg-[#215578]"
+                class="max-w-max rounded p-2 bg-[#215578]"
                 src="/images/qtile-logo-white.webp" 
                 alt="Logo of Qtile" 
                 height="48" width="64"
@@ -37,66 +43,56 @@
         
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="/screenshots/" title=""> Screenshots
                 </a>
             
-            
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="/videos/" title=""> Videos
                 </a>
             
-            
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="http://docs.qtile.org/" title=""> Documentation
                 </a>
             
-            
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="https://github.com/qtile/qtile/issues/" title=""> Issues
                 </a>
             
-            
         
 
-            
-
-                <a class="px-2 py-1 rounded hover:bg-[#404040]
+                <a class="p-1 rounded hover:bg-[#404040]
                     " 
                     href="https://github.com/qtile/qtile/" title=""> GitHub
                 </a>
             
-            
         
-    
-        <div class="flex flex-col items-center  mx-8 lg:mx-80 w-max">
-            <div>Current release:<b>v0.21.0,March 23,2022</b></div>
+        
+        
+        <div class="grid grid-flow-row justify-items-center items-center mx-8 w-full
+            lg:mx-80"
+        >
+            <div>Current release: <b>v0.21.0,March 23,2022</b></div>
             
-            <div class="text-xs text-[#378ec8] ml-0">
+            <div class="grid grid-flow-row justify-items-center items-center 
+                text-sm text-[#378ec8] lg:grid-flow-col"
+            >
 
                 
                 
                     
 
-                        <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                        <a  class="p-1 hover:text-[#5C9FCD]" 
                             href="/download/"
                         >
                             Download
@@ -104,13 +100,13 @@
                     
                     
 
-                <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                <a  class="p-1 hover:text-[#5C9FCD]" 
                 href="https://github.com/qtile/qtile/blob/master/CHANGELOG"
                 >
                     Release Notes
                 </a>
 
-                <a  class="px-2 py-1 hover:text-[#5C9FCD]" 
+                <a  class="p-1 hover:text-[#5C9FCD]" 
                 href="http://docs.qtile.org/en/latest/manual/install/"
                 >
                     Install Guide
@@ -126,53 +122,9 @@
 
     <main>
     <article class="max-w-full h-auto">
-
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="text-6xl">Download</h1>
-                    
-                    
-                        
-                        <p class="text-lg">How to get your hands on Qtile</p>
-                    
-                    
-
-            </div>
-        </section>
-
-        <section class="grid grid-flow-row lg:grid-flow-col">
-            
-            <div class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
-
-                <div>
-                    <span>
-                        <img>
-                        <h1>Get the latest official version</h1>
-                    </span>
-                </div>
-                <div></div>
-                <div></div>
-            
-            </div>
-
-            
-            <div class="my-4 p-4 flex flex-col place-items-start mx-8 lg:mx-80 min-w-full">
-                
-                <div></div>
-                <div></div>
-            
-            </div>
-        </section>
-        
-
-    </article>
-</main>
-
-    <main>
-    <article class="max-w-full h-auto">
-        <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
-            <div class="mx-8 lg:mx-80 py-8">
-                <h1 class="text-6xl">Qtile Demonstration of Floating</h1>
+                <h1 class="text-6xl font-varelaRound">Qtile Demonstration of Floating</h1>
 
                 
 
@@ -196,7 +148,26 @@
 
 
         
-        <section></section>
+        <hr class="mx-8 lg:mx-80">
+<footer class="mx-8 lg:mx-80 p-4 grid grid-flow-col items-center justify-between">
+    <a href="/">
+        <img src="/images/qtile-logo-black.png" alt="" width="64" height="64">
+    </a>
+    <div class="grid grid-flow-col items-center gap-4">
+        <a class="" href="">
+            <img src="/images/fa-icons/heart-regular.svg" 
+            alt="heart icon" height="24" width="24"
+            >
+        </a>
+
+        <a href="https://github.com/qtile/qtile.org/">
+            <img src="/images/fa-icons/github-brands.svg" 
+                alt="github logo" height="24" width="24"
+            >
+        </a>
+
+    </div>
+</footer>
 
     </body>
 </html>

@@ -1,14 +1,20 @@
 {{ define "main" }}
 
+    <!-- Loads the download template from 
+    /layouts/partials/components/single-pages/download-single.html -->
     {{ if eq .Section "download" }}
 
         {{- partial "components/single-pages/download-single.html" . -}}
-
+    
+    <!-- Loads the download template from 
+    /layouts/partials/components/list-pages/screenshot-list.html -->
     {{ else if eq .Section "screenshots" }}
         
         <!-- Load list template for projects section -->
         {{- partial "components/list-pages/screenshots-list.html" . -}}
     
+    <!-- Loads the download template from 
+    /layouts/partials/components/list-pages/videos-list.html -->
     {{ else if eq .Section "videos" }}
 
         <!-- Load videos list template -->

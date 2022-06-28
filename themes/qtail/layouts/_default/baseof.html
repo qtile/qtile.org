@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- Loads the head partial template. -->
+    <!-- Loads the head partial template from /layouts/partials/head.html -->
     <head>{{ partial "head.html" . }}</head>
 
     <!-- Prose-headings will  -->
-    <body class="prose-headings:font-varelaRound">   
+    <body class="prose-headings:font-varelaRound text-lg">   
         
-        <!-- Loads the header template. -->
+        <!-- Loads the header template from /layouts/partials/header.html -->
         <header>{{ partial "header.html" . }}</header>
         
-        <!-- Loads the main block of a markdown file. -->
+        <!-- Loads the content of the page. 
+        If it is a markdown file, it will show it's contents.
+        Else it will load the content from the template -->
         {{- block "main" . }}{{- end }}
 
-        <!-- Loads the footer template. -->
+        <!-- Loads the footer template from /layouts/partials/footer.html -->
         {{ partial "footer.html" . }}
 
     </body>

@@ -14,7 +14,7 @@
         </section>
 
         <!-- Dialogue box for Add your video -->
-        <section class="grid grid-flow-row gap-4 mx-8 lg:mx-80 lg:grid-flow-col my-4 py-2">
+        <section class="grid grid-flow-row gap-4 mx-8 my-4 p-4 lg:mx-80 lg:grid-flow-col">
             <div class="p-4 border rounded px-0 pt-0 mx-0 lg:w-96 h-auto">
                 <div class="grid grid-flow-col items-center place-content-start gap-2 px-6 py-2 border-b border-solid bg-neutral-100">
                     <img src="/images/fa-icons/circle-play-solid.svg" 
@@ -34,15 +34,17 @@
                 </p>
             </div>
         </section>
-    
-        <section class="mx-8 lg:mx-80 py-4 max-w-full">
+        
+        <!-- List of videos -->
+        <section class="mx-8 p-4 max-w-full lg:mx-80">
             <ul>
                 <li>
                     <div class="grid grid-flow-row gap-8">
                         <!-- Iterates through pages and diplays it as links in the order of publish date and the title of the page. -->
                         {{ range (where .Site.RegularPages "Section" "videos") }}
                         
-                            <div class="flex flex-col-reverse items-center gap-6 lg:flex-row">
+                            <div class="flex flex-col-reverse items-center gap-4 lg:flex-row">
+                                
                                 {{ if .Params.youtubeId }}
 
                                     <!-- Slice the youtube video link -->
@@ -64,10 +66,7 @@
                         
                         {{ end }}
 
-                    
                     </div>
-                        
-
                 </li>
             </ul>
         </section>

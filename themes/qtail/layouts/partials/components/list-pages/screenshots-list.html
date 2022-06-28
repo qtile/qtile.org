@@ -1,5 +1,5 @@
 <main>
-    <article class="max-w-full text-lg">
+    <article class="max-w-full">
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 p-4">
                 <h1 class="font-varelaRound">{{ .Title }}</h1>
@@ -15,7 +15,7 @@
         
         <!-- Section for the information on how to submit screenshots to qtile.org -->
         <section class="grid grid-flow-row items-start place-content-start 
-            gap-4 max-w-full my-2 lg:p-2 mx-8 lg:mx-80 lg:grid-flow-col"
+            gap-4 max-w-full my-2 lg:p-4 mx-8 lg:mx-80 lg:grid-flow-col"
         >   
             <!-- See more config examples section -->
             <div class="grid grid-flow-row items-center place-content-start 
@@ -69,14 +69,14 @@
             </div>
         </section>
     
-        <section class="mx-8 h-auto w-auto lg:mx-80 my-2 lg:p-2">
+        <section class="mx-8 h-auto max-w-full lg:mx-80 my-2 lg:p-2">
             <ul>
                 <li> 
                     <!-- Iterate through screenshots and show them as a grid -->
                     {{ range .Pages }}
                         
                         <div class="inline-grid grid-flow-row items-center h-auto p-2 m-2 gap-2
-                         border rounded w-auto lg:hover:shadow-2xl"
+                         border rounded w-auto lg:w-80 lg:hover:shadow-2xl"
                         >
                             
                             <!-- If "screenshot:" frontmatter is set in the markdown file, display image -->
@@ -86,7 +86,7 @@
                                 {{ $image := resources.GetMatch .Params.screenshot }}
                                 <!-- Use Hugo image processing method of "Fit" to fit the image in the thumbnail  -->
                                 {{ $image := $image.Resize "256x160 webp"}}
-                                <img class="w-auto h-auto rounded
+                                <img class="w-full h-full rounded
                                     " 
                                     src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}" height="24" width="24"
                                 >
@@ -115,7 +115,6 @@
                     
                     {{ end }}
                     
-                    </div>      
                 </li>
             </ul>
         </section>

@@ -2,20 +2,25 @@
 
     {{ if eq .Section "screenshots" }}
 
-        <!-- Load single page template for screenshots section from components/single-pages/screenshots-single.html -->
+        <!-- Load single page template for screenshots section from 
+        /layouts/partials/components/single-pages/screenshots-single.html -->
         {{- partial "components/single-pages/screenshots-single.html" . -}}
-
+    
+    <!-- Load default single page template from 
+    /layouts/partials/components/single-pages/videos-single.html" -->
     {{ else if eq .Section "videos" }}
 
         {{- partial "components/single-pages/videos-single.html" . -}}
 
+    <!-- If a markdown file called download.md is present, load download-single.html -->
     {{ else if .Site.GetPage "page" "download.md" }}
     
         {{- partial "components/single-pages/download-single.html" . -}}
         
     {{ else }}
     
-        <!-- Load default single page template from /components/single-pages/default-single.html" -->
+        <!-- Load default single page template from 
+        /layouts/partials/components/single-pages/default-single.html" -->
         {{- partial "components/single-pages/default-single.html" . -}}
         
     {{ end }}

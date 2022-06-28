@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-
+    /* Adding Varela Round typeface to base layer of Tailwind CSS */
     @font-face {
         font-family: 'Varela Round Regular';
         src: url('./fonts/varelaround-regular-webfont.woff2') format('woff2');
@@ -12,6 +12,7 @@
         font-display: swap;
     }
     
+    /* Setting font size for headings to the base layer of Tailwind CSS */
     h1 {
         @apply text-4xl lg:text-6xl font-medium;
     }

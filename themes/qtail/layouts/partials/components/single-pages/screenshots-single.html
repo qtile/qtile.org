@@ -1,19 +1,19 @@
 <main>
     <article class="max-w-full">
         <section class="max-w-full bg-[#222222] text-[#FDFDFE]">
-            <div class="mx-8 lg:mx-80 py-8">
+            <div class="mx-8 lg:mx-80 p-4">
                 <h1 class="text-6xl font-varelaRound">{{ .Title }}</h1>
                     
-                    {{ if .Params.description }}
-                        
-                        <p class="text-lg">{{ .Params.description }}</p>
+                {{ if .Params.description }}
                     
-                    {{ end }}
+                    <p class="text-lg">{{ .Params.description }}</p>
+                
+                {{ end }}
 
             </div>
         </section>
 
-        <div class="mx-8 lg:mx-80 py-2">
+        <div class="mx-8 lg:mx-80 p-4">
             
             <!-- If "screenshot:" frontmatter is set in the markdown file, display image -->
             {{ if .Params.screenshot }}
@@ -45,14 +45,11 @@
                     View the configuration file
                 </a>
             </div>
-        
         </div>
                                 
 
-        <!-- Markdown file's content -->
-        <!-- <section class="leading-relaxed text-left mx-8 lg:mx-80">{{ .Content }}</section> -->
-              
-        <section class="grid grid-flow-row items-center gap-2 my-4 py-4 mx-8 lg:mx-80 lg:grid-flow-col">
+        <!-- Markdown file's content -->              
+        <section class="grid grid-flow-row items-center gap-4 my-4 p-4 mx-8 lg:mx-80 lg:grid-flow-col">
             <span class="max-w-full">
                 
                 <!-- Check if a previous page is present in the current section and display the link to it if present. -->

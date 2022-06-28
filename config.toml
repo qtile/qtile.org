@@ -4,12 +4,12 @@ title               = "Qtile"
 theme               = "qtail"
 
 sectionPagesMenu    = "main"
-disableKinds        = ["download"]
+
 
 [permalinks]
     posts           = "posts/:month/:year/:title/"
 
-
+# Navbar element's order configured with weight
 [menu]
     
     [[menu.main]]
@@ -42,9 +42,8 @@ disableKinds        = ["download"]
         url         = "https://github.com/qtile/qtile/"
         weight      = 6
 
-    
-
+# Site wide information parameters which can be used in templates 
+# using eg; {{ .Site.Params.qtileLogo }}
 [params]    
     qtileLogo           = "/images/qtile-logo-white.webp"
-    disableKinds        = "section"
     currentRelease      = "v0.21.0,March 23,2022"

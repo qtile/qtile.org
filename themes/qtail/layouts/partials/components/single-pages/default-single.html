@@ -1,20 +1,19 @@
 <main>
     <article class="max-w-full h-auto">
 
+        <!-- Title and description (subtitle) -->
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
-            <div class="mx-8 lg:mx-80 p-4">
+            <div class="mx-8 lg:mx-80 my-4 p-4">
                 <h1>{{ .Title }}</h1>
                     
-                    {{ if .Params.description }}
-                        
-                        <p class="text-lg">{{ .Params.description }}</p>
-                    
-                    {{ end }}
+                {{ if .Params.description }}    
+                    <p class="text-lg">{{ .Params.description }}</p>
+                {{ end }}
 
             </div>
         </section>
 
-        <!-- Display markdown file contents -->
+        <!-- Display markdown file's content -->
         <section class="my-4 p-4 grid grid-flow-row mx-8 lg:mx-80 min-w-full">
 
             {{ .Content }}

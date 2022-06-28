@@ -14,8 +14,8 @@
         </section>
 
         <!-- Dialogue box for Add your video -->
-        <section class="grid grid-flow-row gap-4 mx-8 lg:mx-80 lg:grid-flow-col my-2 py-2">
-            <div class="p-4 border rounded px-0 pt-0 mx-0 lg:w-2/5 h-auto">
+        <section class="grid grid-flow-row gap-4 mx-8 lg:mx-80 lg:grid-flow-col my-4 py-2">
+            <div class="p-4 border rounded px-0 pt-0 mx-0 lg:w-96 h-auto">
                 <div class="grid grid-flow-col items-center place-content-start gap-2 px-6 py-2 border-b border-solid bg-neutral-100">
                     <img src="/images/fa-icons/circle-play-solid.svg" 
                         alt="circle play solid type font icon from font awesome"
@@ -35,8 +35,8 @@
             </div>
         </section>
     
-        <section class="mx-8 lg:mx-80 py-4">
-            <ul class="p-0 m-0 list-none not-prose">
+        <section class="mx-8 lg:mx-80 py-4 max-w-full">
+            <ul>
                 <li>
                     <div class="grid grid-flow-row gap-8">
                         <!-- Iterates through pages and diplays it as links in the order of publish date and the title of the page. -->
@@ -46,7 +46,7 @@
                                 {{ if .Params.youtubeId }}
 
                                     <!-- Slice the youtube video link -->
-                                    <iframe class="flex flex-wrap rounded h-64 w-96 lg:max-w-4xl
+                                    <iframe class="flex flex-wrap rounded h-48 lg:h-64 lg:w-96 max-w-full
                                         hover:shadow-lg hover:shadow-[#404040]" 
                                         type="text/html" width="640" height="385"
                                         src="https://www.youtube-nocookie.com/embed/{{ .Params.youtubeId }}" allowfullscreen frameborder="0"

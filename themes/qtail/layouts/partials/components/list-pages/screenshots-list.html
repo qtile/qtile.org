@@ -6,7 +6,7 @@
                     
                 {{ if .Params.description }}
                     
-                    <p class="text-lg">{{ .Params.description }}</p>
+                    <p>{{ .Params.description }}</p>
                 
                 {{ end }}
 
@@ -15,7 +15,7 @@
         
         <!-- Section for the information on how to submit screenshots to qtile.org -->
         <section class="grid grid-flow-row items-start place-content-start 
-            gap-4 my-2 p-2 mx-8 max-w-full lg:mx-80 lg:grid-flow-col text-lg"
+            gap-4 max-w-full my-2 lg:p-2 mx-8 lg:mx-80 lg:grid-flow-col"
         >   
             <!-- See more config examples section -->
             <div class="grid grid-flow-row items-center place-content-start 
@@ -44,7 +44,7 @@
 
             <!-- Add your screenshot section -->
             <div class="grid grid-flow-row items-start place-content-start p-4 
-                px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
+                rounded border px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
             >
                 <span class="grid grid-flow-col items-center place-content-start gap-4 p-2 
                     bg-neutral-100 border-b border-solid"
@@ -69,13 +69,13 @@
             </div>
         </section>
     
-        <section class="mx-8 lg:mx-80 my-2 p-2 h-auto w-auto border rounded">
+        <section class="mx-8 h-auto w-auto lg:mx-80 my-2 lg:p-2">
             <ul>
                 <li> 
                     <!-- Iterate through screenshots and show them as a grid -->
                     {{ range .Pages }}
                         
-                        <div class="inline-grid grid-flow-row items-center justify-between h-auto p-2 m-2 gap-2
+                        <div class="inline-grid grid-flow-row items-center h-auto p-2 m-2 gap-2
                          border rounded w-auto lg:hover:shadow-2xl"
                         >
                             
@@ -86,7 +86,7 @@
                                 {{ $image := resources.GetMatch .Params.screenshot }}
                                 <!-- Use Hugo image processing method of "Fit" to fit the image in the thumbnail  -->
                                 {{ $image := $image.Resize "256x160 webp"}}
-                                <img class="w-full h-full rounded
+                                <img class="w-auto h-auto rounded
                                     " 
                                     src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}" height="24" width="24"
                                 >

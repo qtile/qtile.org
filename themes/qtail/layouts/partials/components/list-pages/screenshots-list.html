@@ -21,7 +21,7 @@
             <div class="grid grid-flow-row items-center place-content-start 
                 p-4 border rounded px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
             >
-                <span class="grid grid-flow-col items-center place-content-start gap-2 p-2 
+                <span class="grid grid-flow-col items-center place-content-start gap-2 px-4 py-2 
                     bg-neutral-100 border-b border-solid"
                 >
                     <img src="/images/fa-icons/cogs-solid.svg" 
@@ -46,7 +46,7 @@
             <div class="grid grid-flow-row items-start place-content-start p-4 
                 rounded border px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
             >
-                <span class="grid grid-flow-col items-center place-content-start gap-4 p-2 
+                <span class="grid grid-flow-col items-center place-content-start gap-2 px-4 py-2 
                     bg-neutral-100 border-b border-solid"
                 >
                     <img src="/images/fa-icons/table-columns-solid.svg" 
@@ -69,14 +69,14 @@
             </div>
         </section>
     
-        <section class="mx-8 h-auto max-w-full lg:mx-80 my-2 lg:p-2">
+        <section class="mx-8 h-auto max-w-full lg:mx-80 my-2">
             <ul>
                 <li> 
                     <!-- Iterate through screenshots and show them as a grid -->
                     {{ range .Pages }}
                         
-                        <div class="inline-grid grid-flow-row items-center h-auto p-2 m-2 gap-2
-                         border rounded w-auto lg:w-80 lg:hover:shadow-2xl"
+                        <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                         border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4"
                         >
                             
                             <!-- If "screenshot:" frontmatter is set in the markdown file, display image -->
@@ -97,15 +97,15 @@
                             <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
                                 
                                 <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
-                                    hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                                    hover:bg-[#222222] hover:text-white hover:border-[#222222]" 
                                     href="{{ .Params.config }}"
                                 >
                                     Config
                                 </a>
                                 
                                 <a class="grid items-center justify-items-center p-1 w-full h-auto 
-                                    rounded border hover:bg-[#215578] hover:text-white 
-                                    hover:border-[#215578]" 
+                                    rounded border hover:bg-[#222222] hover:text-white 
+                                    hover:border-[#222222]" 
                                     href="{{ .Permalink }}"
                                 >
                                     Screenshot

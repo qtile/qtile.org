@@ -8,7 +8,7 @@
                     
                     {{ if .Params.description }}
                         
-                        <p class="text-lg">{{ .Params.description }}</p>
+                        <p>{{ .Params.description }}</p>
                     
                     {{ end }}
 
@@ -70,7 +70,9 @@
                     </code>
                     <br>
                     <p>You can also download a 
-                        <a class="hover:text-[#215578]" href="https://github.com/qtile/qtile/zipball/master">
+                        <a class="hover:text-[#215578]" 
+                            href="https://github.com/qtile/qtile/zipball/master"
+                        >
                             zipped archive
                         </a> of the development version.
                     </p>
@@ -83,8 +85,8 @@
                 
                 <!-- Which is right for me? info box -->
                 <div class="border rounded">
-                    <span class="grid grid-flow-col items-center place-content-start gap-4
-                        bg-neutral-100 border-b m-0 px-4 p-2"
+                    <span class="grid grid-flow-col items-center place-content-start gap-2
+                        bg-neutral-100 border-b m-0 px-4 py-2"
                     >
                         <img src="/images/fa-icons/question-circle-solid.svg" 
                         alt="Question mark in a circle icon from fontawesome.com" 
@@ -104,8 +106,8 @@
 
                 <!-- Got it, what's next? info box -->
                 <div class="border rounded">
-                    <span class="grid grid-flow-col items-center place-content-start gap-4
-                        bg-neutral-100 border-b px-4 p-2"
+                    <span class="grid grid-flow-col items-center place-content-start gap-2
+                        bg-neutral-100 border-b px-4 py-2"
                     >
                         <img src="/images/fa-icons/question-circle-solid.svg" 
                         alt="Question mark in a circle icon from fontawesome.com" 
@@ -122,7 +124,6 @@
                 </div>
             
             </div>
-
         </section>
     </article>
 </main>

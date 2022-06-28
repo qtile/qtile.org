@@ -13,7 +13,7 @@
             </div>
         </section>
 
-        <div class="mx-8 lg:mx-80 p-4">
+        <div class="mx-8 lg:mx-80 lg:p-4">
             
             <!-- If "screenshot:" frontmatter is set in the markdown file, display image -->
             {{ if .Params.screenshot }}
@@ -49,14 +49,14 @@
                                 
 
         <!-- Markdown file's content -->              
-        <section class="grid grid-flow-row items-center gap-4 my-4 p-4 mx-8 lg:mx-80 lg:grid-flow-col">
+        <section class="grid grid-flow-row items-center gap-4 my-4 lg:p-4 mx-8 lg:mx-80 lg:grid-flow-col">
             <span class="max-w-full">
                 
                 <!-- Check if a previous page is present in the current section and display the link to it if present. -->
                 {{ if .PrevInSection }}
                     
                     <a class="decoration-2 border border-solid p-2 flex place-content-center rounded 
-                        hover:bg-[#215578] hover:text-white hover:border-[#215578]"  
+                        hover:bg-[#222222] hover:text-white hover:border-[#222222]"  
                         href="{{ .PrevInSection.Permalink }}"
                     >
                         &larr;&nbsp;Previous screenshot
@@ -72,7 +72,7 @@
                 {{ if .NextInSection }}
                     
                     <a class="decoration-2 border border-solid p-2 flex place-content-center rounded 
-                        hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
+                        hover:bg-[#222222] hover:text-white hover:border-[#222222]" 
                         href="{{ .NextInSection.Permalink }}"
                     >
                         Next screenshot&nbsp;&rarr;

@@ -3,39 +3,33 @@
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 p-4">
                 <h1 class="font-varelaRound">{{ .Title }}</h1>
-                    
+
                 {{ if .Params.description }}
-                    
-                    <p>{{ .Params.description }}</p>
-                
+
+                <p>{{ .Params.description }}</p>
+
                 {{ end }}
 
             </div>
         </section>
-        
+
         <!-- Section for the information on how to submit screenshots to qtile.org -->
         <section class="grid grid-flow-row items-start place-content-start 
-            gap-4 max-w-full my-2 lg:p-4 mx-8 lg:mx-80 lg:grid-flow-col"
-        >   
+            gap-4 max-w-full my-2 lg:p-4 mx-8 lg:mx-80 lg:grid-flow-col">
             <!-- See more config examples section -->
             <div class="grid grid-flow-row items-center place-content-start 
-                p-4 border rounded px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
-            >
+                p-4 border rounded px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96">
                 <span class="grid grid-flow-col items-center place-content-start gap-2 px-4 py-2 
-                    bg-neutral-100 border-b border-solid"
-                >
-                    <img src="/images/fa-icons/cogs-solid.svg" 
-                        alt="cogs solid type font icon from font awesome"
-                        height="20" width="20"
-                    />
+                    bg-neutral-100 border-b border-solid">
+                    <img src="/images/fa-icons/cogs-solid.svg" alt="cogs solid type font icon from font awesome"
+                        height="20" width="20" />
                     <h6>See more config examples</h6>
                 </span>
-                
+
                 <p class="p-4 h-auto">
-                    Be sure to check out 
-                    <a class="text-[#215578] hover:text-[#102A3C] hover:underline decoration-[#102A3C]" 
-                    href="https://github.com/qtile/qtile-examples"
-                    >
+                    Be sure to check out
+                    <a class="text-[#215578] hover:text-[#102A3C] hover:underline decoration-[#102A3C]"
+                        href="https://github.com/qtile/qtile-examples">
                         more examples on Github
                     </a>
                     on how to configure Qtile.
@@ -44,77 +38,63 @@
 
             <!-- Add your screenshot section -->
             <div class="grid grid-flow-row items-start place-content-start p-4 
-                rounded border px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
-            >
+                rounded border px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96">
                 <span class="grid grid-flow-col items-center place-content-start gap-2 px-4 py-2 
-                    bg-neutral-100 border-b border-solid"
-                >
-                    <img src="/images/fa-icons/table-columns-solid.svg" 
-                    alt="cogs solid type font icon from font awesome"
-                    height="20" width="20"
-                    />
+                    bg-neutral-100 border-b border-solid">
+                    <img src="/images/fa-icons/table-columns-solid.svg"
+                        alt="cogs solid type font icon from font awesome" height="20" width="20" />
                     <h6>Add your screenshot</h6>
                 </span>
-                
+
                 <p class="p-4 h-auto">
                     Want to show off how you've customized Qtile?
-                    Send a pull request to 
+                    Send a pull request to
                     <a class="text-[#215578] hover:text-[#102A3C] hover:underline decoration-[#102A3C]"
-                        href="https://github.com/qtile/qtile.org"
-                    >
+                        href="https://github.com/qtile/qtile.org">
                         qtile.org on GitHub,
                     </a>
                     and we'll get your screenshot and config added.
                 </p>
             </div>
         </section>
-    
+
         <section class="mx-8 h-auto max-w-full lg:mx-80 my-2">
             <ul>
-                <li> 
+                <li>
                     <!-- Iterate through screenshots and show them as a grid -->
                     {{ range .Pages }}
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
                         
-                        <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
-                            border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4"
-                        >
-                            
-                            <!-- If "screenshot:" frontmatter is set in the markdown file, display image -->
-                            {{ if .Params.screenshot }}
-                                
-                                <!-- Find image from "screenshot" frontmatter(.Params) provided from subsequent markdown file. -->
-                                {{ $image := resources.GetMatch .Params.screenshot }}
-                                <!-- Use Hugo image processing method of "Fit" to fit the image in the thumbnail  -->
-                                {{ $image := $image.Resize "256x160 webp"}}
-                                <img class="w-full h-full rounded
-                                    " 
-                                    src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}" height="24" width="24"
-                                >
-                            
-                            {{ end }}
-                            
-                            <!-- Buttons to the links for viewing the configuration file and screenshot  -->
-                            <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
-                                    hover:bg-[#222222] hover:text-white hover:border-[#222222]" 
-                                    href="{{ .Params.config }}"
-                                >
-                                    Config
-                                </a>
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto 
-                                    rounded border hover:bg-[#222222] hover:text-white 
-                                    hover:border-[#222222]" 
-                                    href="{{ .Permalink }}"
-                                >
-                                    Screenshot
-                                </a>
-                            </div>
+                        <!-- If "screenshot:" frontmatter is set in the markdown file, display image -->
+                        {{ if .Params.screenshot }}
+                            <!-- Find image from "screenshot" frontmatter(.Params) provided from subsequent markdown file. -->
+                            {{ $image := resources.GetMatch .Params.screenshot }}
+
+                            <!-- Use Hugo image processing method of "Fit" to fit the image in the thumbnail  -->
+                            {{ $image := $image.Resize "256x160 webp"}}
+                            <img class="w-full h-full rounded
+                                    " src="{{ $image.RelPermalink }}" alt="{{ .Params.description }}" height="24"
+                                width="24">
+                        {{ end }}
+
+                        <!-- Buttons to the links for viewing the configuration file and screenshot  -->
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="{{ .Params.config }}">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="{{ .Permalink }}">
+                                Screenshot
+                            </a>
                         </div>
-                    
+                    </div>
+
                     {{ end }}
-                    
+
                 </li>
             </ul>
         </section>

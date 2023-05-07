@@ -1,36 +1,32 @@
 <main>
-  <article>
-    <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
-        <div class="mx-8 lg:mx-80 p-4">
-            <h1 class="font-varelaRound">{{ .Title }}</h1>
-                
+    <article>
+        <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
+            <div class="mx-8 lg:mx-80 p-4">
+                <h1 class="font-varelaRound">{{ .Title }}</h1>
+
                 {{ if .Params.description }}
-                    
-                    <p>{{ .Params.description }}</p>
-                
+
+                <p>{{ .Params.description }}</p>
+
                 {{ end }}
 
-        </div>
-    </section>
-  
-      <section>
-          <ul>
-              <li>
-              
-                  <!-- Iterates through pages and diplays it as links in the order of publish date and the title of the page. -->
-                  {{ range .Pages }}
-                  
-                      <a href="{{ .Permalink }}">
-                          <div class="py-2 hover:text-blue-600">
-                              <span class="text-xl underline decoration-2">{{ .Title }}</span><br>
-                              <span class="text-sm uppercase">{{ .Date.Format "January 2, 2006" }}</span>
-                          </div>
-                      </a>
-              
-                  {{ end }}
-              
-              </li>
-          </ul>
-      </section>
-  </article>
+            </div>
+        </section>
+
+        <section>
+            <ul>
+                <li>
+                    <!-- Iterates through pages and diplays it as links in the order of publish date and the title of the page. -->
+                    {{ range .Pages }}
+                    <a href="{{ .Permalink }}">
+                        <div class="py-2 hover:text-blue-600">
+                            <span class="text-xl underline decoration-2">{{ .Title }}</span><br>
+                            <span class="text-sm uppercase">{{ .Date.Format "January 2, 2006" }}</span>
+                        </div>
+                    </a>
+                    {{ end }}
+                </li>
+            </ul>
+        </section>
+    </article>
 </main>

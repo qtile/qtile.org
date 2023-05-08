@@ -19,7 +19,7 @@
 </head></head>
 
     
-    <body class="prose-headings:font-varelaRound text-base">   
+    <body class="prose-headings:font-varelaRound text-base lg:text-lg">   
         
         
         <header>
@@ -123,24 +123,23 @@
     <main>
     <article class="w-auto h-auto prose-a:text-[#215578]">
 
+        
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
-            <div class="mx-8 lg:mx-80 py-8">
+            <div class="mx-8 lg:mx-80 p-4">
                 <h1 class="font-varelaRound">Home</h1>
                     
                     
                         
-                        <p class="text-lg">A full-featured, hackable tiling window manager written and configured in Python</p>
+                        <p>A full-featured, hackable tiling window manager written and configured in Python</p>
                     
                     
 
             </div>
         </section>
-
-        <section class="grid grid-flow-row items-start my-4 w-auto gap-4 mx-8 h-auto lg:mx-80 lg:grid-cols-3">
-            
-            
-            <div class="my-4 grid grid-flow-row w-auto gap-4 items-start lg:col-span-2">
-
+        
+        
+        <section class="grid grid-flow-row items-start my-4 p-4 w-auto gap-4 mx-8 h-auto lg:mx-80 lg:grid-cols-3">            
+            <div class="grid grid-flow-row w-auto gap-4 items-start lg:col-span-2">
                 <div class="gap-1">
                     <span class="grid grid-flow-col w-max items-center gap-4"
                     
@@ -170,10 +169,11 @@
                         alt="Linux logo icon from fontawesome.com"
                         height="20" width="20"
                         >
-                        <h5>Packages and Installation Guides</h5>
+                        <h6>Packages and Installation Guides</h6>
                     </span>
                     <p class="p-2">Qtile has been packaged for a number of Linux distros,
-                        and it may not be necessary to download the official release directly. Check out the <a href="http://docs.qtile.org/en/latest/manual/install/index.html">
+                        and it may not be necessary to download the official release directly. Check out the 
+                        <a href="http://docs.qtile.org/en/latest/manual/install/index.html">
                             installation guide
                         </a> to see if your distro is included.</p>
                 </div>
@@ -192,7 +192,9 @@
                     </code>
                     <br>
                     <p>You can also download a 
-                        <a class="hover:text-[#215578]" href="https://github.com/qtile/qtile/zipball/master">
+                        <a class="hover:text-[#215578]" 
+                            href="https://github.com/qtile/qtile/zipball/master"
+                        >
                             zipped archive
                         </a> of the development version.
                     </p>
@@ -203,15 +205,16 @@
             
             <div class="my-4 grid grid-flow-row items-start place-content-start col-span-1 gap-4 w-auto">
                 
+                
                 <div class="border rounded">
-                    <span class="grid grid-flow-col items-center place-content-start gap-4
-                        bg-neutral-100 border-b m-0 p-2"
+                    <span class="grid grid-flow-col items-center place-content-start gap-2
+                        bg-neutral-100 border-b m-0 px-4 py-2"
                     >
                         <img src="/images/fa-icons/question-circle-solid.svg" 
                         alt="Question mark in a circle icon from fontawesome.com" 
                         height="20" width="20"
                         >
-                        <h5>Which is right for me?</h5>
+                        <h6>Which is right for me?</h6>
                     </span>
                     <p class="px-4 py-2">The development version will have the latest features, but may also contain new bugs. 
                         Grab this version if you want to live on the bleeding edge, or you plan on hacking on Qtile. 
@@ -223,26 +226,27 @@
                     </p>
                 </div>
 
+                
                 <div class="border rounded">
-                    <span class="grid grid-flow-col items-center place-content-start gap-4
-                        bg-neutral-100 border-b p-2"
+                    <span class="grid grid-flow-col items-center place-content-start gap-2
+                        bg-neutral-100 border-b px-4 py-2"
                     >
                         <img src="/images/fa-icons/question-circle-solid.svg" 
                         alt="Question mark in a circle icon from fontawesome.com" 
                         height="20" width="20"
                         >
-                        <h5>Got it, what's next?</h5>
+                        <h6>Got it, what's next?</h6>
                     </span>
-                    <p class="px-4 py-2">Check out the <a href="http://docs.qtile.org/en/latest/manual/install/index.html">installation guide</a> 
+                    <p class="px-4 py-2">Check out the 
+                        <a href="http://docs.qtile.org/en/latest/manual/install/index.html">
+                            installation guide
+                        </a> 
                         for further instructions.
                     </p>
                 </div>
             
             </div>
-
         </section>
-        
-
     </article>
 </main>
 
@@ -251,9 +255,12 @@
         
         <hr class="mx-8 lg:mx-80">
 <footer class="mx-8 lg:mx-80 p-4 grid grid-flow-col items-center justify-between">
+    
     <a href="/">
         <img src="/images/qtile-logo-black.png" alt="" width="64" height="64">
     </a>
+
+    
     <div class="grid grid-flow-col items-center gap-4">
         <a class="" href="">
             <img src="/images/fa-icons/heart-regular.svg" 

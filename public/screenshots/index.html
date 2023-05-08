@@ -19,7 +19,7 @@
 </head></head>
 
     
-    <body class="prose-headings:font-varelaRound text-base">   
+    <body class="prose-headings:font-varelaRound text-base lg:text-lg">   
         
         
         <header>
@@ -121,45 +121,40 @@
         
 
     
+    
         
         <main>
-    <article class="max-w-full text-lg">
+    <article class="max-w-full">
         <section class="max-w-full bg-[#222222] text-[#FDFDFE] not-prose">
             <div class="mx-8 lg:mx-80 p-4">
                 <h1 class="font-varelaRound">Screenshots</h1>
-                    
+
                 
-                    
-                    <p class="text-lg">Showing off what folks have done with Qtile</p>
-                
+
+                <p>Showing off what folks have done with Qtile</p>
+
                 
 
             </div>
         </section>
-        
+
         
         <section class="grid grid-flow-row items-start place-content-start 
-            gap-4 my-2 p-2 mx-8 max-w-full lg:mx-80 lg:grid-flow-col text-lg"
-        >   
+            gap-4 max-w-full my-2 lg:p-4 mx-8 lg:mx-80 lg:grid-flow-col">
             
             <div class="grid grid-flow-row items-center place-content-start 
-                p-4 border rounded px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
-            >
-                <span class="grid grid-flow-col items-center place-content-start gap-2 p-2 
-                    bg-neutral-100 border-b border-solid"
-                >
-                    <img src="/images/fa-icons/cogs-solid.svg" 
-                        alt="cogs solid type font icon from font awesome"
-                        height="20" width="20"
-                    />
+                p-4 border rounded px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96">
+                <span class="grid grid-flow-col items-center place-content-start gap-2 px-4 py-2 
+                    bg-neutral-100 border-b border-solid">
+                    <img src="/images/fa-icons/cogs-solid.svg" alt="cogs solid type font icon from font awesome"
+                        height="20" width="20" />
                     <h6>See more config examples</h6>
                 </span>
-                
+
                 <p class="p-4 h-auto">
-                    Be sure to check out 
-                    <a class="text-[#215578] hover:text-[#102A3C] hover:underline decoration-[#102A3C]" 
-                    href="https://github.com/qtile/qtile-examples"
-                    >
+                    Be sure to check out
+                    <a class="text-[#215578] hover:text-[#102A3C] hover:underline decoration-[#102A3C]"
+                        href="https://github.com/qtile/qtile-examples">
                         more examples on Github
                     </a>
                     on how to configure Qtile.
@@ -168,253 +163,918 @@
 
             
             <div class="grid grid-flow-row items-start place-content-start p-4 
-                px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96"
-            >
-                <span class="grid grid-flow-col items-center place-content-start gap-4 p-2 
-                    bg-neutral-100 border-b border-solid"
-                >
-                    <img src="/images/fa-icons/table-columns-solid.svg" 
-                    alt="cogs solid type font icon from font awesome"
-                    height="20" width="20"
-                    />
+                rounded border px-0 pt-0 mx-0 my-2 h-auto w-auto lg:h-48 lg:w-96">
+                <span class="grid grid-flow-col items-center place-content-start gap-2 px-4 py-2 
+                    bg-neutral-100 border-b border-solid">
+                    <img src="/images/fa-icons/table-columns-solid.svg"
+                        alt="cogs solid type font icon from font awesome" height="20" width="20" />
                     <h6>Add your screenshot</h6>
                 </span>
-                
+
                 <p class="p-4 h-auto">
                     Want to show off how you've customized Qtile?
-                    Send a pull request to 
+                    Send a pull request to
                     <a class="text-[#215578] hover:text-[#102A3C] hover:underline decoration-[#102A3C]"
-                        href="https://github.com/qtile/qtile.org"
-                    >
+                        href="https://github.com/qtile/qtile.org">
                         qtile.org on GitHub,
                     </a>
                     and we'll get your screenshot and config added.
                 </p>
             </div>
         </section>
-    
-        <section class="mx-8 lg:mx-80 my-2 p-2 h-auto w-auto border rounded">
+
+        <section class="mx-8 h-auto max-w-full lg:mx-80 my-2">
             <ul>
-                <li> 
+                <li>
                     
                     
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
                         
-                        <div class="inline-grid grid-flow-row items-center justify-between h-auto p-2 m-2 gap-2
-                         border rounded w-auto lg:hover:shadow-2xl"
-                        >
-                            
-                            
-                            
-                                
-                                
-                                
-                                
-                                
-                                <img class="w-full h-full rounded
-                                    " 
-                                    src="/images/screenshots/aeronotix2_hu2c453f10e1a5a2f37bc5653464f76139_557127_256x160_resize_q75_h2_box.webp" alt="This is some desc" height="24" width="24"
-                                >
-                            
-                            
-                            
-                            
-                            <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
-                                    hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
-                                    href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
-                                >
-                                    Config
-                                </a>
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto 
-                                    rounded border hover:bg-[#215578] hover:text-white 
-                                    hover:border-[#215578]" 
-                                    href="/screenshots/justinsmithies/"
-                                >
-                                    Screenshot
-                                </a>
-                            </div>
-                        </div>
-                    
-                    
                         
-                        <div class="inline-grid grid-flow-row items-center justify-between h-auto p-2 m-2 gap-2
-                         border rounded w-auto lg:hover:shadow-2xl"
-                        >
-                            
-                            
-                            
-                                
-                                
-                                
-                                
-                                
-                                <img class="w-full h-full rounded
-                                    " 
-                                    src="/images/screenshots/jasoneastman-lighter_hud2dac44e7f0f186f50d8d9bea73e1375_623139_256x160_resize_q75_h2_box_3.webp" alt="This is some desc" height="24" width="24"
-                                >
-                            
-                            
-                            
-                            
-                            <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
-                                    hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
-                                    href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
-                                >
-                                    Config
-                                </a>
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto 
-                                    rounded border hover:bg-[#215578] hover:text-white 
-                                    hover:border-[#215578]" 
-                                    href="/screenshots/jasoneastman-lighter/"
-                                >
-                                    Screenshot
-                                </a>
-                            </div>
-                        </div>
-                    
-                    
                         
-                        <div class="inline-grid grid-flow-row items-center justify-between h-auto p-2 m-2 gap-2
-                         border rounded w-auto lg:hover:shadow-2xl"
-                        >
                             
                             
-                            
-                                
-                                
-                                
-                                
-                                
-                                <img class="w-full h-full rounded
-                                    " 
-                                    src="/images/screenshots/cjbarnes18_hu6bc448b61b2a30dd518da1536b49419c_249913_256x160_resize_q75_h2_box.webp" alt="This is some desc" height="24" width="24"
-                                >
+
                             
                             
-                            
-                            
-                            <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
-                                    hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
-                                    href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
-                                >
-                                    Config
-                                </a>
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto 
-                                    rounded border hover:bg-[#215578] hover:text-white 
-                                    hover:border-[#215578]" 
-                                    href="/screenshots/cjbarnes18/"
-                                >
-                                    Screenshot
-                                </a>
-                            </div>
-                        </div>
-                    
-                    
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/tywgg-clean_huf3299748ce3d442d23022c177da49f65_182157_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
                         
-                        <div class="inline-grid grid-flow-row items-center justify-between h-auto p-2 m-2 gap-2
-                         border rounded w-auto lg:hover:shadow-2xl"
-                        >
-                            
-                            
-                            
-                                
-                                
-                                
-                                
-                                
-                                <img class="w-full h-full rounded
-                                    " 
-                                    src="/images/screenshots/aeronotix2_hu2c453f10e1a5a2f37bc5653464f76139_557127_256x160_resize_q75_h2_box.webp" alt="This is some desc" height="24" width="24"
-                                >
-                            
-                            
-                            
-                            
-                            <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
-                                    hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
-                                    href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
-                                >
-                                    Config
-                                </a>
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto 
-                                    rounded border hover:bg-[#215578] hover:text-white 
-                                    hover:border-[#215578]" 
-                                    href="/screenshots/aeronotix2/"
-                                >
-                                    Screenshot
-                                </a>
-                            </div>
-                        </div>
-                    
-                    
+
                         
-                        <div class="inline-grid grid-flow-row items-center justify-between h-auto p-2 m-2 gap-2
-                         border rounded w-auto lg:hover:shadow-2xl"
-                        >
-                            
-                            
-                            
-                                
-                                
-                                
-                                
-                                
-                                <img class="w-full h-full rounded
-                                    " 
-                                    src="/images/screenshots/aeronotix_hu65f571f787a5baea9bf3b70b34c19034_238057_256x160_resize_q75_h2_box.webp" alt="This is some desc" height="24" width="24"
-                                >
-                            
-                            
-                            
-                            
-                            <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
-                                    hover:bg-[#215578] hover:text-white hover:border-[#215578]" 
-                                    href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py"
-                                >
-                                    Config
-                                </a>
-                                
-                                <a class="grid items-center justify-items-center p-1 w-full h-auto 
-                                    rounded border hover:bg-[#215578] hover:text-white 
-                                    hover:border-[#215578]" 
-                                    href="/screenshots/aeronotix/"
-                                >
-                                    Screenshot
-                                </a>
-                            </div>
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/tywgg-clean/">
+                                Screenshot
+                            </a>
                         </div>
+                    </div>
+
                     
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/tjy_hud72059c635835b14f2c2ac9b94793290_781947_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/tjy/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
                     
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/tywgg-dirty_hu869d522e121ba7837db188cfdb392d2c_319439_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/tywgg/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
                     
-                    </div>      
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/tian_hu869d522e121ba7837db188cfdb392d2c_319439_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/tian/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/rxcomm_huad797d5f0cf3c9a5987d5b26112bcd53_802456_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/qtile/qtile-examples/blob/master/user-configs/rxcomm">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/rxcomm/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/roger_hu511f03ec685c2e9de05c52ebb04ffc13_1258529_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/qtile/qtile-examples/tree/master/user-configs/roger">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/roger/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/oblivion_huaeb85ddff7e4e600163f341a52537165_667449_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/oblivion/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/pavel_hub96b1837eacc1eed3ed0a3361021e5d3_141045_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/pavel/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/maxdamaged-dirty_hu3785f0ab8e201a07fba57b5dfc0a1e15_253683_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/maxdamaged-dirty/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/maxdamaged-clean_hu989bece9c0544de8f2ed21e01e13858a_789779_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/maxdamaged-clean/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/longerhv_hu1a89821f52d855b1686852be8340ee2c_1772593_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://gitlab.com/LongerHV/.dotfiles/blob/master/.config/qtile/config.py">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/longerhv/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/linuxville_hu614020f187dc2b5ba2e4581a55540ea3_1659799_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/linuxville/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/linuxville-tiling_huef8c2b8d2657c5457b460e15c70aeb70_2185595_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/linuxville-tiling/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/linuxville-rage-of-angels_hu763367c13c7654320f9c3a1ba2774a9c_3227953_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/linuxville-rage-of-angels/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/linuxville-comicbook_hu2ee66953d8cfe2c2ce64d794eca90a90_247107_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/linuxville-comicbook/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/justinesmithies_hu56cdd9c28e3181b0e762c248c6dd9ffe_7503780_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/justinesmithies/dotfiles/tree/master/.config/qtile">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/justinesmithies/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/ldlework_hu513c9fe1d7986e138809f500bea20cd7_219095_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/dustinlacewell/dustinlacewell-dotfiles/tree/master/qtile">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/ldlework/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/jasoneastman-greyish_hu9c10fb662588dcaefc95e4c29ca165ab_805457_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/jasoneastman-greyish/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/jasoneastman-lighter_hud2dac44e7f0f186f50d8d9bea73e1375_623139_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/jasoneastman-lighter/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/jasoneastman_hu7a3a2854c24439079d8dab615bc7565c_347891_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/jasoneastman/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/drei_hua905117cd44041dd0e8cc77c66bd3af5_1846858_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/drei/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/eigrad_hu88a9697b7da373ba90ac05b8480bba14_293365_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/eigrad/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/dmpayton_hu386839477554b6510be08dfc6c0d8521_122008_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/dmpayton/dotfiles/blob/master/qtile/config.py">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/dmpayton/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/david35mm_hu0c5534911f84cc1533aae90b4052e4aa_967999_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/david35mm/.files/tree/main/.config/qtile">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/david35mm/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/cjbarnes18_hu6bc448b61b2a30dd518da1536b49419c_249913_256x160_resize_q75_h2_box.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/qtile/qtile-examples/tree/master/user-configs/cjbarnes">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/cjbarnes18/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/demo_hu9098bd5a3a3498d09caad68b13b9f2e2_175525_256x160_resize_q75_h2_box_3.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/demo/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/aeronotix2_hu2c453f10e1a5a2f37bc5653464f76139_557127_256x160_resize_q75_h2_box.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/aeronotix2/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="inline-grid grid-flow-row items-center h-auto p-2 my-4 gap-2
+                        border rounded w-full lg:w-80 lg:hover:shadow-2xl lg:m-4">
+                        
+                        
+                        
+                            
+                            
+
+                            
+                            
+                            <img class="w-full h-full rounded
+                                    " src="/images/screenshots/aeronotix_hu65f571f787a5baea9bf3b70b34c19034_238057_256x160_resize_q75_h2_box.webp" alt="" height="24"
+                                width="24">
+                        
+
+                        
+                        <div class="grid grid-flow-col gap-2 items-center justify-items-center max-w-full">
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto rounded border 
+                                hover:bg-[#222222] hover:text-white hover:border-[#222222]"
+                                href="https://github.com/qtile/qtile-examples/blob/master/user-configs/aeronotix.py">
+                                Config
+                            </a>
+                            <a class="grid items-center justify-items-center p-1 w-full h-auto 
+                                rounded border hover:bg-[#222222] hover:text-white 
+                                hover:border-[#222222]" href="/screenshots/aeronotix/">
+                                Screenshot
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
                 </li>
             </ul>
         </section>
     </article>
 </main>
-
+    
 
 
 
         
         <hr class="mx-8 lg:mx-80">
 <footer class="mx-8 lg:mx-80 p-4 grid grid-flow-col items-center justify-between">
+    
     <a href="/">
         <img src="/images/qtile-logo-black.png" alt="" width="64" height="64">
     </a>
+
+    
     <div class="grid grid-flow-col items-center gap-4">
         <a class="" href="">
             <img src="/images/fa-icons/heart-regular.svg" 

@@ -3,7 +3,7 @@
 
 name = "Qtail"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = ""
 description = ""
 homepage = "https://qtile.org/"
 tags = []
@@ -11,8 +11,8 @@ features = []
 min_version = "0.41.0"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Nikhil(unsungNovelty)"
+  homepage = "https://www.unsungnovelty.org/"
 
 # If porting an existing theme
 [original]

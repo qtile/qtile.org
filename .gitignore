@@ -1,3 +1,6 @@
 # ignore node_modules directory so that we are not uploading node modules into git repo.
 # Instead we can just use `npm install` from inside qtail directory and get the developer dependencies installed on the local machine.
 /themes/qtail/node_modules
+.hugo_build.lock
+public
+resources

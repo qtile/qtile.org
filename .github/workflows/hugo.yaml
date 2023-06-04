@@ -22,6 +22,14 @@ jobs:
         with:
           hugo-version: '0.111.3'
           extended: true
+      
+      - name: Tailwind CSS Typography plugin
+        working-directory: themes/qtail
+        run: npm install @tailwindcss/typography
+      
+      - name: Build Qtail
+        working-directory: themes/qtail
+        run: npm run build-qtail
 
       - name: Build
         run: hugo --gc --minify

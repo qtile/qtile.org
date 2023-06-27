@@ -33,3 +33,4 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: qtile/qtile.github.io
           publish_dir: ./public
+          cname: qtile.org

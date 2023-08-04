@@ -51,7 +51,7 @@ layouts = [
     layout.Stack(num_stacks=2)
 ]
 widget_defaults = dict(
-    font=&#x27;sans&#x27;,
+    font="sans",
     fontsize=12,
     padding=3,
 )
@@ -65,7 +65,7 @@ screens = [
                 widget.WindowName(),
                 widget.TextBox("default config", name="default"),
                 widget.Systray(),
-                widget.Clock(format=&#x27;%Y-%m-%d %a %I:%M %p&#x27;),
+                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
             ],
             24,
         ),
@@ -86,31 +86,31 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
-    {&#x27;wmclass&#x27;: &#x27;confirm&#x27;},
-    {&#x27;wmclass&#x27;: &#x27;dialog&#x27;},
-    {&#x27;wmclass&#x27;: &#x27;download&#x27;},
-    {&#x27;wmclass&#x27;: &#x27;error&#x27;},
-    {&#x27;wmclass&#x27;: &#x27;file_progress&#x27;},
-    {&#x27;wmclass&#x27;: &#x27;notification&#x27;},
-    {&#x27;wmclass&#x27;: &#x27;splash&#x27;},
-    {&#x27;wmclass&#x27;: &#x27;toolbar&#x27;},
-    {&#x27;wmclass&#x27;: &#x27;confirmreset&#x27;},  # gitk
-    {&#x27;wmclass&#x27;: &#x27;makebranch&#x27;},  # gitk
-    {&#x27;wmclass&#x27;: &#x27;maketag&#x27;},  # gitk
-    {&#x27;wname&#x27;: &#x27;branchdialog&#x27;},  # gitk
-    {&#x27;wname&#x27;: &#x27;pinentry&#x27;},  # GPG key password entry
-    {&#x27;wmclass&#x27;: &#x27;ssh-askpass&#x27;},  # ssh-askpass
+    {"wmclass": "confirm"},
+    {"wmclass": "dialog"},
+    {"wmclass": "download"},
+    {"wmclass": "error"},
+    {"wmclass": "file_progress"},
+    {"wmclass": "notification"},
+    {"wmclass": "splash"},
+    {"wmclass": "toolbar"},
+    {"wmclass": "confirmreset"},  # gitk
+    {"wmclass": "makebranch"},  # gitk
+    {"wmclass": "maketag"},  # gitk
+    {"wname": "branchdialog"},  # gitk
+    {"wname": "pinentry"},  # GPG key password entry
+    {"wmclass": "ssh-askpass"},  # ssh-askpass
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
-# XXX: Gasp! We&#x27;re lying here. In fact, nobody really uses or cares about this
+# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
 # mailing lists, github issues, and other WM documentation that suggest setting
-# this string if your java app doesn&#x27;t work correctly. We may as well just lie
-# and say that we&#x27;re a working one by default.
+# this string if your java app doesn't work correctly. We may as well just lie
+# and say that we're a working one by default.
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java&#x27;s whitelist.
+# java that happens to be on java's whitelist.
 wmname = "LG3D"
 dpi_scale = 1.0
 ```

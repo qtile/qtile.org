@@ -27,7 +27,7 @@ sectionPagesMenu    = "main"
     [[menu.main]]
         identifier  = "docs"
         name        = "Documentation"
-        url         = "https://qtile.readthedocs.io/en/stable/index.html"
+        url         = "https://docs.qtile.org"
         weight      = 4
 
     [[menu.main]]

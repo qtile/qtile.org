@@ -11,6 +11,10 @@
         font-style: normal;
         font-display: swap;
     }
+
+    body {
+        overflow-x: hidden;
+    }
     
     /* Setting font size for headings to the base layer of Tailwind CSS */
     h1 {

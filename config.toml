@@ -11,13 +11,13 @@ sectionPagesMenu    = "main"
 
 # Navbar element's order configured with weight
 [menu]
-    
+
     [[menu.main]]
         identifier  = "screenshots"
         name        = "Screenshots"
         url         = "/screenshots/"
         weight      = 2
-    
+
     [[menu.main]]
         identifier  = "videos"
         name        = "Videos"
@@ -35,15 +35,15 @@ sectionPagesMenu    = "main"
         name        = "Issues"
         url         = "https://github.com/qtile/qtile/issues/"
         weight      = 5
-    
+
     [[menu.main]]
         identifier  = "github"
         name        = "GitHub"
         url         = "https://github.com/qtile/qtile/"
         weight      = 6
 
-# Site wide information parameters which can be used in templates 
+# Site wide information parameters which can be used in templates
 # using eg; {{ .Site.Params.qtileLogo }}
-[params]    
+[params]
     qtileLogo           = "/images/qtile-logo-white.webp"
     currentRelease      = "v0.23.0, Sept. 24, 2023"

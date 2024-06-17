@@ -46,4 +46,4 @@ sectionPagesMenu    = "main"
 # using eg; {{ .Site.Params.qtileLogo }}
 [params]
     qtileLogo           = "/images/qtile-logo-white.webp"
-    currentRelease      = "v0.25.0, Apr. 04, 2024"
+    currentRelease      = "v0.26.0, May 21, 2024"

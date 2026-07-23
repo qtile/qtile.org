@@ -11,6 +11,10 @@ content/default_config.py:
 	# delete the license header; it's annoying to scroll past
 	sed '1,26d' -i $@
 
+.PHONY: update-release
+update-release:
+	./scripts/update-release.sh
+
 deps:
 	(cd themes/qtail/ && npm install @tailwindcss/typography)
 
